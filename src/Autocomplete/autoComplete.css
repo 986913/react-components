@@ -1,0 +1,33 @@
+
+ul li {
+  list-style: none;
+}
+
+li {
+  padding: 0.5em;
+}
+
+li:hover {
+  background-color: lightgray;
+  cursor: pointer;
+}
+
+.autocomplete {
+  border: 1px solid gray;
+  width: 70%;
+  margin: auto;
+}
+
+#searchInput,
+section {
+  width: 100%;
+}
+
+#searchInput {
+  height: 3em;
+}
+
+section {
+  max-height: 300px;
+  overflow: auto;
+}

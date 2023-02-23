@@ -1,0 +1,38 @@
+.viewport {
+  /* width: 150px; */
+  overflow: hidden;
+  position: relative;
+}
+
+.container {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  transition: all 1s; /* animation is here! */
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -ms-transition: all 1s;
+  -o-transition: all 1s;
+}
+
+.btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+}
+.btn:hover {
+  background: black;
+  color: #fff;
+  border: none;
+}
+.left-btn {
+  left: 0;
+}
+.right-btn {
+  right: 0;
+}
