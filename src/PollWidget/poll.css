@@ -1,0 +1,42 @@
+.container {
+  padding: 1em !important;
+  border: 1px solid black;
+  background-color: lightgray;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding: 1em;
+  text-align: left;
+}
+
+
+li.item {
+  padding: .3em !important;
+  border: 1px solid gray;
+  position: relative;
+  margin: .5em !important
+}
+
+span.rateText {
+  position: absolute;
+  right: 0;
+  top:50%
+}
+
+.progress {
+  height: 10px;
+  position: absolute;
+  height: 100%;
+  top:0;
+  background: rgba(117, 174, 53, 0.3);
+  transition:all 1s;
+  -webkit-transition:all 1s;
+  -moz-transition:all 1s;
+  -ms-transition:all 1s;
+  -o-transition:all 1s;
+}
+
+/* .item:hover{
+  background-color: black;
+  color: wheat;
+} */
