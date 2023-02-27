@@ -6,6 +6,7 @@ export const ProgressBarWrapper = () => {
     <div>
       <ProgressBar value={-20} />
       <ProgressBar value={0} />
+      <ProgressBar value={2} />
       <ProgressBar value={30} />
       <ProgressBar value={50} />
       <ProgressBar value={100} />

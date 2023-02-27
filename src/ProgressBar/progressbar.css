@@ -5,20 +5,12 @@
   height: 20px;
   width: 500px;
   position: relative;
+  overflow: hidden;
 }
 
 .inner {
-  border-radius: 8px 0 0 8px; 
-  /*
-  shortcut for : 
-    border-top-left-radius
-    border-top-right-radius
-    border-bottom-right-radius
-    border-bottom-left-radius
-  */
   background-color: blue;
   height: 100%;
   color: white;
   text-align: center;
-  overflow: hidden;
 }
