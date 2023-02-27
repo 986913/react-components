@@ -40,7 +40,7 @@ export const Poll = ({ header }) => {
           return (
             <li className='item' key={id} onClick={() => handleClick(item)}>
               {title}
-              <div className='progress' style={progressStyle}></div>
+              <div className='progress-poll' style={progressStyle}></div>
               {isVoted && <span className='rateText'>{`${voteRate}%`}</span>}
             </li>
           );
