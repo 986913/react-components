@@ -1,0 +1,20 @@
+.progress-outter{
+  height: 10px;
+  width: 300px;
+  background-color: lightgray;
+  margin-top: .5em !important;
+}
+
+.progress-inner {
+  background-color: green;
+  height: 100%;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition-duration: 2000ms;
+  transition-property: transform;
+  transition-timing-function: linear;
+}
+
+.bar-filled {
+  transform: scaleX(1)
+}

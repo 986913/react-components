@@ -15,7 +15,7 @@ export const Carousel = ({ dataSource, viewWidth }) => {
   const viewPortStyle = {
     width: viewWidth + 'px',
   };
-  // key point is here:
+  // key point is here: translateX用来左右平移
   const containerStyle = {
     transform: 'translateX(' + currentIndex * 150 + 'px)',
   };

@@ -3,14 +3,16 @@ import { AutocompleteWrapper } from './Autocomplete';
 import { CarouselWrapper } from './Carousel';
 import { PollWrapper } from './PollWidget/Wrapper';
 import { ProgressBarWrapper } from './ProgressBar';
+import { ProgressBarsWrapper } from './ProgressBars';
 
 function App() {
   return (
     <div className='App'>
       {/* <AutocompleteWrapper /> */}
       {/* <CarouselWrapper /> */}
-      <PollWrapper />
+      {/* <PollWrapper /> */}
       <ProgressBarWrapper />
+      <ProgressBarsWrapper />
     </div>
   );
 }
