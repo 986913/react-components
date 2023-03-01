@@ -5,6 +5,7 @@ import { PollWrapper } from './PollWidget/Wrapper';
 import { ProgressBarWrapper } from './ProgressBar';
 import { ProgressBarsWrapper } from './ProgressBars';
 import { AccordionWrapper } from './Accordion';
+import { AccordionIIWrapper } from './AccordionII';
 
 function App() {
   return (
@@ -14,7 +15,8 @@ function App() {
       {/* <PollWrapper /> */}
       {/* <ProgressBarWrapper /> */}
       {/* <ProgressBarsWrapper /> */}
-      <AccordionWrapper />
+      {/* <AccordionWrapper /> */}
+      <AccordionIIWrapper />
     </div>
   );
 }
