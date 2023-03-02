@@ -6,17 +6,24 @@ import { ProgressBarWrapper } from './ProgressBar';
 import { ProgressBarsWrapper } from './ProgressBars';
 import { AccordionWrapper } from './Accordion';
 import { AccordionIIWrapper } from './AccordionII';
+import { AppUseDebounceExample } from './Hooks/CustomizeHooks/useDebounce';
 
 function App() {
   return (
     <div className='App'>
+      <h2>React Components:</h2>
       {/* <AutocompleteWrapper /> */}
       {/* <CarouselWrapper /> */}
       {/* <PollWrapper /> */}
       {/* <ProgressBarWrapper /> */}
       {/* <ProgressBarsWrapper /> */}
       {/* <AccordionWrapper /> */}
-      <AccordionIIWrapper />
+      {/* <AccordionIIWrapper /> */}
+
+      <hr />
+
+      <h2>Hooks examples:</h2>
+      <AppUseDebounceExample />
     </div>
   );
 }
