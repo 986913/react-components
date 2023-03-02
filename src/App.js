@@ -20,10 +20,10 @@ function App() {
       {/* <AccordionWrapper /> */}
       {/* <AccordionIIWrapper /> */}
 
-      <hr />
+      {/* <hr /> */}
 
-      <h2>Hooks examples:</h2>
-      <AppUseDebounceExample />
+      {/* <h2>Hooks examples:</h2> */}
+      {/* <AppUseDebounceExample /> */}
     </div>
   );
 }
