@@ -23,7 +23,7 @@ const data = [
 ];
 
 /**
- * AccordionIII 与 AccordionII 的区别：只是增加了Accessbility的东西，function逻辑没变
+ * AccordionIII 与 AccordionII 的区别：只是增加了Accessbility keyboard的东西，function逻辑没变
  */
 export const AccordionIIIWrapper = () => {
   return (

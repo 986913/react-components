@@ -20,8 +20,52 @@ export const AccordionIII = ({ sections }) => {
     setOpenSections(newOpenSections);
   };
 
+  // <-- diff
+  const focusOnSection = (index) => {
+    document
+      .getElementById(getAccordionHeaderId(accordionId, sections[index].value))
+      .focus();
+  };
+
+  // <-- diff
+  const handleKeyDown = (event) => {
+    const activeItemValue = document.activeElement.getAttribute(
+      'data-accordion-value'
+    );
+
+    // Only respond to these interactions if an accordion title is in focus.
+    if (activeItemValue == null) return;
+
+    switch (event.code) {
+      case 'ArrowUp': {
+        const index = sections.findIndex(
+          ({ value: itemValue }) => itemValue === activeItemValue
+        );
+        focusOnSection((index - 1 + sections.length) % sections.length);
+        break;
+      }
+      case 'ArrowDown': {
+        const index = sections.findIndex(
+          ({ value: itemValue }) => itemValue === activeItemValue
+        );
+        focusOnSection((index + 1) % sections.length);
+        break;
+      }
+      case 'Home': {
+        focusOnSection(0);
+        break;
+      }
+      case 'End': {
+        focusOnSection(sections.length - 1);
+        break;
+      }
+      default:
+        break;
+    }
+  };
+
   return (
-    <div className='accordion'>
+    <div className='accordion' onKeyDown={handleKeyDown}>
       {sections.map(({ value, title, contents }) => {
         const isExpanded = openSections.has(value);
         const headerId = getAccordionHeaderId(accordionId, value);
@@ -36,6 +80,7 @@ export const AccordionIII = ({ sections }) => {
               id={headerId}
               aria-controls={panelId}
               aria-expanded={isExpanded}
+              data-accordion-value={value} // <-- diff
             >
               {title}
               <span
