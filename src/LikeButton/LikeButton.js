@@ -57,3 +57,19 @@ export const LikeButton = ({ sections }) => {
     </div>
   );
 };
+
+/**
+  知识点总结：
+
+    1. React 中 setState最好写在fetch data的逻辑里。
+    2. Fetch with Post 基本格式：
+      fetch(“url”, {
+        method: “POST”,
+        header: {
+          “Content-Type”: “application/json”
+        },
+        body: JSON.stringify({key: value})
+      })
+    3. React 中经常用到的helper function: const classNames = (…args) => args.filter(Boolean).join(“  “)
+      用法为： <div className={classNames(“classA”, active && “active”)}></div>
+ */
