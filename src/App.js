@@ -7,6 +7,7 @@ import { ProgressBarsWrapper } from './ProgressBars';
 import { AccordionWrapper } from './Accordion';
 import { AccordionIIWrapper } from './AccordionII';
 import { AccordionIIIWrapper } from './AccordionIII';
+import { LikeBtnWrapper } from './LikeButton';
 import { AppUseDebounceExample } from './Hooks/CustomizeHooks/useDebounce';
 
 function App() {
@@ -20,7 +21,8 @@ function App() {
       {/* <ProgressBarsWrapper /> */}
       {/* <AccordionWrapper /> */}
       {/* <AccordionIIWrapper /> */}
-      <AccordionIIIWrapper />
+      {/* <AccordionIIIWrapper /> */}
+      <LikeBtnWrapper />
       {/* <hr /> */}
 
       {/* <h2>Hooks examples:</h2> */}
