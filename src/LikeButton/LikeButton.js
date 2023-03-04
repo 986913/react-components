@@ -5,7 +5,7 @@ import './likebutton.css';
 // 👍 helper function
 const classNames = (...args) => args.filter(Boolean).join(' ');
 
-export const LikeButton = ({ sections }) => {
+export const LikeButton = () => {
   const [isLiked, setIsLiked] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState(null);
