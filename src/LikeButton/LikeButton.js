@@ -22,6 +22,8 @@ export const LikeButton = ({ sections }) => {
         },
         body: JSON.stringify(data),
       });
+
+      // use response.ok to see if api goes wrong or successfully
       if (!response.ok) {
         response.json().then((data) => {
           setErrorMessage(data.error);
