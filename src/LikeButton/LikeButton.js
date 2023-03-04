@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { HeartIcon, SpinnerIcon } from './icons';
 import './likebutton.css';
 
+// 👍 helper function
 const classNames = (...args) => args.filter(Boolean).join(' ');
 
 export const LikeButton = ({ sections }) => {
