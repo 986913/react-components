@@ -7,7 +7,7 @@
   padding: .5em;
   background-color: white;
   border-color: var(--defaultColor);
-  color: var(var(--defaultColor));
+  color: var(--defaultColor);
 }
 
 .button:hover {
