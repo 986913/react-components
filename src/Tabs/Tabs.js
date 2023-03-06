@@ -15,6 +15,7 @@ export const Tabs = ({ items }) => {
         {items.map(({ id, label }) => (
           <button
             key={id}
+            type='button'
             onClick={() => handleClick(id)}
             className={classNames('button', id === activeId && 'active')}
           >
