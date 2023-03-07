@@ -9,6 +9,7 @@ import { AccordionIIWrapper } from './AccordionII';
 import { AccordionIIIWrapper } from './AccordionIII';
 import { LikeBtnWrapper } from './LikeButton';
 import { TabsWrapper } from './Tabs';
+import { TabsIIWrapper } from './TabsII';
 import { AppUseDebounceExample } from './Hooks/CustomizeHooks/useDebounce';
 
 function App() {
@@ -24,7 +25,8 @@ function App() {
       {/* <AccordionIIWrapper /> */}
       {/* <AccordionIIIWrapper /> */}
       {/* <LikeBtnWrapper /> */}
-      <TabsWrapper />
+      {/* <TabsWrapper /> */}
+      <TabsIIWrapper />
       {/* <hr /> */}
 
       {/* <h2>Hooks examples:</h2> */}
