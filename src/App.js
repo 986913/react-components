@@ -4,6 +4,7 @@ import { CarouselWrapper } from './Carousel';
 import { PollWrapper } from './PollWidget/Wrapper';
 import { ProgressBarWrapper } from './ProgressBar';
 import { ProgressBarsWrapper } from './ProgressBars';
+import { ProgressBarsIIWrapper } from './ProgressBarsII';
 import { AccordionWrapper } from './Accordion';
 import { AccordionIIWrapper } from './AccordionII';
 import { AccordionIIIWrapper } from './AccordionIII';
@@ -22,13 +23,14 @@ function App() {
       {/* <PollWrapper /> */}
       {/* <ProgressBarWrapper /> */}
       {/* <ProgressBarsWrapper /> */}
+      <ProgressBarsIIWrapper />
       {/* <AccordionWrapper /> */}
       {/* <AccordionIIWrapper /> */}
       {/* <AccordionIIIWrapper /> */}
       {/* <LikeBtnWrapper /> */}
       {/* <TabsWrapper /> */}
       {/* <TabsIIWrapper /> */}
-      <StarRatingWrapper />
+      {/* <StarRatingWrapper /> */}
 
       {/* <hr /> */}
 

@@ -21,18 +21,16 @@ const ProgressBar = () => {
   );
 };
 
-export const ProgressBars = ({ value }) => {
+export const ProgressBars = () => {
   const [bars, setBars] = useState(0);
   const handleClick = () => setBars(bars + 1);
   return (
     <div>
       <button onClick={handleClick}>Add</button>
       <div>
-        {Array(bars)
-          .fill(null)
-          .map((_, index) => (
-            <ProgressBar key={index} />
-          ))}
+        {Array.from({ length: bars }).map((_, index) => (
+          <ProgressBar key={index} />
+        ))}
       </div>
     </div>
   );
