@@ -6,7 +6,7 @@ const classNames = (...args) => args.filter(Boolean).join(' ');
 const ProgressBarII = ({ isEmpty, onCompleted }) => {
   const [startTransition, setStartTransition] = useState(false);
 
-  // Start transition when the bar is no longer empty.
+  // diff ---> Start transition when the bar is no longer empty.
   useEffect(() => {
     if (isEmpty || startTransition) return;
     setStartTransition(true);
@@ -19,7 +19,7 @@ const ProgressBarII = ({ isEmpty, onCompleted }) => {
           'progress-inner',
           startTransition && 'bar-filled'
         )}
-        /* key point is here, use onTransitionEnd props to detect when a CSS transition is complete */
+        /* key point is here❗, use 🟡onTransitionEnd props to detect when a CSS transition is complete */
         onTransitionEnd={() => {
           onCompleted();
         }}
@@ -40,9 +40,9 @@ export const ProgressBarsII = () => {
         {Array.from({ length: bars }).map((_, index) => (
           <ProgressBarII
             key={index}
-            isEmpty={index > numFilledUpBars}
+            isEmpty={index > numFilledUpBars} // <-- diff
             onCompleted={() => {
-              setNumFilledUpBars(numFilledUpBars + 1);
+              setNumFilledUpBars(numFilledUpBars + 1); // <-- diff
             }}
           />
         ))}
