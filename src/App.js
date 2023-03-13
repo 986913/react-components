@@ -15,6 +15,7 @@ import { LikeBtnWrapper } from './LikeButton';
 import { TabsWrapper } from './Tabs';
 import { TabsIIWrapper } from './TabsII';
 import { StarRatingWrapper } from './StarRating';
+import { GridLightsWrapper } from './GridLights';
 import { AppUseDebounceExample } from './Hooks/CustomizeHooks/useDebounce';
 
 function App() {
@@ -54,6 +55,8 @@ function App() {
       {/* <TabsIIWrapper /> */}
 
       {/* <StarRatingWrapper /> */}
+
+      <GridLightsWrapper />
 
       {/* ------below are Hooks examples----------------------------------------------------- */}
 
