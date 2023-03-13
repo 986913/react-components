@@ -31,6 +31,11 @@ export const ProgressBarsIIII = ({ concurrencyLimit, fillUpTime }) => {
         const barsToIncrement = nonFullBars.slice(0, concurrencyLimit);
         const newProgression = currProgression.slice();
         for (const { index } of barsToIncrement) {
+          /* 计算每10ms该增加多少progress(也就是求x)
+              x        100
+            -----  =  -----
+              10     fillUpTime
+          */
           const increaseRate = (100 * 10) / fillUpTime;
           newProgression[index] += increaseRate;
         }
