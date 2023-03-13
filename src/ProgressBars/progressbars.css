@@ -13,6 +13,10 @@
   transition-duration: 2000ms;
   transition-property: transform;
   transition-timing-function: linear;
+  -webkit-transform: scaleX(0);
+  -moz-transform: scaleX(0);
+  -ms-transform: scaleX(0);
+  -o-transform: scaleX(0);
 }
 
 .bar-filled {
