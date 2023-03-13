@@ -6,6 +6,7 @@ import { ProgressBarWrapper } from './ProgressBar';
 import { ProgressBarsWrapper } from './ProgressBars';
 import { ProgressBarsIIWrapper } from './ProgressBarsII';
 import { ProgressBarsIIIWrapper } from './ProgressBarsIII';
+import { ProgressBarsIIIIWrapper } from './ProgressBarsIIII';
 import { AccordionWrapper } from './Accordion';
 import { AccordionIIWrapper } from './AccordionII';
 import { AccordionIIIWrapper } from './AccordionIII';
@@ -25,7 +26,8 @@ function App() {
       {/* <ProgressBarWrapper /> */}
       {/* <ProgressBarsWrapper /> */}
       {/* <ProgressBarsIIWrapper /> */}
-      <ProgressBarsIIIWrapper />
+      {/* <ProgressBarsIIIWrapper /> */}
+      <ProgressBarsIIIIWrapper />
       {/* <AccordionWrapper /> */}
       {/* <AccordionIIWrapper /> */}
       {/* <AccordionIIIWrapper /> */}

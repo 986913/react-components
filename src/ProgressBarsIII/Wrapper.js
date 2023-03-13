@@ -4,7 +4,7 @@ import { ProgressBarsIII } from './ProgressBarsIII';
 export const ProgressBarsIIIWrapper = () => {
   return (
     <div>
-      <ProgressBarsIII />
+      <ProgressBarsIII concurrencyLimit={3} />
     </div>
   );
 };

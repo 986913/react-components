@@ -1,0 +1,17 @@
+
+.progress-outterIIII{
+  height: 10px;
+  width: 300px;
+  background-color: lightgray;
+  margin-top: .5em !important;
+}
+
+.progress-innerIIII {
+  background-color: green;
+  height: 100%;
+  transform-origin: left;
+}
+
+.progressPre {
+  text-align: left;
+}

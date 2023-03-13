@@ -26,12 +26,11 @@ const ProgressBarIII = ({ isEmpty, onCompleted }) => {
   );
 };
 
-export const ProgressBarsIII = () => {
+export const ProgressBarsIII = ({ concurrencyLimit }) => {
   const [bars, setBars] = useState(0);
   const [numFilledUpBars, setNumFilledUpBars] = useState(0);
 
   const handleClick = () => setBars(bars + 1);
-  const CONCURRENCY_LIMIT = 3; // <-- diff
 
   return (
     <div>
@@ -40,7 +39,7 @@ export const ProgressBarsIII = () => {
         {Array.from({ length: bars }).map((_, index) => (
           <ProgressBarIII
             key={index}
-            isEmpty={index >= numFilledUpBars + CONCURRENCY_LIMIT} // <-- diff
+            isEmpty={index >= numFilledUpBars + concurrencyLimit} // <-- diff
             onCompleted={() => {
               setNumFilledUpBars(numFilledUpBars + 1);
             }}
