@@ -3,7 +3,7 @@ import './progressbarsII.css';
 
 const classNames = (...args) => args.filter(Boolean).join(' ');
 
-const ProgressBarII = ({ isEmpty, onCompleted }) => {
+const ProgressBarII = ({ duration, isEmpty, onCompleted }) => {
   const [startTransition, setStartTransition] = useState(false);
 
   // diff ---> Start transition when the bar is no longer empty.
@@ -13,11 +13,12 @@ const ProgressBarII = ({ isEmpty, onCompleted }) => {
   });
 
   return (
-    <div className='progress-outter'>
+    <div className='progress-outterII'>
       <div
+        style={{ transitionDuration: `${duration}ms` }}
         className={classNames(
-          'progress-inner',
-          startTransition && 'bar-filled'
+          'progress-innerII',
+          startTransition && 'bar-filledII'
         )}
         /* key point is here❗, use 🟡onTransitionEnd props to detect when a CSS transition is complete */
         onTransitionEnd={() => {
@@ -40,6 +41,7 @@ export const ProgressBarsII = () => {
         {Array.from({ length: bars }).map((_, index) => (
           <ProgressBarII
             key={index}
+            duration={1000}
             isEmpty={index > numFilledUpBars} // <-- diff
             onCompleted={() => {
               setNumFilledUpBars(numFilledUpBars + 1); // <-- diff

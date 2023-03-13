@@ -12,7 +12,7 @@ const ProgressBarIIII = ({ progress }) => {
   );
 };
 
-export const ProgressBarsIIII = ({ concurrencyLimit, fillUpTime }) => {
+export const ProgressBarsIIII = ({ concurrencyLimit, duration }) => {
   const [progression, setProgression] = useState([0]);
   const [timerId, setTimerId] = useState(null);
 
@@ -34,9 +34,9 @@ export const ProgressBarsIIII = ({ concurrencyLimit, fillUpTime }) => {
           /* 计算每10ms该增加多少progress(也就是求x)
               x        100
             -----  =  -----
-              10     fillUpTime
+              10     duration(ms)
           */
-          const increaseRate = (100 * 10) / fillUpTime;
+          const increaseRate = (100 * 10) / duration;
           newProgression[index] += increaseRate;
         }
         return newProgression;

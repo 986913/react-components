@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './progressbars.css';
 
-const ProgressBar = () => {
+const ProgressBar = ({ duration }) => {
   const [startTransition, setStartTransition] = useState(false);
 
   // Start transition after first render and never  apply this effect ever again.
@@ -13,6 +13,7 @@ const ProgressBar = () => {
   return (
     <div className='progress-outter'>
       <div
+        style={{ transitionDuration: `${duration}ms` }}
         className={['progress-inner', startTransition && 'bar-filled']
           .filter(Boolean)
           .join(' ')}
@@ -29,7 +30,8 @@ export const ProgressBars = () => {
       <button onClick={handleClick}>Add</button>
       <div>
         {Array.from({ length: bars }).map((_, index) => (
-          <ProgressBar key={index} />
+          // duration props: how much time to take to running whole bar (ms as unit)
+          <ProgressBar key={index} duration={4000} />
         ))}
       </div>
     </div>

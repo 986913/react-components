@@ -6,9 +6,9 @@ export const ProgressBarsIIIIWrapper = () => {
     <div>
       {/* 
           concurrencyLimit ---> 同时running的bars的个数
-          fillUpTime       ---> run完单独的bar需要的毫秒数
+          duration         ---> run完单独的bar需要的毫秒数
       */}
-      <ProgressBarsIIII concurrencyLimit={3} fillUpTime={2000} />
+      <ProgressBarsIIII concurrencyLimit={3} duration={2000} />
     </div>
   );
 };

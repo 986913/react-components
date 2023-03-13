@@ -3,7 +3,7 @@ import './progressbarsIII.css';
 
 const classNames = (...args) => args.filter(Boolean).join(' ');
 
-const ProgressBarIII = ({ isEmpty, onCompleted }) => {
+const ProgressBarIII = ({ duration, isEmpty, onCompleted }) => {
   const [startTransition, setStartTransition] = useState(false);
 
   useEffect(() => {
@@ -12,11 +12,12 @@ const ProgressBarIII = ({ isEmpty, onCompleted }) => {
   });
 
   return (
-    <div className='progress-outter'>
+    <div className='progress-outterIII'>
       <div
+        style={{ transitionDuration: `${duration}ms` }}
         className={classNames(
-          'progress-inner',
-          startTransition && 'bar-filled'
+          'progress-innerIII',
+          startTransition && 'bar-filledIII'
         )}
         onTransitionEnd={() => {
           onCompleted();
@@ -39,6 +40,7 @@ export const ProgressBarsIII = ({ concurrencyLimit }) => {
         {Array.from({ length: bars }).map((_, index) => (
           <ProgressBarIII
             key={index}
+            duration={1000}
             isEmpty={index >= numFilledUpBars + concurrencyLimit} // <-- diff
             onCompleted={() => {
               setNumFilledUpBars(numFilledUpBars + 1);
