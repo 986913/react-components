@@ -3,6 +3,7 @@ import { AutocompleteWrapper } from './Autocomplete';
 import { CarouselWrapper } from './Carousel';
 import { PollWrapper } from './PollWidget/Wrapper';
 import { ProgressBarWrapper } from './ProgressBar';
+import { ProgressBarIWrapper } from './ProgressBarI';
 import { ProgressBarsWrapper } from './ProgressBars';
 import { ProgressBarsIIWrapper } from './ProgressBarsII';
 import { ProgressBarsIIIWrapper } from './ProgressBarsIII';
@@ -20,20 +21,30 @@ function App() {
   return (
     <div className='App'>
       {/* <h2>React Components:</h2> */}
+
       {/* <AutocompleteWrapper /> */}
+
       {/* <CarouselWrapper /> */}
+
       {/* <PollWrapper /> */}
+
       {/* <ProgressBarWrapper /> */}
       {/* <ProgressBarsWrapper /> */}
       {/* <ProgressBarsIIWrapper /> */}
       {/* <ProgressBarsIIIWrapper /> */}
-      <ProgressBarsIIIIWrapper />
+      {/* <ProgressBarIWrapper /> */}
+      {/* ProgressBarsIIIIWrapper 是 ProgressBarIWrapper的升级 */}
+      {/* <ProgressBarsIIIIWrapper /> */}
+
       {/* <AccordionWrapper /> */}
       {/* <AccordionIIWrapper /> */}
       {/* <AccordionIIIWrapper /> */}
+
       {/* <LikeBtnWrapper /> */}
+
       {/* <TabsWrapper /> */}
       {/* <TabsIIWrapper /> */}
+
       {/* <StarRatingWrapper /> */}
 
       {/* <hr /> */}

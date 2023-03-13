@@ -36,8 +36,8 @@ export const ProgressBarsIIII = ({ concurrencyLimit, duration }) => {
             -----  =  -----
             10(ms)  duration(ms)
           */
-          const increaseRate = (100 * 10) / duration;
-          newProgression[index] += increaseRate;
+          const increased = (100 * 10) / duration;
+          newProgression[index] += increased;
         }
         return newProgression;
       });
