@@ -12,7 +12,7 @@ export const ProgressBar = ({ value }) => {
     <div className='progress'>
       <div
         className='inner'
-        style={{ width: `${clampedValue}%` }}
+        style={{ transform: `scaleX(${value / 100})` }}
         role='progressbar'
         aria-valuenow={clampedValue}
         aria-valuemin={MIN}
