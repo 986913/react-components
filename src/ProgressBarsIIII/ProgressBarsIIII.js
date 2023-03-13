@@ -34,7 +34,7 @@ export const ProgressBarsIIII = ({ concurrencyLimit, duration }) => {
           /* 计算每10ms该增加多少progress(也就是求x)
               x        100
             -----  =  -----
-              10     duration(ms)
+            10(ms)  duration(ms)
           */
           const increaseRate = (100 * 10) / duration;
           newProgression[index] += increaseRate;
