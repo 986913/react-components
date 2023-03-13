@@ -28,12 +28,20 @@ function App() {
 
       {/* <PollWrapper /> */}
 
+      {/* 
+        下面4个progress components没有计算， 全都基于CSS:
+          from transform: scaleX(0) to transform: scaleX(1) + transition-duration
+      */}
       {/* <ProgressBarWrapper /> */}
       {/* <ProgressBarsWrapper /> */}
       {/* <ProgressBarsIIWrapper /> */}
       {/* <ProgressBarsIIIWrapper /> */}
+      {/* 
+        下面ProgressBarsIIIIWrapper 和 ProgressBarIWrapper是重点， 因为场景更多见：
+          1. 需要计算每10ms增加具体多少的progress
+          2. 有interaction行为，比如start, pause, reset etc
+      */}
       {/* <ProgressBarIWrapper /> */}
-      {/* ProgressBarsIIIIWrapper 是 ProgressBarIWrapper的升级 */}
       {/* <ProgressBarsIIIIWrapper /> */}
 
       {/* <AccordionWrapper /> */}
@@ -47,9 +55,8 @@ function App() {
 
       {/* <StarRatingWrapper /> */}
 
-      {/* <hr /> */}
+      {/* ------below are Hooks examples----------------------------------------------------- */}
 
-      {/* <h2>Hooks examples:</h2> */}
       {/* <AppUseDebounceExample /> */}
     </div>
   );
