@@ -12,7 +12,7 @@ export const ProgressBarIWrapper = () => {
 
   const start = () => {
     const timer = setInterval(() => {
-      //setProgress使用函数作为参数 ----> 这种使用函数来计算新的状态值的方式，可以避免因为异步更新导致的状态不同步的问题。
+      //setProgress使用🟡函数作为参数 ----> 这种使用函数来计算新的状态值的方式，可以避免因为异步更新导致的状态不同步的问题。
       setProgress((prevProgress) => {
         // once bar is full, none to increment.
         if (prevProgress >= 100) return prevProgress;
