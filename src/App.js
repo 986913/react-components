@@ -5,6 +5,7 @@ import { PollWrapper } from './PollWidget/Wrapper';
 import { ProgressBarWrapper } from './ProgressBar';
 import { ProgressBarsWrapper } from './ProgressBars';
 import { ProgressBarsIIWrapper } from './ProgressBarsII';
+import { ProgressBarsIIIWrapper } from './ProgressBarsIII';
 import { AccordionWrapper } from './Accordion';
 import { AccordionIIWrapper } from './AccordionII';
 import { AccordionIIIWrapper } from './AccordionIII';
@@ -17,13 +18,14 @@ import { AppUseDebounceExample } from './Hooks/CustomizeHooks/useDebounce';
 function App() {
   return (
     <div className='App'>
-      <h2>React Components:</h2>
+      {/* <h2>React Components:</h2> */}
       {/* <AutocompleteWrapper /> */}
       {/* <CarouselWrapper /> */}
       {/* <PollWrapper /> */}
       {/* <ProgressBarWrapper /> */}
       {/* <ProgressBarsWrapper /> */}
-      <ProgressBarsIIWrapper />
+      {/* <ProgressBarsIIWrapper /> */}
+      <ProgressBarsIIIWrapper />
       {/* <AccordionWrapper /> */}
       {/* <AccordionIIWrapper /> */}
       {/* <AccordionIIIWrapper /> */}
