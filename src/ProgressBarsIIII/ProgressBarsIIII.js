@@ -12,7 +12,7 @@ const ProgressBarIIII = ({ progress }) => {
   );
 };
 
-export const ProgressBarsIIII = ({ concurrencyLimit }) => {
+export const ProgressBarsIIII = ({ concurrencyLimit, fillUpTime }) => {
   const [progression, setProgression] = useState([0]);
   const [timerId, setTimerId] = useState(null);
 
@@ -31,9 +31,9 @@ export const ProgressBarsIIII = ({ concurrencyLimit }) => {
         const barsToIncrement = nonFullBars.slice(0, concurrencyLimit);
         const newProgression = currProgression.slice();
         for (const { index } of barsToIncrement) {
-          newProgression[index] += 0.5;
+          const increaseRate = (100 * 10) / fillUpTime;
+          newProgression[index] += increaseRate;
         }
-
         return newProgression;
       });
     }, 10);
