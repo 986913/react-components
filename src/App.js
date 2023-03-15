@@ -20,6 +20,7 @@ import { TrafficLightsWrapper } from './TrafficLights';
 import { AnalogClockWrapper } from './AnalogClock';
 import { DigitialClockWrapper } from './DigitalClock';
 import { AppUseDebounceExample } from './Hooks/CustomizeHooks/useDebounce';
+import { AppUseCurrentDateExample } from './Hooks/CustomizeHooks/useCurentDate';
 
 function App() {
   return (
@@ -68,6 +69,7 @@ function App() {
       {/* ------below are Hooks examples----------------------------------------------------- */}
 
       {/* <AppUseDebounceExample /> */}
+      {/* <AppUseCurrentDateExample /> */}
     </div>
   );
 }
