@@ -16,6 +16,9 @@ import { TabsWrapper } from './Tabs';
 import { TabsIIWrapper } from './TabsII';
 import { StarRatingWrapper } from './StarRating';
 import { GridLightsWrapper } from './GridLights';
+import { TrafficLightsWrapper } from './TrafficLights';
+import { AnalogClockWrapper } from './AnalogClock';
+import { DigitialClockWrapper } from './DigitalClock';
 import { AppUseDebounceExample } from './Hooks/CustomizeHooks/useDebounce';
 
 function App() {
@@ -56,7 +59,11 @@ function App() {
 
       {/* <StarRatingWrapper /> */}
 
-      <GridLightsWrapper />
+      {/* <GridLightsWrapper /> */}
+      {/* <TrafficLightsWrapper /> */}
+
+      <AnalogClockWrapper />
+      {/* <DigitialClockWrapper /> */}
 
       {/* ------below are Hooks examples----------------------------------------------------- */}
 
