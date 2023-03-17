@@ -61,10 +61,10 @@ function App() {
       {/* <StarRatingWrapper /> */}
 
       {/* <GridLightsWrapper /> */}
-      {/* <TrafficLightsWrapper /> */}
+      <TrafficLightsWrapper />
 
       {/* <AnalogClockWrapper /> */}
-      <DigitalClockWrapper />
+      {/* <DigitalClockWrapper /> */}
 
       {/* ------below are Hooks examples----------------------------------------------------- */}
       {/* <AppUseDebounceExample /> */}
