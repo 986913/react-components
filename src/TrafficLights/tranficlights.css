@@ -20,13 +20,3 @@
   width: var(--size);
   border-radius: 100%;
 }
-
-.red {
-  background-color: red;
-}
-.green {
-  background-color: green;
-}
-.yellow {
-  background-color: yellow;
-}
