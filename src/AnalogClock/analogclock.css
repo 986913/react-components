@@ -1,20 +1,11 @@
-
-.clock {
-  display: block;
-  position: relative;
-  width: var(--size);
-  height: var(--size);
-  border-radius: 100%;
-  border: 2px solid #ccc;
-  transform: rotate(180deg);
-}
-
-.clock-hand {
+.digit-clock {
+  border: 3px solid gray;
+  border-radius: 10px;
+  width: 200px;
+  height: 80px;
+  line-height: 80px;
+  font-size: xx-large;
+  color: white;
+  text-align: center;
   background-color: black;
-  position: absolute;
-  width: 1px;
-  height: calc(var(--size) / 2);
-  left: calc(var(--size) / 2);
-  top: calc(var(--size) / 2);
-  transform-origin: top center;
 }

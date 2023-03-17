@@ -18,7 +18,7 @@ import { StarRatingWrapper } from './StarRating';
 import { GridLightsWrapper } from './GridLights';
 import { TrafficLightsWrapper } from './TrafficLights';
 import { AnalogClockWrapper } from './AnalogClock';
-import { DigitialClockWrapper } from './DigitalClock';
+import { DigitalClockWrapper } from './DigitalClock';
 import { AppUseDebounceExample } from './Hooks/CustomizeHooks/useDebounce';
 import { AppUseCurrentDateExample } from './Hooks/CustomizeHooks/useCurentDate';
 
@@ -63,11 +63,10 @@ function App() {
       {/* <GridLightsWrapper /> */}
       {/* <TrafficLightsWrapper /> */}
 
-      <AnalogClockWrapper />
-      {/* <DigitialClockWrapper /> */}
+      {/* <AnalogClockWrapper /> */}
+      <DigitalClockWrapper />
 
       {/* ------below are Hooks examples----------------------------------------------------- */}
-
       {/* <AppUseDebounceExample /> */}
       {/* <AppUseCurrentDateExample /> */}
     </div>
