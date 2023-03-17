@@ -19,6 +19,7 @@ import { GridLightsWrapper } from './GridLights';
 import { TrafficLightsWrapper } from './TrafficLights';
 import { AnalogClockWrapper } from './AnalogClock';
 import { DigitalClockWrapper } from './DigitalClock';
+import { GenerateTableWrapper } from './GenerateTable';
 import { AppUseDebounceExample } from './Hooks/CustomizeHooks/useDebounce';
 import { AppUseCurrentDateExample } from './Hooks/CustomizeHooks/useCurentDate';
 
@@ -33,6 +34,7 @@ function App() {
 
       {/* <PollWrapper /> */}
 
+      <GenerateTableWrapper />
       {/* 
         下面4个progress components没有计算， 全都基于CSS:
           from transform: scaleX(0) to transform: scaleX(1) + transition-duration
@@ -61,7 +63,7 @@ function App() {
       {/* <StarRatingWrapper /> */}
 
       {/* <GridLightsWrapper /> */}
-      <TrafficLightsWrapper />
+      {/* <TrafficLightsWrapper /> */}
 
       {/* <AnalogClockWrapper /> */}
       {/* <DigitalClockWrapper /> */}

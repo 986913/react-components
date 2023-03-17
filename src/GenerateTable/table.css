@@ -1,0 +1,27 @@
+
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.table {
+  margin: auto;
+  border: 1px solid black;
+  min-height: 200px;
+  min-width: 200px;
+  
+  --unitSize: 30px;
+}
+
+tr {
+  height: var(--unitSize);
+  width: var(--unitSize);
+}
+
+td {
+  width: var(--unitSize);
+  height: var(--unitSize);
+  border: 1px solid gray ;
+}
