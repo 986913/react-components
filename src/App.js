@@ -19,6 +19,7 @@ import { GridLightsWrapper } from './GridLights';
 import { TrafficLightsWrapper } from './TrafficLights';
 import { AnalogClockWrapper } from './AnalogClock';
 import { DigitalClockWrapper } from './DigitalClock';
+import { StopWatchWrapper } from './StopWatch';
 import { GenerateTableWrapper } from './GenerateTable';
 import { AppUseDebounceExample } from './Hooks/CustomizeHooks/useDebounce';
 import { AppUseCurrentDateExample } from './Hooks/CustomizeHooks/useCurentDate';
@@ -26,15 +27,23 @@ import { AppUseCurrentDateExample } from './Hooks/CustomizeHooks/useCurentDate';
 function App() {
   return (
     <div className='App'>
-      {/* <h2>React Components:</h2> */}
-
       {/* <AutocompleteWrapper /> */}
 
       {/* <CarouselWrapper /> */}
 
       {/* <PollWrapper /> */}
 
-      <GenerateTableWrapper />
+      {/* <GenerateTableWrapper /> */}
+
+      {/* <TabsWrapper /> */}
+      {/* <TabsIIWrapper /> */}
+
+      {/* <StarRatingWrapper /> */}
+
+      {/* <AccordionWrapper /> */}
+      {/* <AccordionIIWrapper /> */}
+      {/* <AccordionIIIWrapper /> */}
+
       {/* 
         下面4个progress components没有计算， 全都基于CSS:
           from transform: scaleX(0) to transform: scaleX(1) + transition-duration
@@ -51,22 +60,14 @@ function App() {
       {/* <ProgressBarIWrapper /> */}
       {/* <ProgressBarsIIIIWrapper /> */}
 
-      {/* <AccordionWrapper /> */}
-      {/* <AccordionIIWrapper /> */}
-      {/* <AccordionIIIWrapper /> */}
-
       {/* <LikeBtnWrapper /> */}
-
-      {/* <TabsWrapper /> */}
-      {/* <TabsIIWrapper /> */}
-
-      {/* <StarRatingWrapper /> */}
 
       {/* <GridLightsWrapper /> */}
       {/* <TrafficLightsWrapper /> */}
 
       {/* <AnalogClockWrapper /> */}
       {/* <DigitalClockWrapper /> */}
+      <StopWatchWrapper />
 
       {/* ------below are Hooks examples----------------------------------------------------- */}
       {/* <AppUseDebounceExample /> */}
