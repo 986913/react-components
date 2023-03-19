@@ -103,8 +103,6 @@ const mockData = [
   },
 ];
 
-export default mockData;
-
 export const TreeViewWrapperI = () => {
   // note: defaultExpandedKeys 等会再实现
   return <TreeView treeData={mockData} defaultExpandedKeys={['china']} />;

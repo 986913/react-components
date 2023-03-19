@@ -24,6 +24,7 @@ import { StopWatchWrapper } from './StopWatch';
 import { GenerateTableWrapper } from './GenerateTable';
 import { CalculatorWrapper } from './Calculator';
 import { TreeViewWrapperI } from './TreeViewI';
+import { TreeViewWrapperII } from './TreeViewII';
 import { TransferListWrapperI } from './TransferListI';
 import { TransferListWrapperII } from './TransferListII';
 import { InfiniteScrollWrapper } from './InfiniteScroll/Wrapper';
@@ -76,7 +77,8 @@ function App() {
       {/* <ProgressBarIWrapper /> */}
       {/* <ProgressBarsIIIIWrapper /> */}
 
-      <TreeViewWrapperI />
+      {/* <TreeViewWrapperI /> */}
+      <TreeViewWrapperII />
 
       {/* <LikeBtnWrapper /> */}
 
