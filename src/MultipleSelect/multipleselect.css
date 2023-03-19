@@ -1,0 +1,55 @@
+.multiple-selection-container {
+  width: 500px;
+}
+
+ul li {
+  list-style: none;
+}
+
+.selected-container {
+  border: 1px solid gray;
+  display: flex;
+  height: 30px;
+  position: relative;
+}
+
+.selected-container:focus {
+  border: 1px solid blue;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.clear-all {
+  position: absolute;
+  right: 0;
+  height: 100%;
+  border: none;
+}
+.clear-all:hover {
+  cursor: pointer;
+}
+
+.selected-item {
+  border: 1px solid lightgray;
+  margin: 5px;
+  background: lightgray;
+  cursor: pointer;
+}
+
+.delete {
+  color: red;
+  margin: 0 5px;
+}
+
+.list-container {
+  width: 100%;
+  border: 1px solid lightgray;
+}
+
+.list-item {
+  padding: 5px;
+}
+
+.list-item:hover {
+  background: lightgrey;
+  cursor: pointer;
+}

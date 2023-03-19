@@ -26,6 +26,7 @@ import { CalculatorWrapper } from './Calculator';
 import { TransferListWrapperI } from './TransferListI';
 import { TransferListWrapperII } from './TransferListII';
 import { InfiniteScrollWrapper } from './InfiniteScroll/Wrapper';
+import { MultipleSelectWrapper } from './MultipleSelect';
 import { AppUseDebounceExample } from './Hooks/CustomizeHooks/useDebounce';
 import { AppUseCurrentDateExample } from './Hooks/CustomizeHooks/useCurentDate';
 
@@ -55,6 +56,8 @@ function App() {
 
       {/* <TransferListWrapperI /> */}
       {/* <TransferListWrapperII /> */}
+
+      <MultipleSelectWrapper />
 
       {/* 
         下面4个progress components没有计算， 全都基于CSS:
