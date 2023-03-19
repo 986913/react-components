@@ -23,6 +23,7 @@ import { DigitalClockWrapper } from './DigitalClock';
 import { StopWatchWrapper } from './StopWatch';
 import { GenerateTableWrapper } from './GenerateTable';
 import { CalculatorWrapper } from './Calculator';
+import { TreeViewWrapperI } from './TreeViewI';
 import { TransferListWrapperI } from './TransferListI';
 import { TransferListWrapperII } from './TransferListII';
 import { InfiniteScrollWrapper } from './InfiniteScroll/Wrapper';
@@ -57,7 +58,7 @@ function App() {
       {/* <TransferListWrapperI /> */}
       {/* <TransferListWrapperII /> */}
 
-      <MultipleSelectWrapper />
+      {/* <MultipleSelectWrapper /> */}
 
       {/* 
         下面4个progress components没有计算， 全都基于CSS:
@@ -74,6 +75,8 @@ function App() {
       */}
       {/* <ProgressBarIWrapper /> */}
       {/* <ProgressBarsIIIIWrapper /> */}
+
+      <TreeViewWrapperI />
 
       {/* <LikeBtnWrapper /> */}
 

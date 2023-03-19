@@ -1,0 +1,9 @@
+
+.tree-item{
+  list-style: none;
+  padding-left: 10px;
+}
+
+.icon {
+  cursor: pointer;
+}
