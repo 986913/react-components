@@ -23,9 +23,10 @@ import { DigitalClockWrapper } from './DigitalClock';
 import { StopWatchWrapper } from './StopWatch';
 import { GenerateTableWrapper } from './GenerateTable';
 import { CalculatorWrapper } from './Calculator';
+import { TransferListWrapperI } from './TransferListI';
+import { InfiniteScrollWrapper } from './InfiniteScroll/Wrapper';
 import { AppUseDebounceExample } from './Hooks/CustomizeHooks/useDebounce';
 import { AppUseCurrentDateExample } from './Hooks/CustomizeHooks/useCurentDate';
-import { InfiniteScrollWrapper } from './InfiniteScroll/Wrapper';
 
 function App() {
   return (
@@ -49,7 +50,9 @@ function App() {
       {/* <AccordionIIWrapper /> */}
       {/* <AccordionIIIWrapper /> */}
 
-      <InfiniteScrollWrapper />
+      {/* <InfiniteScrollWrapper /> */}
+
+      <TransferListWrapperI />
 
       {/* 
         下面4个progress components没有计算， 全都基于CSS:
