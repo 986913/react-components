@@ -1,0 +1,28 @@
+.transferBox {
+  border: 1px solid black;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.transfer-column {
+  width: 45%;
+  border: 1px solid green;
+  max-height: 300px;
+  overflow: auto;
+}
+
+.transfer-column-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.transfer-item {
+  margin: 10px;
+}
+
+
+.disable {
+  color: #ccc;
+}
