@@ -1,0 +1,26 @@
+.pagination-container {
+  display: flex;
+  list-style: none;
+}
+
+.pagination-container li {
+  width: 50px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  text-align: center;
+}
+
+._active {
+  background-color: lightseagreen;
+}
+
+._disable {
+  color: #ccc;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+li.eclipese {
+  border: none;
+  text-align: center;
+}

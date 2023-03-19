@@ -27,6 +27,7 @@ import { TreeViewWrapperI } from './TreeViewI';
 import { TreeViewWrapperII } from './TreeViewII';
 import { TransferListWrapperI } from './TransferListI';
 import { TransferListWrapperII } from './TransferListII';
+import { PaginationWrapperI } from './PaginationI/Wrapper';
 import { InfiniteScrollWrapper } from './InfiniteScroll/Wrapper';
 import { MultipleSelectWrapper } from './MultipleSelect';
 import { AppUseDebounceExample } from './Hooks/CustomizeHooks/useDebounce';
@@ -34,7 +35,7 @@ import { AppUseCurrentDateExample } from './Hooks/CustomizeHooks/useCurentDate';
 
 function App() {
   return (
-    <div className='App'>
+    <div>
       {/* <AutocompleteWrapper /> */}
 
       {/* <CarouselWrapper /> */}
@@ -61,6 +62,8 @@ function App() {
 
       {/* <MultipleSelectWrapper /> */}
 
+      <PaginationWrapperI />
+
       {/* 
         下面4个progress components没有计算， 全都基于CSS:
           from transform: scaleX(0) to transform: scaleX(1) + transition-duration
@@ -78,7 +81,7 @@ function App() {
       {/* <ProgressBarsIIIIWrapper /> */}
 
       {/* <TreeViewWrapperI /> */}
-      <TreeViewWrapperII />
+      {/* <TreeViewWrapperII /> */}
 
       {/* <LikeBtnWrapper /> */}
 
