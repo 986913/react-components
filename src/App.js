@@ -21,6 +21,7 @@ import { AnalogClockWrapper } from './AnalogClock';
 import { DigitalClockWrapper } from './DigitalClock';
 import { StopWatchWrapper } from './StopWatch';
 import { GenerateTableWrapper } from './GenerateTable';
+import { CalculatorWrapper } from './Calculator';
 import { AppUseDebounceExample } from './Hooks/CustomizeHooks/useDebounce';
 import { AppUseCurrentDateExample } from './Hooks/CustomizeHooks/useCurentDate';
 
@@ -67,7 +68,9 @@ function App() {
 
       {/* <AnalogClockWrapper /> */}
       {/* <DigitalClockWrapper /> */}
-      <StopWatchWrapper />
+      {/* <StopWatchWrapper /> */}
+
+      <CalculatorWrapper />
 
       {/* ------below are Hooks examples----------------------------------------------------- */}
       {/* <AppUseDebounceExample /> */}
