@@ -13,7 +13,7 @@ const TableImplement = ({ rows, columns }) => {
                   <td key={`col-${col}`}>
                     {col % 2 === 0
                       ? rows * col + (row + 1)
-                      : rows * (col + 1) - row}{' '}
+                      : rows * (col + 1) - row}
                   </td>
                 );
               })}
