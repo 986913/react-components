@@ -1,0 +1,17 @@
+.pagi-container,
+.pages-nums-container {
+  display: flex !important
+}
+
+.pages-nums-container li {
+  padding: 3px;
+}
+
+.current {
+  background: lightcoral;
+}
+.disable {
+  opacity: 0.3;
+  pointer-events: none;
+  cursor: not-allowed;
+}

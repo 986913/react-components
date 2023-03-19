@@ -44,7 +44,7 @@ export const AutoComplete = ({ api }) => {
       />
 
       {list && searchText && (
-        <section>
+        <section className='section'>
           <ul>
             {list.map((item) => (
               <li

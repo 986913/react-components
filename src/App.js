@@ -28,6 +28,7 @@ import { TreeViewWrapperII } from './TreeViewII';
 import { TransferListWrapperI } from './TransferListI';
 import { TransferListWrapperII } from './TransferListII';
 import { PaginationWrapperI } from './PaginationI/Wrapper';
+import { PaginationWrapperII } from './PaginationII/Wrapper';
 import { InfiniteScrollWrapper } from './InfiniteScroll/Wrapper';
 import { MultipleSelectWrapper } from './MultipleSelect';
 import { AppUseDebounceExample } from './Hooks/CustomizeHooks/useDebounce';
@@ -62,7 +63,8 @@ function App() {
 
       {/* <MultipleSelectWrapper /> */}
 
-      <PaginationWrapperI />
+      {/* <PaginationWrapperI /> */}
+      <PaginationWrapperII />
 
       {/* 
         下面4个progress components没有计算， 全都基于CSS:
