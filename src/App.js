@@ -1,6 +1,7 @@
 import './App.css';
 import { AutocompleteWrapper } from './Autocomplete';
 import { CarouselWrapper } from './Carousel';
+import { CascaderWrapper } from './Cascader';
 import { PollWrapper } from './PollWidget/Wrapper';
 import { ProgressBarWrapper } from './ProgressBar';
 import { ProgressBarIWrapper } from './ProgressBarI';
@@ -31,6 +32,8 @@ function App() {
       {/* <AutocompleteWrapper /> */}
 
       {/* <CarouselWrapper /> */}
+
+      <CascaderWrapper />
 
       {/* <PollWrapper /> */}
 
@@ -70,7 +73,7 @@ function App() {
       {/* <DigitalClockWrapper /> */}
       {/* <StopWatchWrapper /> */}
 
-      <CalculatorWrapper />
+      {/* <CalculatorWrapper /> */}
 
       {/* ------below are Hooks examples----------------------------------------------------- */}
       {/* <AppUseDebounceExample /> */}
