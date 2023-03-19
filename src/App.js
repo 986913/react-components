@@ -25,6 +25,7 @@ import { GenerateTableWrapper } from './GenerateTable';
 import { CalculatorWrapper } from './Calculator';
 import { AppUseDebounceExample } from './Hooks/CustomizeHooks/useDebounce';
 import { AppUseCurrentDateExample } from './Hooks/CustomizeHooks/useCurentDate';
+import { InfiniteScrollWrapper } from './InfiniteScroll/Wrapper';
 
 function App() {
   return (
@@ -33,7 +34,7 @@ function App() {
 
       {/* <CarouselWrapper /> */}
 
-      <CascaderWrapper />
+      {/* <CascaderWrapper /> */}
 
       {/* <PollWrapper /> */}
 
@@ -47,6 +48,8 @@ function App() {
       {/* <AccordionWrapper /> */}
       {/* <AccordionIIWrapper /> */}
       {/* <AccordionIIIWrapper /> */}
+
+      <InfiniteScrollWrapper />
 
       {/* 
         下面4个progress components没有计算， 全都基于CSS:
