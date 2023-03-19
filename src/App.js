@@ -53,8 +53,8 @@ function App() {
 
       {/* <InfiniteScrollWrapper /> */}
 
-      <TransferListWrapperI />
-      <TransferListWrapperII />
+      {/* <TransferListWrapperI /> */}
+      {/* <TransferListWrapperII /> */}
 
       {/* 
         下面4个progress components没有计算， 全都基于CSS:
