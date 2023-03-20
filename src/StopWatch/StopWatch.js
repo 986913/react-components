@@ -39,26 +39,22 @@ const formatTime = (timeParam) => {
 };
 
 export const StopWatch = () => {
-  const lastTickTiming = useRef(null);
+  const lastTickTiming = useRef(null); // use `useRef` to create this value since it's not used in the render code.
   const [totalDuration, setTotalDuration] = useState(0);
   const [timerId, setTimerId] = useState(null); // Timer ID of the active interval, if one is running.
 
   const isRunning = timerId != null; // Derived state to determine if there's a timer running.
 
   const startTimer = () => {
-    lastTickTiming.current = Date.now();
-    console.log(lastTickTiming);
+    lastTickTiming.current = Date.now(); // 用于记录上次setInterval的callback停在哪儿了(记录了ms)
 
+    //下面这个setInterval一直run, 每隔1ms run一次callback, 然后根据 之前的现在的时间-上次记录的ms = passedtime, 再去更新totalDuration
     const timer = window.setInterval(() => {
       const now = Date.now();
       const timePassed = now - lastTickTiming.current;
-      setTotalDuration(
-        (duration) =>
-          // Use the callback form of setState to ensure we are using the latest value of duration.
-          duration + timePassed
-      );
-
-      lastTickTiming.current = now;
+      // Use the callback form of setState to ensure we are using the latest value of duration.
+      setTotalDuration((duration) => duration + timePassed);
+      lastTickTiming.current = now; // update lastTickTiming
     }, 1);
 
     setTimerId(timer);
