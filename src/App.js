@@ -42,6 +42,7 @@ import { AppUseDebounceExample } from './Hooks/CustomizeHooks/useDebounce';
 import { AppUseCurrentDateExample } from './Hooks/CustomizeHooks/useCurentDate';
 import { AppUseAsyncExample } from './Hooks/CustomizeHooks/useAsync';
 import { AppUseEventListenerExample } from './Hooks/CustomizeHooks/useEventListener';
+import { AppUseOnlineExample } from './Hooks/CustomizeHooks/useOnline';
 
 function App() {
   return (
@@ -120,7 +121,8 @@ function App() {
       {/* <AppUseDebounceExample /> */}
       {/* <AppUseCurrentDateExample /> */}
       {/* <AppUseAsyncExample /> */}
-      <AppUseEventListenerExample />
+      {/* <AppUseEventListenerExample /> */}
+      <AppUseOnlineExample />
     </div>
   );
 }
