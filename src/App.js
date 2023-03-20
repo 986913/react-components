@@ -52,6 +52,8 @@ import { AppUseMemoExample1 } from './Hooks/ReacBuildIntHooks/useMemo_eg1';
 import { AppUseMemoExample2 } from './Hooks/ReacBuildIntHooks/useMemo_eg2';
 import { AppUseCallbackExample1 } from './Hooks/ReacBuildIntHooks/useCallback_eg1';
 import { AppUseCallbackExample2 } from './Hooks/ReacBuildIntHooks/useCallback_eg2';
+import { AppUseReducerExample1 } from './Hooks/ReacBuildIntHooks/useReducer_eg1';
+import { AppUseReducerExample2 } from './Hooks/ReacBuildIntHooks/useReducer_eg2';
 
 function App() {
   return (
@@ -137,9 +139,10 @@ function App() {
       {/* <AppUseTimeoutExample /> */}
 
       {/* <AppUseEffectExample1 /> */}
-
+      {/* <AppUseReducerExample1 /> */}
+      <AppUseReducerExample2 />
       {/* <AppUseMemoExample1 /> */}
-      <AppUseMemoExample2 />
+      {/* <AppUseMemoExample2 /> */}
       {/* <AppUseCallbackExample1 /> */}
       {/* <AppUseCallbackExample2 /> */}
     </div>
