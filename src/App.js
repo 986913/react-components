@@ -28,6 +28,7 @@ import { GenerateTableWrapper } from './GenerateTable';
 import { CalculatorWrapper } from './Calculator';
 import { TreeViewWrapperI } from './TreeViewI';
 import { TreeViewWrapperII } from './TreeViewII';
+import { TodolistWrapper } from './TodoList/Wrapper';
 import { TransferListWrapperI } from './TransferListI';
 import { TransferListWrapperII } from './TransferListII';
 import { PaginationWrapperI } from './PaginationI/Wrapper';
@@ -72,7 +73,9 @@ function App() {
       {/* <MentionsWrapperI /> */}
       {/* <MentionsWrapperII /> */}
 
-      <SpinnerWrapper />
+      {/* <SpinnerWrapper /> */}
+
+      <TodolistWrapper />
 
       {/* 
         下面4个progress components没有计算， 全都基于CSS:

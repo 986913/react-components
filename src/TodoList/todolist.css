@@ -1,0 +1,25 @@
+
+.itemContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.addBtn {
+  background-color: green;
+}
+
+.deleteBtn {
+  background-color: red;
+}
+
+.editBtn {
+  background-color: yellow;
+}
+
+.saveBtn {
+  background-color: blue;
+}
+
+.cancelBtn {
+  background-color: gray;
+}
