@@ -46,6 +46,7 @@ import { AppUseEventListenerExample } from './Hooks/CustomizeHooks/useEventListe
 import { AppUseOnlineExample } from './Hooks/CustomizeHooks/useOnline';
 import { AppUseHoverExample } from './Hooks/CustomizeHooks/useHover';
 import { AppUseToggleExample } from './Hooks/CustomizeHooks/useToggle';
+import { AppUseTimeoutExample } from './Hooks/CustomizeHooks/useTimeout';
 
 function App() {
   return (
@@ -127,7 +128,8 @@ function App() {
       {/* <AppUseEventListenerExample /> */}
       {/* <AppUseOnlineExample /> */}
       {/* <AppUseHoverExample /> */}
-      <AppUseToggleExample />
+      {/* <AppUseToggleExample /> */}
+      <AppUseTimeoutExample />
     </div>
   );
 }
