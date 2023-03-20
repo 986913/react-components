@@ -48,6 +48,7 @@ import { AppUseHoverExample } from './Hooks/CustomizeHooks/useHover';
 import { AppUseToggleExample } from './Hooks/CustomizeHooks/useToggle';
 import { AppUseTimeoutExample } from './Hooks/CustomizeHooks/useTimeout';
 import { AppUseCallbackExample1 } from './Hooks/ReacBuildIntHooks/useCallback_eg1';
+import { AppUseCallbackExample2 } from './Hooks/ReacBuildIntHooks/useCallback_eg2';
 
 function App() {
   return (
@@ -132,7 +133,8 @@ function App() {
       {/* <AppUseToggleExample /> */}
       {/* <AppUseTimeoutExample /> */}
 
-      <AppUseCallbackExample1 />
+      {/* <AppUseCallbackExample1 /> */}
+      {/* <AppUseCallbackExample2 /> */}
     </div>
   );
 }
