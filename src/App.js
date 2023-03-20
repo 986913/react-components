@@ -18,6 +18,7 @@ import { TabsIIWrapper } from './TabsII';
 import { StarRatingWrapper } from './StarRating';
 import { GridLightsWrapper } from './GridLights';
 import { MentionsWrapperI } from './MentionsI';
+import { MentionsWrapperII } from './MentionsII';
 import { TrafficLightsWrapper } from './TrafficLights';
 import { AnalogClockWrapper } from './AnalogClock';
 import { DigitalClockWrapper } from './DigitalClock';
@@ -67,7 +68,8 @@ function App() {
       {/* <PaginationWrapperI /> */}
       {/* <PaginationWrapperII /> */}
 
-      <MentionsWrapperI />
+      {/* <MentionsWrapperI /> */}
+      <MentionsWrapperII />
 
       {/* 
         下面4个progress components没有计算， 全都基于CSS:

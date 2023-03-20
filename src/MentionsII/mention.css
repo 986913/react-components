@@ -1,0 +1,28 @@
+
+.input {
+  width: 70%;
+  display: inline-block;
+}
+
+.hidden-div {
+  width: auto;
+  display: inline-block;
+  visibility: hidden;
+  position: fixed;
+  overflow: auto;
+}
+
+.mentions-container {
+  position: relative;
+}
+
+.metion_list {
+  position: absolute;
+  list-style: none;
+  border: 1px solid black;
+  text-align: center;
+  margin: 10px 0;
+  padding: 5px;
+  top: 10px;
+  cursor: pointer;
+}
