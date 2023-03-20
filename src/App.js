@@ -41,6 +41,7 @@ import { MultipleSelectWrapper } from './MultipleSelect';
 import { AppUseDebounceExample } from './Hooks/CustomizeHooks/useDebounce';
 import { AppUseCurrentDateExample } from './Hooks/CustomizeHooks/useCurentDate';
 import { AppUseAsyncExample } from './Hooks/CustomizeHooks/useAsync';
+import { AppUseEventListenerExample } from './Hooks/CustomizeHooks/useEventListener';
 
 function App() {
   return (
@@ -118,7 +119,8 @@ function App() {
       {/* ------below are Hooks examples----------------------------------------------------- */}
       {/* <AppUseDebounceExample /> */}
       {/* <AppUseCurrentDateExample /> */}
-      <AppUseAsyncExample />
+      {/* <AppUseAsyncExample /> */}
+      <AppUseEventListenerExample />
     </div>
   );
 }
