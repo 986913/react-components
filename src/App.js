@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import './App.css';
 import { AutocompleteWrapper } from './Autocomplete';
 import { CarouselWrapper } from './Carousel';
@@ -44,6 +45,7 @@ import { AppUseAsyncExample } from './Hooks/CustomizeHooks/useAsync';
 import { AppUseEventListenerExample } from './Hooks/CustomizeHooks/useEventListener';
 import { AppUseOnlineExample } from './Hooks/CustomizeHooks/useOnline';
 import { AppUseHoverExample } from './Hooks/CustomizeHooks/useHover';
+import { AppUseToggleExample } from './Hooks/CustomizeHooks/useToggle';
 
 function App() {
   return (
@@ -124,7 +126,8 @@ function App() {
       {/* <AppUseAsyncExample /> */}
       {/* <AppUseEventListenerExample /> */}
       {/* <AppUseOnlineExample /> */}
-      <AppUseHoverExample />
+      {/* <AppUseHoverExample /> */}
+      <AppUseToggleExample />
     </div>
   );
 }
