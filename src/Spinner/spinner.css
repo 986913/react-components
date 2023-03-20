@@ -1,0 +1,21 @@
+
+.loadIcon {
+  width: 100px;
+  height: auto;
+  animation: spinner 1s ease-in infinite;
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0);
+  }
+  25% {
+    transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(270deg);
+  }
+}

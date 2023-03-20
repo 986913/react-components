@@ -15,6 +15,7 @@ import { AccordionIIIWrapper } from './AccordionIII';
 import { LikeBtnWrapper } from './LikeButton';
 import { TabsWrapper } from './Tabs';
 import { TabsIIWrapper } from './TabsII';
+import { SpinnerWrapper } from './Spinner';
 import { StarRatingWrapper } from './StarRating';
 import { GridLightsWrapper } from './GridLights';
 import { MentionsWrapperI } from './MentionsI';
@@ -69,7 +70,9 @@ function App() {
       {/* <PaginationWrapperII /> */}
 
       {/* <MentionsWrapperI /> */}
-      <MentionsWrapperII />
+      {/* <MentionsWrapperII /> */}
+
+      <SpinnerWrapper />
 
       {/* 
         下面4个progress components没有计算， 全都基于CSS:
