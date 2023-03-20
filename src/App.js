@@ -29,6 +29,7 @@ import { CalculatorWrapper } from './Calculator';
 import { TreeViewWrapperI } from './TreeViewI';
 import { TreeViewWrapperII } from './TreeViewII';
 import { TodolistWrapper } from './TodoList/Wrapper';
+import { TodolistWrapperII } from './TodoListII/Wrapper';
 import { TransferListWrapperI } from './TransferListI';
 import { TransferListWrapperII } from './TransferListII';
 import { PaginationWrapperI } from './PaginationI/Wrapper';
@@ -75,7 +76,8 @@ function App() {
 
       {/* <SpinnerWrapper /> */}
 
-      <TodolistWrapper />
+      {/* <TodolistWrapper /> */}
+      <TodolistWrapperII />
 
       {/* 
         下面4个progress components没有计算， 全都基于CSS:
