@@ -130,7 +130,7 @@ function App() {
 
       {/* <AnalogClockWrapper /> */}
       {/* <DigitalClockWrapper /> */}
-      {/* <StopWatchWrapper /> */}
+      <StopWatchWrapper />
 
       {/* <CalculatorWrapper /> */}
 
