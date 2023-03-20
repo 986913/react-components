@@ -24,6 +24,7 @@ import { TrafficLightsWrapper } from './TrafficLights';
 import { AnalogClockWrapper } from './AnalogClock';
 import { DigitalClockWrapper } from './DigitalClock';
 import { StopWatchWrapper } from './StopWatch';
+import { ModalWrapper } from './Modal';
 import { GenerateTableWrapper } from './GenerateTable';
 import { CalculatorWrapper } from './Calculator';
 import { TreeViewWrapperI } from './TreeViewI';
@@ -50,6 +51,8 @@ function App() {
       {/* <CascaderWrapper /> */}
 
       {/* <PollWrapper /> */}
+
+      {/* <ModalWrapper /> */}
 
       {/* <GenerateTableWrapper /> */}
 
