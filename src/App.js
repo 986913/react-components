@@ -47,6 +47,7 @@ import { AppUseOnlineExample } from './Hooks/CustomizeHooks/useOnline';
 import { AppUseHoverExample } from './Hooks/CustomizeHooks/useHover';
 import { AppUseToggleExample } from './Hooks/CustomizeHooks/useToggle';
 import { AppUseTimeoutExample } from './Hooks/CustomizeHooks/useTimeout';
+import { AppUseEffectExample1 } from './Hooks/ReacBuildIntHooks/useEffect_eg1';
 import { AppUseCallbackExample1 } from './Hooks/ReacBuildIntHooks/useCallback_eg1';
 import { AppUseCallbackExample2 } from './Hooks/ReacBuildIntHooks/useCallback_eg2';
 
@@ -132,6 +133,8 @@ function App() {
       {/* <AppUseHoverExample /> */}
       {/* <AppUseToggleExample /> */}
       {/* <AppUseTimeoutExample /> */}
+
+      {/* <AppUseEffectExample1 /> */}
 
       {/* <AppUseCallbackExample1 /> */}
       {/* <AppUseCallbackExample2 /> */}
