@@ -25,6 +25,7 @@ import { TrafficLightsWrapper } from './TrafficLights';
 import { AnalogClockWrapper } from './AnalogClock';
 import { DigitalClockWrapper } from './DigitalClock';
 import { StopWatchWrapper } from './StopWatch';
+import { TimerWrapper } from './Timer';
 import { ModalWrapper } from './Modal';
 import { GenerateTableWrapper } from './GenerateTable';
 import { CalculatorWrapper } from './Calculator';
@@ -130,7 +131,8 @@ function App() {
 
       {/* <AnalogClockWrapper /> */}
       {/* <DigitalClockWrapper /> */}
-      <StopWatchWrapper />
+      {/* <StopWatchWrapper /> */}
+      <TimerWrapper />
 
       {/* <CalculatorWrapper /> */}
 

@@ -1,0 +1,17 @@
+.time {
+  align-items: baseline;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  gap: 16px;
+  user-select: none;
+}
+
+.time-unit {
+  font-size: 24px
+}
+
+.time-number {
+  font-size: 62px;
+}
