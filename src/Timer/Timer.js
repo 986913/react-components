@@ -51,7 +51,7 @@ export const Timer = ({ maxMinutes }) => {
 
   const resetTimer = () => {
     stopInterval();
-    setTotalDuration(maxMinutes * MS_IN_MINUTE);
+    setTotalDuration(maxMinutes * MS_IN_MINUTE); // difference with stopwatch
   };
 
   const toggleTimer = () => {
