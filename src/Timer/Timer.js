@@ -27,7 +27,7 @@ const formatTime = (timeParam) => {
 
 export const Timer = ({ maxMinutes }) => {
   const lastTickTiming = useRef(null);
-  const [totalDuration, setTotalDuration] = useState(maxMinutes * MS_IN_MINUTE);
+  const [totalDuration, setTotalDuration] = useState(maxMinutes * MS_IN_MINUTE); // <-- 这是与 🟡 Stopwatch compoent的最大区别1！
   const [timerId, setTimerId] = useState(null);
   const isRunning = timerId != null;
 
@@ -37,7 +37,7 @@ export const Timer = ({ maxMinutes }) => {
       const now = Date.now();
       const timePassed = now - lastTickTiming.current;
 
-      setTotalDuration((duration) => duration - timePassed); // <-- 这是与 🟡 Stopwatch compoent的最大区别！
+      setTotalDuration((duration) => duration - timePassed); // <-- 这是与 🟡 Stopwatch compoent的最大区别2！
       lastTickTiming.current = now;
     }, 1);
 
