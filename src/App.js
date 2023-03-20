@@ -43,6 +43,7 @@ import { AppUseCurrentDateExample } from './Hooks/CustomizeHooks/useCurentDate';
 import { AppUseAsyncExample } from './Hooks/CustomizeHooks/useAsync';
 import { AppUseEventListenerExample } from './Hooks/CustomizeHooks/useEventListener';
 import { AppUseOnlineExample } from './Hooks/CustomizeHooks/useOnline';
+import { AppUseHoverExample } from './Hooks/CustomizeHooks/useHover';
 
 function App() {
   return (
@@ -122,7 +123,8 @@ function App() {
       {/* <AppUseCurrentDateExample /> */}
       {/* <AppUseAsyncExample /> */}
       {/* <AppUseEventListenerExample /> */}
-      <AppUseOnlineExample />
+      {/* <AppUseOnlineExample /> */}
+      <AppUseHoverExample />
     </div>
   );
 }
