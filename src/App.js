@@ -48,6 +48,10 @@ import { AppUseHoverExample } from './Hooks/CustomizeHooks/useHover';
 import { AppUseToggleExample } from './Hooks/CustomizeHooks/useToggle';
 import { AppUseTimeoutExample } from './Hooks/CustomizeHooks/useTimeout';
 import { AppUseEffectExample1 } from './Hooks/ReacBuildIntHooks/useEffect_eg1';
+import { AppUseRefExample1 } from './Hooks/ReacBuildIntHooks/useRef_eg1';
+import { AppUseRefExample2 } from './Hooks/ReacBuildIntHooks/useRef_eg2';
+import { AppUseRefExample3 } from './Hooks/ReacBuildIntHooks/useRef_eg3';
+import { AppUseRefExample4 } from './Hooks/ReacBuildIntHooks/useRef_eg4';
 import { AppUseMemoExample1 } from './Hooks/ReacBuildIntHooks/useMemo_eg1';
 import { AppUseMemoExample2 } from './Hooks/ReacBuildIntHooks/useMemo_eg2';
 import { AppUseCallbackExample1 } from './Hooks/ReacBuildIntHooks/useCallback_eg1';
@@ -140,7 +144,11 @@ function App() {
 
       {/* <AppUseEffectExample1 /> */}
       {/* <AppUseReducerExample1 /> */}
-      <AppUseReducerExample2 />
+      {/* <AppUseReducerExample2 /> */}
+      <AppUseRefExample1 />
+      <AppUseRefExample2 />
+      <AppUseRefExample3 />
+      <AppUseRefExample4 />
       {/* <AppUseMemoExample1 /> */}
       {/* <AppUseMemoExample2 /> */}
       {/* <AppUseCallbackExample1 /> */}
