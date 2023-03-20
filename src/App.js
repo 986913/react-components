@@ -40,6 +40,7 @@ import { InfiniteScrollWrapper } from './InfiniteScroll/Wrapper';
 import { MultipleSelectWrapper } from './MultipleSelect';
 import { AppUseDebounceExample } from './Hooks/CustomizeHooks/useDebounce';
 import { AppUseCurrentDateExample } from './Hooks/CustomizeHooks/useCurentDate';
+import { AppUseAsyncExample } from './Hooks/CustomizeHooks/useAsync';
 
 function App() {
   return (
@@ -117,6 +118,7 @@ function App() {
       {/* ------below are Hooks examples----------------------------------------------------- */}
       {/* <AppUseDebounceExample /> */}
       {/* <AppUseCurrentDateExample /> */}
+      <AppUseAsyncExample />
     </div>
   );
 }
