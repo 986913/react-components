@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './progressbarsII.css';
 
+// 👍 helper function (这是简易版，完整版看src/classNames.js)
 const classNames = (...args) => args.filter(Boolean).join(' ');
 
 const ProgressBarII = ({ duration, isEmpty, onCompleted }) => {

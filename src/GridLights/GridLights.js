@@ -8,7 +8,7 @@ const config = [
   [1, 0, 1],
   [1, 1, 1],
 ];
-
+// 👍 helper function (这是简易版，完整版看src/classNames.js)
 const classNames = (...args) => args.filter(Boolean).join(' ');
 
 const Cell = ({ filled, label, onClick, isDisabled }) => {

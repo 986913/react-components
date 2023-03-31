@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { HeartIcon, SpinnerIcon } from './icons';
 import './likebutton.css';
 
-// 👍 helper function
+// 👍 helper function (这是简易版，完整版看src/classNames.js)
 const classNames = (...args) => args.filter(Boolean).join(' ');
 
 export const LikeButton = () => {

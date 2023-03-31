@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './tabs.css';
 
+// 👍 helper function (这是简易版，完整版看src/classNames.js)
 const classNames = (...args) => {
   return args.filter(Boolean).join(' ');
 };

@@ -3,6 +3,7 @@ import './tabs.css';
 
 const getTabId = (id) => `tab-${id}`;
 const getPanelId = (id) => `tabpanel-${id}`;
+// 👍 helper function (这是简易版，完整版看src/classNames.js)
 const classNames = (...args) => {
   return args.filter(Boolean).join(' ');
 };
