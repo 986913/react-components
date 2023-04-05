@@ -40,6 +40,7 @@ import { PaginationWrapperI } from './PaginationI/Wrapper';
 import { PaginationWrapperII } from './PaginationII/Wrapper';
 import { InfiniteScrollWrapper } from './InfiniteScroll/Wrapper';
 import { MultipleSelectWrapper } from './MultipleSelect';
+import { AppUseEffectOnceExample } from './Hooks/CustomizeHooks/useEffectOnce';
 import { AppUseDebounceExample } from './Hooks/CustomizeHooks/useDebounce';
 import { AppUseCurrentDateExample } from './Hooks/CustomizeHooks/useCurentDate';
 import { AppUseAsyncExample } from './Hooks/CustomizeHooks/useAsync';
@@ -138,6 +139,7 @@ function App() {
       {/* <CalculatorWrapper /> */}
 
       {/* ------below are Hooks examples----------------------------------------------------- */}
+      {/* <AppUseEffectOnceExample /> */}
       {/* <AppUseDebounceExample /> */}
       {/* <AppUseCurrentDateExample /> */}
       {/* <AppUseAsyncExample /> */}
