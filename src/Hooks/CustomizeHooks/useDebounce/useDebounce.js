@@ -20,7 +20,7 @@ export const useDebounce = (value, delay) => {
         This is how we prevent debounced value from updating if value is changed within the delay period. 
         Timeout gets cleared and restarted.
       */
-      return () => clearTimeout(handler);
+      return () => clearTimeout(handler); // 类比于js_version debounce的 if(timer) clearTimeout(timer)； 目的确保只有一个settimeout isntance
     },
     [value, delay] // Only re-call if value or delay changes
   );
