@@ -140,7 +140,7 @@ function App() {
 
       {/* ------below are Hooks examples----------------------------------------------------- */}
       {/* <AppUseEffectOnceExample /> */}
-      <AppUseDebounceExample />
+      {/* <AppUseDebounceExample /> */}
       {/* <AppUseCurrentDateExample /> */}
       {/* <AppUseAsyncExample /> */}
       {/* <AppUseEventListenerExample /> */}
