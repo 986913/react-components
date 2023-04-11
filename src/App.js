@@ -67,6 +67,7 @@ import { AppUseReducerExample2 } from './Hooks/ReacBuildIntHooks/useReducer_eg2'
 function App() {
   return (
     <div>
+      {/* ----------------------- React components practices ------------------------- */}
       {/* <AutocompleteWrapper /> */}
 
       {/* <CarouselWrapper /> */}
@@ -139,7 +140,7 @@ function App() {
 
       {/* <CalculatorWrapper /> */}
 
-      {/* ------below are Hooks examples----------------------------------------------------- */}
+      {/* ----------------------- Customized Hooks examples------------------------- */}
       {/* <AppUseEffectOnceExample /> */}
       {/* <AppUseDebounceExample /> */}
       {/* <AppUseCurrentDateExample /> */}
@@ -150,7 +151,7 @@ function App() {
       {/* <AppUseToggleExample /> */}
       {/* <AppUsePreviousExample /> */}
       {/* <AppUseTimeoutExample /> */}
-
+      {/* ----------------------- React build-in Hooks examples-------------------- */}
       {/* <AppUseEffectExample1 /> */}
       {/* <AppUseReducerExample1 /> */}
       {/* <AppUseReducerExample2 /> */}
