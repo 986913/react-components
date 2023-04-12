@@ -49,6 +49,7 @@ import { AppUseOnlineExample } from './Hooks/CustomizeHooks/useOnline';
 import { AppUseHoverExample } from './Hooks/CustomizeHooks/useHover';
 import { AppUsePreviousExample } from './Hooks/CustomizeHooks/usePrevious';
 import { AppUseToggleExample } from './Hooks/CustomizeHooks/useToggle';
+import { AppUseSWRExample } from './Hooks/CustomizeHooks/useSWR';
 import { AppUseTimeoutExample } from './Hooks/CustomizeHooks/useTimeout';
 import { AppUseEffectExample1 } from './Hooks/ReacBuildIntHooks/useEffect_eg1';
 import { AppUseRefExample1 } from './Hooks/ReacBuildIntHooks/useRef_eg1';
@@ -151,6 +152,7 @@ function App() {
       {/* <AppUseToggleExample /> */}
       {/* <AppUsePreviousExample /> */}
       {/* <AppUseTimeoutExample /> */}
+      {/* <AppUseSWRExample /> */}
       {/* ----------------------- React build-in Hooks examples-------------------- */}
       {/* <AppUseEffectExample1 /> */}
       {/* <AppUseReducerExample1 /> */}
