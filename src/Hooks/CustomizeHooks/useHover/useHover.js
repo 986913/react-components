@@ -1,6 +1,29 @@
-import { useState, useRef, useCallback } from 'react';
+import { useState, useRef, useCallback, useEffect } from 'react';
+/*----------------------- solution 1 --------------------------- */
+export const useHover1 = () => {
+  const [isHovered, setIsHovered] = useState(false);
+  const handleMouseOver = useCallback(() => setIsHovered(true), []);
+  const handleMouseOut = useCallback(() => setIsHovered(false), []);
 
-export const useHover = () => {
+  // 🟡使用useRef()生成ref对象
+  const ref = useRef();
+
+  useEffect(() => {
+    ref.current.addEventListener('mouseover', handleMouseOver);
+    ref.current.addEventListener('mouseout', handleMouseOut);
+
+    // 为了在组件卸载时注销事件监听器，以避免潜在的问题。
+    return () => {
+      ref.current.removeEventListener('mouseover', handleMouseOver);
+      ref.current.removeEventListener('mouseout', handleMouseOut);
+    };
+  }, [handleMouseOver, handleMouseOut]);
+
+  return [ref, isHovered];
+};
+
+/*----------------------- solution 2 --------------------------- */
+export const useHover2 = () => {
   const [isHovered, setIsHovered] = useState(false);
   /**
    * 在这个例子中，如果不使用 useCallback 包裹 handleMouseOver，那么每次渲染时都会创建一个新的函数引用，即使函数本身的代码并没有发生变化。
