@@ -149,7 +149,7 @@ function App() {
       {/* <AppUseAsyncExample /> */}
       {/* <AppUseEventListenerExample /> */}
       {/* <AppUseOnlineExample /> */}
-      <AppUseHoverExample />
+      {/* <AppUseHoverExample /> */}
       {/* <AppUseToggleExample /> */}
       {/* <AppUsePreviousExample /> */}
       {/* <AppUseTimeoutExample /> */}
