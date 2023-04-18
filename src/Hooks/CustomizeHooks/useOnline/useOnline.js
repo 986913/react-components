@@ -2,11 +2,10 @@ import { useState, useEffect } from 'react';
 
 export const useOnline = () => {
   const [online, setOnline] = useState(navigator.onLine);
+  const handleOnLine = () => setOnline(true);
+  const handleOffLine = () => setOnline(false);
 
   useEffect(() => {
-    const handleOnLine = () => setOnline(true);
-    const handleOffLine = () => setOnline(false);
-
     window.addEventListener('online', handleOnLine, false);
     window.addEventListener('offline', handleOffLine, false);
 
