@@ -156,7 +156,7 @@ function App() {
       {/* <AppUseTimeoutExample /> */}
       {/* <AppUseSWRExample /> */}
       {/* <AppUseClickOutsideExample /> */}
-      <AppUseIsMountedExample />
+      {/* <AppUseIsMountedExample /> */}
       {/* ----------------------- React build-in Hooks examples-------------------- */}
       {/* <AppUseEffectExample1 /> */}
       {/* <AppUseReducerExample1 /> */}
