@@ -7,6 +7,7 @@ import { useSWR } from './useSWR';
  */
 export default function App() {
   const fetcher = () => fetch('https://jsonplaceholder.typicode.com/todos/1');
+  /*********************  hook usage ****************************************/
   const { data, error } = useSWR(
     'https://jsonplaceholder.typicode.com/todos/1',
     fetcher

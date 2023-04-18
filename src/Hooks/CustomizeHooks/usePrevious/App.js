@@ -3,6 +3,7 @@ import { usePrevious } from './usePrevious';
 
 export default function App() {
   const [count, setCount] = useState(0);
+  /*********************  hook usage ****************************************/
   const previousCount = usePrevious(count);
 
   return (

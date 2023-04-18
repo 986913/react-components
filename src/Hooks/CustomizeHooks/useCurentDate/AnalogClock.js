@@ -4,6 +4,7 @@ import { ClockImplement } from './ClockImplement';
 import './analogclock.css';
 
 export const AnalogClock = () => {
+  /*********************  hook usage ****************************************/
   const date = useCurrentDate();
   //%12 是因为可以把17 --> 变成5  (24hr制)
   const hours = date.getHours() % 12;

@@ -13,6 +13,7 @@ export default function App() {
     [setCoords]
   );
 
+  /*********************  hook usage ****************************************/
   // Add event listener using our hook
   useEventListener('mousemove', handler);
 

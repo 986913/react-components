@@ -6,6 +6,7 @@ export default function App() {
   useTimeout(() => setCount1(0), 1000); // usage
 
   const [count2, setCount2] = useState(20);
+  /*********************  hook usage ****************************************/
   const { reset, clear } = useTimeout(() => setCount2(0), 1000); // usage
 
   return (

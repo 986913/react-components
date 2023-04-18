@@ -1,6 +1,7 @@
 import { useEffectOnce } from './useEffectOnce';
 
 export default function App() {
+  /*********************  hook usage ****************************************/
   useEffectOnce(() => {
     console.log('This runs only once!');
   });

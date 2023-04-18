@@ -1,6 +1,7 @@
 import { useHover1, useHover2 } from './useHover';
 
 export default function App() {
+  /*********************  hook usage ****************************************/
   const [hoverRef2, isHovered] = useHover2();
 
   return (
