@@ -45,7 +45,7 @@ root.render(<App />);
   "useEffect 2"
   "App" // Re-render
   "useLayoutEffect cleanup" // useLayoutEffect is first to be cleaned up and immediately executed.
-  "useLayoutEffect"         
+  "useLayoutEffect"         // 🟡 useLayoutEffect immediately executed.
   "useEffect 1 cleanup" // Regular useEffects are grouped, cleaned up and then executed for the second rendering cycle.
   "useEffect 2 cleanup"
   "useEffect 1"

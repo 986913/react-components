@@ -20,12 +20,6 @@ function A({ children }) {
     - wrapping them in `memeo`
     - passing them as `children` prop
  */
-
-  /**
-    本质上 children 是一个对象，在 App 中已经生成了，是通过调用函数生成的
-    回归到理解 jsx 是啥上，是书写 React.createElement 的语法糖
-    React.createElement 的第一个参数如果是函数，调用函数，拿到返回值
-  */
 }
 
 function B() {
