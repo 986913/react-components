@@ -41,6 +41,7 @@ import { PaginationWrapperII } from './PaginationII/Wrapper';
 import { InfiniteScrollWrapper } from './InfiniteScroll/Wrapper';
 import { MultipleSelectWrapper } from './MultipleSelect';
 import { PhoneNoInputWrapper } from './PhoneNumberInput';
+import { ValtioWrapper } from './Valtio';
 import { AppUseEffectOnceExample } from './Hooks/CustomizeHooks/useEffectOnce';
 import { AppUseDebounceExample } from './Hooks/CustomizeHooks/useDebounce';
 import { AppUseCurrentDateExample } from './Hooks/CustomizeHooks/useCurentDate';
@@ -144,7 +145,9 @@ function App() {
 
       {/* <CalculatorWrapper /> */}
 
-      <PhoneNoInputWrapper />
+      {/* <PhoneNoInputWrapper /> */}
+
+      <ValtioWrapper />
 
       {/* ----------------------- Customized Hooks examples------------------------- */}
       {/* <AppUseEffectOnceExample /> */}
