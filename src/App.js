@@ -55,6 +55,7 @@ import { AppUseSWRExample } from './Hooks/CustomizeHooks/useSWR';
 import { AppUseTimeoutExample } from './Hooks/CustomizeHooks/useTimeout';
 import { AppUseClickOutsideExample } from './Hooks/CustomizeHooks/useClickOutside';
 import { AppUseIsMountedExample } from './Hooks/CustomizeHooks/useIsMounted';
+import { AppUseArrayExample } from './Hooks/CustomizeHooks/useArray';
 import { AppUseEffectExample1 } from './Hooks/ReacBuildIntHooks/useEffect_eg1';
 import { AppUseRefExample1 } from './Hooks/ReacBuildIntHooks/useRef_eg1';
 import { AppUseRefExample2 } from './Hooks/ReacBuildIntHooks/useRef_eg2';
@@ -147,7 +148,7 @@ function App() {
 
       {/* <PhoneNoInputWrapper /> */}
 
-      <ValtioWrapper />
+      {/* <ValtioWrapper /> */}
 
       {/* ----------------------- Customized Hooks examples------------------------- */}
       {/* <AppUseEffectOnceExample /> */}
@@ -163,6 +164,7 @@ function App() {
       {/* <AppUseSWRExample /> */}
       {/* <AppUseClickOutsideExample /> */}
       {/* <AppUseIsMountedExample /> */}
+      <AppUseArrayExample />
       {/* ----------------------- React build-in Hooks examples-------------------- */}
       {/* <AppUseEffectExample1 /> */}
       {/* <AppUseReducerExample1 /> */}
