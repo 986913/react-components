@@ -53,6 +53,7 @@ import { AppUsePreviousExample } from './Hooks/CustomizeHooks/usePrevious';
 import { AppUseToggleExample } from './Hooks/CustomizeHooks/useToggle';
 import { AppUseSWRExample } from './Hooks/CustomizeHooks/useSWR';
 import { AppUseTimeoutExample } from './Hooks/CustomizeHooks/useTimeout';
+import { AppUseTimeoutIIExample } from './Hooks/CustomizeHooks/useTimeoutII';
 import { AppUseClickOutsideExample } from './Hooks/CustomizeHooks/useClickOutside';
 import { AppUseIsMountedExample } from './Hooks/CustomizeHooks/useIsMounted';
 import { AppUseArrayExample } from './Hooks/CustomizeHooks/useArray';
@@ -161,10 +162,11 @@ function App() {
       {/* <AppUseToggleExample /> */}
       {/* <AppUsePreviousExample /> */}
       {/* <AppUseTimeoutExample /> */}
+      <AppUseTimeoutIIExample />
       {/* <AppUseSWRExample /> */}
       {/* <AppUseClickOutsideExample /> */}
       {/* <AppUseIsMountedExample /> */}
-      <AppUseArrayExample />
+      {/* <AppUseArrayExample /> */}
       {/* ----------------------- React build-in Hooks examples-------------------- */}
       {/* <AppUseEffectExample1 /> */}
       {/* <AppUseReducerExample1 /> */}
