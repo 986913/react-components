@@ -22,7 +22,7 @@ export const useHover1 = () => {
   return [ref, isHovered];
 };
 
-/*----------------------- solution 2 --------------------------- */
+/*-----------------------  👍 solution 2 --------------------------- */
 export const useHover2 = () => {
   const [isHovered, setIsHovered] = useState(false);
   /**

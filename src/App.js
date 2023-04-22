@@ -49,6 +49,7 @@ import { AppUseAsyncExample } from './Hooks/CustomizeHooks/useAsync';
 import { AppUseEventListenerExample } from './Hooks/CustomizeHooks/useEventListener';
 import { AppUseOnlineExample } from './Hooks/CustomizeHooks/useOnline';
 import { AppUseHoverExample } from './Hooks/CustomizeHooks/useHover';
+import { AppUseFocusExample } from './Hooks/CustomizeHooks/useFocus';
 import { AppUsePreviousExample } from './Hooks/CustomizeHooks/usePrevious';
 import { AppUseToggleExample } from './Hooks/CustomizeHooks/useToggle';
 import { AppUseSWRExample } from './Hooks/CustomizeHooks/useSWR';
@@ -77,45 +78,29 @@ function App() {
     <div>
       {/* ----------------------- React components practices ------------------------- */}
       {/* <AutocompleteWrapper /> */}
-
       {/* <CarouselWrapper /> */}
-
       {/* <CascaderWrapper /> */}
-
       {/* <PollWrapper /> */}
-
       {/* <ModalWrapper /> */}
-
       {/* <GenerateTableWrapper /> */}
-
       {/* <TabsWrapper /> */}
       {/* <TabsIIWrapper /> */}
-
       {/* <StarRatingWrapper /> */}
-
       {/* <AccordionWrapper /> */}
       {/* <AccordionIIWrapper /> */}
       {/* <AccordionIIIWrapper /> */}
-
       {/* <InfiniteScrollWrapper /> */}
-
       {/* <TransferListWrapperI /> */}
       {/* <TransferListWrapperII /> */}
-
       {/* <MultipleSelectWrapper /> */}
-
       {/* <PaginationWrapperI /> */}
       {/* <PaginationWrapperII /> */}
-
       {/* <MentionsWrapperI /> */}
       {/* <MentionsWrapperII /> */}
-
       {/* <SpinnerWrapper /> */}
-
       {/* <TodolistWrapper /> */}
       {/* <TodolistWrapperII /> */}
       {/* <TodolistWrapperIII /> */}
-
       {/* 
         下面4个progress components没有计算， 全都基于CSS:
           from transform: scaleX(0) to transform: scaleX(1) + transition-duration
@@ -131,27 +116,18 @@ function App() {
       */}
       {/* <ProgressBarIWrapper /> */}
       {/* <ProgressBarsIIIIWrapper /> */}
-
       {/* <TreeViewWrapperI /> */}
       {/* <TreeViewWrapperII /> */}
-
       {/* <LikeBtnWrapper /> */}
-
       {/* <GridLightsWrapper /> */}
       {/* <TrafficLightsWrapper /> */}
-
       {/* <AnalogClockWrapper /> */}
       {/* <DigitalClockWrapper /> */}
-
       {/* <StopWatchWrapper /> */}
       {/* <TimerWrapper /> */}
-
       {/* <CalculatorWrapper /> */}
-
       {/* <PhoneNoInputWrapper /> */}
-
       {/* <ValtioWrapper /> */}
-
       {/* ----------------------- Customized Hooks examples------------------------- */}
       {/* <AppUseEffectOnceExample /> */}
       {/* <AppUseDebounceExample /> */}
@@ -160,6 +136,7 @@ function App() {
       {/* <AppUseEventListenerExample /> */}
       {/* <AppUseOnlineExample /> */}
       {/* <AppUseHoverExample /> */}
+      {/* <AppUseFocusExample /> */}
       {/* <AppUseToggleExample /> */}
       {/* <AppUsePreviousExample /> */}
       {/* <AppUseTimeoutExample /> */}
