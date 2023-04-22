@@ -54,6 +54,7 @@ import { AppUseToggleExample } from './Hooks/CustomizeHooks/useToggle';
 import { AppUseSWRExample } from './Hooks/CustomizeHooks/useSWR';
 import { AppUseTimeoutExample } from './Hooks/CustomizeHooks/useTimeout';
 import { AppUseTimeoutIIExample } from './Hooks/CustomizeHooks/useTimeoutII';
+import { AppUseTimeIntervalExample } from './Hooks/CustomizeHooks/useTimeInterval';
 import { AppUseClickOutsideExample } from './Hooks/CustomizeHooks/useClickOutside';
 import { AppUseIsMountedExample } from './Hooks/CustomizeHooks/useIsMounted';
 import { AppUseArrayExample } from './Hooks/CustomizeHooks/useArray';
@@ -162,7 +163,8 @@ function App() {
       {/* <AppUseToggleExample /> */}
       {/* <AppUsePreviousExample /> */}
       {/* <AppUseTimeoutExample /> */}
-      <AppUseTimeoutIIExample />
+      {/* <AppUseTimeoutIIExample /> */}
+      {/* <AppUseTimeIntervalExample /> */}
       {/* <AppUseSWRExample /> */}
       {/* <AppUseClickOutsideExample /> */}
       {/* <AppUseIsMountedExample /> */}
