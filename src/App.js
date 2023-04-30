@@ -145,7 +145,7 @@ function App() {
       {/* <AppUseTimeIntervalExample /> */}
       {/* <AppUseSWRExample /> */}
       {/* <AppUseClickOutsideExample /> */}
-      <AppUseIsFirstRenderExample />
+      {/* <AppUseIsFirstRenderExample /> */}
       {/* <AppUseIsMountedExample /> */}
       {/* <AppUseArrayExample /> */}
       {/* ----------------------- React build-in Hooks examples-------------------- */}
