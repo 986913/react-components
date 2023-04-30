@@ -58,6 +58,7 @@ import { AppUseTimeoutIIExample } from './Hooks/CustomizeHooks/useTimeoutII';
 import { AppUseTimeIntervalExample } from './Hooks/CustomizeHooks/useTimeInterval';
 import { AppUseClickOutsideExample } from './Hooks/CustomizeHooks/useClickOutside';
 import { AppUseIsMountedExample } from './Hooks/CustomizeHooks/useIsMounted';
+import { AppUseIsFirstRenderExample } from './Hooks/CustomizeHooks/useIsFirstRender';
 import { AppUseArrayExample } from './Hooks/CustomizeHooks/useArray';
 import { AppUseEffectExample1 } from './Hooks/ReacBuildIntHooks/useEffect_eg1';
 import { AppUseRefExample1 } from './Hooks/ReacBuildIntHooks/useRef_eg1';
@@ -144,6 +145,7 @@ function App() {
       {/* <AppUseTimeIntervalExample /> */}
       {/* <AppUseSWRExample /> */}
       {/* <AppUseClickOutsideExample /> */}
+      <AppUseIsFirstRenderExample />
       {/* <AppUseIsMountedExample /> */}
       {/* <AppUseArrayExample /> */}
       {/* ----------------------- React build-in Hooks examples-------------------- */}
