@@ -1,48 +1,33 @@
 // This is a React Quiz from BFE.dev, What does the code snippet to the right output by console.log?
 
-import React, {
-  useState,
-  useEffect,
-  useLayoutEffect,
-  useInsertionEffect,
-} from 'react';
+import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 
 function App() {
+  const [count, setCount] = useState(1);
   console.log(1);
-  const [state, setState] = useState(0);
-  useEffect(() => {
-    setState((state) => state + 1);
-  }, []);
-
   useEffect(() => {
     console.log(2);
     return () => {
       console.log(3);
     };
-  }, [state]);
+  }, [count]);
 
   useEffect(() => {
     console.log(4);
-    return () => {
-      console.log(5);
-    };
-  }, [state]);
+    setCount((count) => count + 1);
+  }, []);
+  return <Child count={count} />;
+}
 
-  useLayoutEffect(() => {
-    console.log(6);
+function Child({ count }) {
+  useEffect(() => {
+    console.log(5);
     return () => {
-      console.log(7);
+      console.log(6);
     };
-  }, [state]);
+  }, [count]);
 
-  useInsertionEffect(() => {
-    console.log(8);
-    return () => {
-      console.log(9);
-    };
-  }, [state]);
-  console.log(10);
   return null;
 }
 
@@ -50,25 +35,18 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<App />);
 
 /**
-  // first render
-  1
-  10
-  8
-  6
-  2
-  4
-  // re-render
-  1
-  10
-  9
-  8
-  7
-  6
-  3
-  5
-  2
-  4
-*/
+//first render
+1
+5
+2
+4
+//re-render
+1
+6
+3
+5
+2
+ */
 
 /*
 通用知识点❗❗❗❗❗❗❗❗❗❗❗
@@ -79,4 +57,7 @@ root.render(<App />);
   re-render时 (优先级由高到低):
     render主线程 --> useInsertionEffect cleanup  ---> useLayoutEffect clean up   --->  useEffect ALL cleanup by order --> useEffect executed by order
                     then immediately executed        then immediately executed 
+
+
+如果有子组件，那么父亲的useEffect要先等子组件的render和useEffect完事儿后再被call
 */
