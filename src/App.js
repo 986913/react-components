@@ -43,6 +43,7 @@ import { InfiniteScrollWrapper } from './InfiniteScroll/Wrapper';
 import { MultipleSelectWrapper } from './MultipleSelect';
 import { PhoneNoInputWrapper } from './PhoneNumberInput';
 import { ValtioWrapper } from './Valtio';
+import { MortgageCalculatorWrapper } from './Mortgage Calculator/Wrapper';
 import { AppUseEffectOnceExample } from './Hooks/CustomizeHooks/useEffectOnce';
 import { AppUseDebounceExample } from './Hooks/CustomizeHooks/useDebounce';
 import { AppUseCurrentDateExample } from './Hooks/CustomizeHooks/useCurentDate';
@@ -131,6 +132,7 @@ function App() {
       {/* <PhoneNoInputWrapper /> */}
       {/* <ValtioWrapper /> */}
       {/* <FlightBookerWrapper /> */}
+      <MortgageCalculatorWrapper />
       {/* ----------------------- Customized Hooks examples------------------------- */}
       {/* <AppUseEffectOnceExample /> */}
       {/* <AppUseDebounceExample /> */}
