@@ -6,8 +6,10 @@ form {
   flex-direction: column;
   justify-content: space-around;
 }
-button[type='submit']{
-  background: yellow;
-  border: none;
-  padding: 0.5em
+.flight-booker {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 0 auto;
+  max-width: 320px;
 }

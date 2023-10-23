@@ -1,59 +1,72 @@
 import React, { useState } from 'react';
 import './flightbooker.css';
 
+/**
+  padStart usage example:
+    const fullNumber = '2034399002125581';
+    const last4Digits = fullNumber.slice(-4);
+    const maskedNumber = last4Digits.padStart(fullNumber.length, '*');
+    console.log(maskedNumber); // "************5581"
+ */
+
 /* formatting Date() object to YYYY-MM_DD  */
-const getToday = () => {
-  const today = new Date();
-  return `${today.getFullYear()}-${
-    today.getMonth() < 12 ? today.getMonth() + 1 : 1
-  }-${today.getDate()}`;
-};
+const TODAY = formatDate(new Date());
+const DAY_IN_SECONDS = 24 * 60 * 60 * 1000;
+
+function formatDate(date) {
+  const year = date.getFullYear();
+  const month = (date.getMonth() + 1).toString().padStart(2, '0');
+  const day = date.getDate().toString().padStart(2, '0');
+
+  return [year, month, day].join('-');
+}
 
 export const FlightBooker = () => {
-  const [isReturnFlight, setReturnFlight] = useState(false);
-  const [departTime, setDepartTime] = useState(null);
-  const [returnTime, setReturnTime] = useState(null);
-
-  const changeType = (e) =>
-    setReturnFlight(e.target.value === 'roundway' ? true : false);
-  const handleDepartOnChange = (e) => setDepartTime(e.target.value);
-  const handleReturnOnChange = (e) => setReturnTime(e.target.value);
-  const handleSubmit = (e) => {
+  const [flightOption, setFlightOption] = useState('one-way');
+  const [departureDate, setDepartureDate] = useState(
+    formatDate(new Date(Date.now() + DAY_IN_SECONDS)) // Tomorrow.
+  );
+  const [returnDate, setReturnDate] = useState(departureDate);
+  const handleFlightTypeChange = (e) => setFlightOption(e.target.value);
+  const handleDepartureChange = (e) => setDepartureDate(e.target.value);
+  const handleReturnChange = (e) => setReturnDate(e.target.value);
+  const hanldeSubmit = (e) => {
     e.preventDefault();
+    if (flightOption === 'one-way') {
+      alert(`You have booked a one-way flight on ${departureDate}`);
+      return;
+    }
     alert(
-      isReturnFlight
-        ? `You have booked a return flight, departing on ${departTime} and returning on ${returnTime}`
-        : `You have booked a one-way flight on ${departTime}`
+      `You have booked a return flight, departing on ${departureDate} and returning on ${returnDate}`
     );
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div>
-        <select name='flightType' onChange={changeType}>
-          <option value='oneway'> one way flight </option>
-          <option value='roundway'> round way flight </option>
+    <div>
+      <form className='flight-booker' onSubmit={hanldeSubmit}>
+        <select value={flightOption} onChange={handleFlightTypeChange}>
+          <option value='one-way'>One-way flight</option>
+          <option value='return'>Return flight</option>
         </select>
-      </div>
 
-      <input
-        type='date'
-        name='depart-time'
-        min={getToday()} /* specify the today date as the min of the depart date field and leverage the browser's form validation during submission */
-        onChange={handleDepartOnChange}
-      />
-      {isReturnFlight && (
         <input
+          aria-label='Departure date'
           type='date'
-          name='return-time'
-          min={
-            departTime
-          } /* specify the current departure date as the min of the return date field and leverage the browser's form validation during submission */
-          onChange={handleReturnOnChange}
+          value={departureDate}
+          onChange={handleDepartureChange}
+          min={TODAY} // 这是重点：specify the today date as the min of the depart date field and leverage the browser's form validation during submission
         />
-      )}
-
-      <button type='submit'> submit </button>
-    </form>
+        {flightOption === 'return' && (
+          <input
+            aria-label='Return date'
+            type='date'
+            value={returnDate}
+            min={departureDate} // 这是重点：specify the current departure date as the min of the return date field and leverage the browser's form validation during submission
+            onChange={handleReturnChange}
+          />
+        )}
+        <button>Book</button>
+      </form>
+    </div>
   );
 };
