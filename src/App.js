@@ -130,7 +130,7 @@ function App() {
       {/* <CalculatorWrapper /> */}
       {/* <PhoneNoInputWrapper /> */}
       {/* <ValtioWrapper /> */}
-      <FlightBookerWrapper />
+      {/* <FlightBookerWrapper /> */}
       {/* ----------------------- Customized Hooks examples------------------------- */}
       {/* <AppUseEffectOnceExample /> */}
       {/* <AppUseDebounceExample /> */}
