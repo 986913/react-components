@@ -14,6 +14,7 @@ import { AccordionWrapper } from './Accordion';
 import { AccordionIIWrapper } from './AccordionII';
 import { AccordionIIIWrapper } from './AccordionIII';
 import { LikeBtnWrapper } from './LikeButton';
+import { FlightBookerWrapper } from './Flight Booker';
 import { TabsWrapper } from './Tabs';
 import { TabsIIWrapper } from './TabsII';
 import { SpinnerWrapper } from './Spinner';
@@ -129,6 +130,7 @@ function App() {
       {/* <CalculatorWrapper /> */}
       {/* <PhoneNoInputWrapper /> */}
       {/* <ValtioWrapper /> */}
+      {/* <FlightBookerWrapper /> */}
       {/* ----------------------- Customized Hooks examples------------------------- */}
       {/* <AppUseEffectOnceExample /> */}
       {/* <AppUseDebounceExample /> */}

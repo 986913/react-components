@@ -1,0 +1,13 @@
+
+
+form {
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+button[type='submit']{
+  background: yellow;
+  border: none;
+  padding: 0.5em
+}
