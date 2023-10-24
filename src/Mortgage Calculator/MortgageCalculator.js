@@ -97,3 +97,18 @@ export const MortgageCalculator = () => {
     </div>
   );
 };
+
+/**
+  知识点：
+
+  1. const data = new FormData(event.target) 的使用
+    data有一系列的方法可使用，eg： data.forEach, data.has, data.get('name').....
+  
+  
+  2. Intl.NumberFormat()的使用： https://juejin.cn/post/7218006495802818615 
+    const formatter = new Intl.NumberFormat('en-US', {
+      style: 'currency',
+      currency: 'USD',
+    });
+    formatter.format(12345556); // "$12,345,556.00"
+ */

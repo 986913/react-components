@@ -132,7 +132,7 @@ function App() {
       {/* <PhoneNoInputWrapper /> */}
       {/* <ValtioWrapper /> */}
       {/* <FlightBookerWrapper /> */}
-      <MortgageCalculatorWrapper />
+      {/* <MortgageCalculatorWrapper /> */}
       {/* ----------------------- Customized Hooks examples------------------------- */}
       {/* <AppUseEffectOnceExample /> */}
       {/* <AppUseDebounceExample /> */}
