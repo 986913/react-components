@@ -34,7 +34,7 @@ export const GenerateTable = () => {
       <form
         onSubmit={(e) => {
           e.preventDefault();
-          // Obtain data from the form.
+          // Obtain data from the form: 经常attach to form element
           const data = new FormData(e.target);
 
           const rows = data.get('rows');

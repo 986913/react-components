@@ -101,7 +101,7 @@ export const MortgageCalculator = () => {
 /**
   知识点：
 
-  1. const data = new FormData(event.target) 的使用
+  1. const data = new FormData(event.target) 的使用, 经常attach to form element
     data有一系列的方法可使用，eg： data.forEach, data.has, data.get('name').....
   
   
