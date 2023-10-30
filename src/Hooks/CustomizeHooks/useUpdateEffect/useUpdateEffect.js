@@ -1,4 +1,4 @@
-import { useCallback, useState, useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 
 /*
   Implement useUpdateEffect() that it works the same as useEffect() 
