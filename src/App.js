@@ -62,6 +62,7 @@ import { AppUseClickOutsideExample } from './Hooks/CustomizeHooks/useClickOutsid
 import { AppUseIsMountedExample } from './Hooks/CustomizeHooks/useIsMounted';
 import { AppUseIsFirstRenderExample } from './Hooks/CustomizeHooks/useIsFirstRender';
 import { AppUseArrayExample } from './Hooks/CustomizeHooks/useArray';
+import { AppUseUpdateEffectExample } from './Hooks/CustomizeHooks/useUpdateEffect';
 import { AppUseEffectExample1 } from './Hooks/ReacBuildIntHooks/useEffect_eg1';
 import { AppUseRefExample1 } from './Hooks/ReacBuildIntHooks/useRef_eg1';
 import { AppUseRefExample2 } from './Hooks/ReacBuildIntHooks/useRef_eg2';
@@ -152,6 +153,7 @@ function App() {
       {/* <AppUseIsFirstRenderExample /> */}
       {/* <AppUseIsMountedExample /> */}
       {/* <AppUseArrayExample /> */}
+      <AppUseUpdateEffectExample />
       {/* ----------------------- React build-in Hooks examples-------------------- */}
       {/* <AppUseEffectExample1 /> */}
       {/* <AppUseReducerExample1 /> */}
