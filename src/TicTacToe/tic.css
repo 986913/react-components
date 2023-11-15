@@ -1,0 +1,28 @@
+.tic-container {
+  width: 200px;
+  height:200px;
+  margin: 4em auto;
+  text-align: center;
+}
+
+.board {
+  width: 80%;
+  height: 80%;
+  margin: 1em auto;
+  display: grid;
+  grid-template-rows: repeat(3,1fr);
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.cell {
+  font-size: xx-large;
+}
+.cell:hover {
+  background-color: #F0EAEA
+}
+
+
+.win-msg {
+  color: green;
+  font-weight: bolder;
+}

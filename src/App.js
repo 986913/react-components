@@ -43,6 +43,7 @@ import { InfiniteScrollWrapper } from './InfiniteScroll/Wrapper';
 import { MultipleSelectWrapper } from './MultipleSelect';
 import { PhoneNoInputWrapper } from './PhoneNumberInput';
 import { ValtioWrapper } from './Valtio';
+import { TicTacToeWrapper } from './TicTacToe';
 import { MortgageCalculatorWrapper } from './Mortgage Calculator/Wrapper';
 import { AppUseEffectOnceExample } from './Hooks/CustomizeHooks/useEffectOnce';
 import { AppUseDebounceExample } from './Hooks/CustomizeHooks/useDebounce';
@@ -134,6 +135,7 @@ function App() {
       {/* <ValtioWrapper /> */}
       {/* <FlightBookerWrapper /> */}
       {/* <MortgageCalculatorWrapper /> */}
+      <TicTacToeWrapper />
       {/* ----------------------- Customized Hooks examples------------------------- */}
       {/* <AppUseEffectOnceExample /> */}
       {/* <AppUseDebounceExample /> */}
@@ -153,7 +155,7 @@ function App() {
       {/* <AppUseIsFirstRenderExample /> */}
       {/* <AppUseIsMountedExample /> */}
       {/* <AppUseArrayExample /> */}
-      <AppUseUpdateEffectExample />
+      {/* <AppUseUpdateEffectExample /> */}
       {/* ----------------------- React build-in Hooks examples-------------------- */}
       {/* <AppUseEffectExample1 /> */}
       {/* <AppUseReducerExample1 /> */}
