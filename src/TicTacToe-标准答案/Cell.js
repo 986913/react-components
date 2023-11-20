@@ -8,6 +8,7 @@ export const Cell = ({ index, disabled, mark, player, onClick }) => {
       disabled={disabled}
       onClick={onClick}
     >
+      {/* mark是重要的prop,用来显示X，O或者空值的 */}
       <span aria-hidden={true}>{mark}</span>
     </button>
   );
