@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Cell } from './Cell';
 import { determineWinner } from './helper';
-import './tictactoe.css';
+import './tictactoeII.css';
 
 export const TicTacToe = () => {
   const [board, setBoard] = useState(Array(9).fill(null)); // 'X', 'O', or null, representing the marks made by players X, O, or an empty cell
@@ -45,7 +45,7 @@ export const TicTacToe = () => {
     <div className='tic-app'>
       <div aria-live='polite'>{getStatusMessage()}</div>
 
-      <div className='tic-board'>
+      <div className='board'>
         {board.map((_, index) => {
           const player = xIsPlaying ? 'X' : 'O';
           return (

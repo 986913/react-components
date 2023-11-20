@@ -77,12 +77,12 @@ export const TicTacToe = () => {
       {isDraw && <p>It's draw !</p>}
       {!winner && !isDraw && <p>Player {player === 1 ? 'X' : 'O'} turn </p>}
 
-      <section className='board'>
+      <section className='my-board'>
         {mx.map((row, i) => {
           return row.map((_, j) => {
             return (
               <div
-                className='cell'
+                className='my-cell'
                 key={`${i}-${j}`}
                 onClick={(e) => handleOnClick(e, i, j)}
               >

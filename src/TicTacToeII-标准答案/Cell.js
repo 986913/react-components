@@ -4,7 +4,7 @@ export const Cell = ({ index, disabled, mark, player, onClick }) => {
   return (
     <button
       aria-label={mark == null ? `Mark cell ${index} as ${player}` : undefined}
-      className='tic-cell'
+      className='cell'
       disabled={disabled}
       onClick={onClick}
     >

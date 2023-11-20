@@ -5,7 +5,7 @@
   text-align: center;
 }
 
-.board {
+.my-board {
   width: 80%;
   height: 80%;
   margin: 1em auto;
@@ -14,10 +14,11 @@
   grid-template-columns: repeat(3, 1fr);
 }
 
-.cell {
+.my-cell {
   font-size: xx-large;
+  border: 1px solid #ccc;
 }
-.cell:hover {
+.my-cell:hover {
   background-color: #F0EAEA
 }
 
