@@ -1,22 +1,36 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback, useEffect } from 'react';
 import { Cell } from './Cell';
 import { determineWinner } from './helper';
 import './tictactoeII.css';
 
-export const TicTacToe = () => {
-  const [board, setBoard] = useState(Array(9).fill(null)); // 'X', 'O', or null, representing the marks made by players X, O, or an empty cell
+/**
+  这是TicTacToe的升级版本：
+    之前经典的TicTacToe是3 x 3;
+    现在升级版是 N x N, needs M marks in a horizontal, vertical, or diagonal row to win. (N=5, M=4 as example)
+ **/
+
+export const TicTacToe = ({ n, m }) => {
+  const [board, setBoard] = useState(Array(n * n).fill(null)); // difference is here
   const [xIsPlaying, setIsXPlaying] = useState(true);
+  const [winner, setWinner] = useState(null); // difference is heres
 
-  const winner = determineWinner(board);
-
-  const onReset = () => {
-    setBoard(Array(9).fill(null));
+  const onReset = useCallback(() => {
+    setBoard(Array(n * n).fill(null));
     setIsXPlaying(true);
-  };
+    setWinner(null);
+  }, [n]);
+
+  // difference is here
+  useEffect(() => {
+    onReset();
+  }, [n, m, onReset]);
+
+  // difference is here
+  if (m > n) throw Error('Invalid props. `m` must be <= `n`.');
 
   const getStatusMessage = () => {
     if (winner != null) return `Player ${winner} wins!`;
-    if (!board.includes(null)) return `It's a draw!`; // All cells have been filled up.
+    if (!board.includes(null)) return `It's a draw!`;
     return `Player ${xIsPlaying ? 'X' : 'O'} turn`;
   };
 
@@ -24,20 +38,18 @@ export const TicTacToe = () => {
     const newBoard = board.slice();
     newBoard[cellIndex] = player;
 
-    // update board and player here:
     setBoard(newBoard);
     setIsXPlaying(!xIsPlaying);
+    setWinner(determineWinner(newBoard, cellIndex, n, m)); // different is here
   };
 
   const handleOnBtnClick = () => {
     if (winner == null) {
-      // Confirm whether to reset the game.
       const confirm = window.confirm(
         'Are you sure you want to reset the game?'
       );
       if (!confirm) return;
     }
-    //if has winner, then reset directly,
     onReset();
   };
 
@@ -45,7 +57,13 @@ export const TicTacToe = () => {
     <div className='tic-app'>
       <div aria-live='polite'>{getStatusMessage()}</div>
 
-      <div className='board'>
+      <div
+        className='boardII'
+        // different is here:
+        style={{
+          gridTemplateColumns: `repeat(${n}, 1fr)`,
+        }}
+      >
         {board.map((_, index) => {
           const player = xIsPlaying ? 'X' : 'O';
           return (

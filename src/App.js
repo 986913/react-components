@@ -138,8 +138,8 @@ function App() {
       {/* <ValtioWrapper /> */}
       {/* <FlightBookerWrapper /> */}
       {/* <MortgageCalculatorWrapper /> */}
-      <TicTacToeWrapperMing />
-      <TicTacToeWrapper />
+      {/* <TicTacToeWrapperMing /> */}
+      {/* <TicTacToeWrapper /> */}
       <TicTacToeWrapperII />
       {/* <JobBoardWrapper /> */}
       {/* ----------------------- Customized Hooks examples------------------------- */}

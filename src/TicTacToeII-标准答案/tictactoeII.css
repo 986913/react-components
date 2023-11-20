@@ -8,20 +8,20 @@
   row-gap: 16px;
 }
 
-.board {
+.boardII {
   display: grid;
   width: 100%;
-  grid-template-columns: repeat(3, 1fr);
+  /* different is here: 取消了grid-template-columns */
 }
 
 .cell {
   background-color: #fff;
   border: 1px solid #ccc;
   color: #000;
-  /* font-size: min(48px, 10vw); */
+  font-size: min(48px, 10vw);
   font-weight: bold;
   vertical-align: middle;
-  aspect-ratio: 1 / 1;  /* ensuring that each cell maintains a square shape regardless of its content. */
+  aspect-ratio: 1 / 1;
 }
 
 .cell:not(:disabled) {
