@@ -17,6 +17,7 @@ export const CELLS_IN_A_LINE = [
 /* Determine if there's a winner for the board : 
     iterating through all possible winning combinations and checks if the cells in each combination have the same mark
  */
+//注意：board为一维数组
 export const determineWinner = (board) => {
   for (let i = 0; i < CELLS_IN_A_LINE.length; i++) {
     const [a, b, c] = CELLS_IN_A_LINE[i];
