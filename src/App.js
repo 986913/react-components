@@ -35,8 +35,8 @@ import { TreeViewWrapperII } from './TreeViewII';
 import { TodolistWrapper } from './TodoList/Wrapper';
 import { TodolistWrapperII } from './TodoListII/Wrapper';
 import { TodolistWrapperIII } from './TodoListIII/Wrapper';
-import { TransferListWrapperI } from './TransferListI';
-import { TransferListWrapperII } from './TransferListII';
+import { TransferListWrapperI } from './TransferListI-明';
+import { TransferListWrapperII } from './TransferListII-明';
 import { PaginationWrapperI } from './PaginationI/Wrapper';
 import { PaginationWrapperII } from './PaginationII/Wrapper';
 import { InfiniteScrollWrapper } from './InfiniteScroll/Wrapper';
@@ -98,8 +98,8 @@ function App() {
       {/* <AccordionIIWrapper /> */}
       {/* <AccordionIIIWrapper /> */}
       {/* <InfiniteScrollWrapper /> */}
-      {/* <TransferListWrapperI /> */}
-      {/* <TransferListWrapperII /> */}
+      <TransferListWrapperI />
+      <TransferListWrapperII />
       {/* <MultipleSelectWrapper /> */}
       {/* <PaginationWrapperI /> */}
       {/* <PaginationWrapperII /> */}
@@ -140,8 +140,9 @@ function App() {
       {/* <MortgageCalculatorWrapper /> */}
       {/* <TicTacToeWrapperMing /> */}
       {/* <TicTacToeWrapper /> */}
-      <TicTacToeWrapperII />
+      {/* <TicTacToeWrapperII /> */}
       {/* <JobBoardWrapper /> */}
+
       {/* ----------------------- Customized Hooks examples------------------------- */}
       {/* <AppUseEffectOnceExample /> */}
       {/* <AppUseDebounceExample /> */}
@@ -162,6 +163,7 @@ function App() {
       {/* <AppUseIsMountedExample /> */}
       {/* <AppUseArrayExample /> */}
       {/* <AppUseUpdateEffectExample /> */}
+
       {/* ----------------------- React build-in Hooks examples-------------------- */}
       {/* <AppUseEffectExample1 /> */}
       {/* <AppUseReducerExample1 /> */}
