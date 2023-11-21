@@ -43,7 +43,7 @@ import { InfiniteScrollWrapper } from './InfiniteScroll/Wrapper';
 import { MultipleSelectWrapper } from './MultipleSelect';
 import { PhoneNoInputWrapper } from './PhoneNumberInput';
 import { ValtioWrapper } from './Valtio';
-import { TicTacToeWrapperMing } from './TicTacToe-自己写的';
+import { TicTacToeWrapperMing } from './TicTacToe-明';
 import { TicTacToeWrapper } from './TicTacToe-标准答案';
 import { TicTacToeWrapperII } from './TicTacToeII-标准答案';
 import { JobBoardWrapper } from './JobBoard';
