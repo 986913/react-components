@@ -37,6 +37,7 @@ import { TodolistWrapperII } from './TodoListII/Wrapper';
 import { TodolistWrapperIII } from './TodoListIII/Wrapper';
 import { TransferListWrapperI } from './TransferListI-明';
 import { TransferListWrapperII } from './TransferListII-明';
+import { TransferListWrapperIII } from './TransferListIII';
 import { PaginationWrapperI } from './PaginationI/Wrapper';
 import { PaginationWrapperII } from './PaginationII/Wrapper';
 import { InfiniteScrollWrapper } from './InfiniteScroll/Wrapper';
@@ -98,8 +99,9 @@ function App() {
       {/* <AccordionIIWrapper /> */}
       {/* <AccordionIIIWrapper /> */}
       {/* <InfiniteScrollWrapper /> */}
-      <TransferListWrapperI />
-      <TransferListWrapperII />
+      {/* <TransferListWrapperI /> */}
+      {/* <TransferListWrapperII /> */}
+      <TransferListWrapperIII />
       {/* <MultipleSelectWrapper /> */}
       {/* <PaginationWrapperI /> */}
       {/* <PaginationWrapperII /> */}
