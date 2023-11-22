@@ -45,11 +45,14 @@ export const transferSelectedItems = (
 
   // Remove selected items from source list and add to the destination list.
   itemsSrc.forEach((value, key) => {
+    // if value is false, means no-selected, then return function directly
     if (!value) return;
 
+    // if value is true, means selected, then remove selected items from source list and add to the destination list.
     newItemsDst.set(key, value);
     newItemsSrc.delete(key);
   });
+
   setItemsSrc(newItemsSrc);
   setItemsDst(newItemsDst);
 };
