@@ -1,72 +1,66 @@
 import React, { useState } from 'react';
-import { ItemList } from './ItemList';
 import './transferlistIII.css';
+import { List } from './List';
 import {
   generateItemsMap,
+  moveSelectedItems,
+  moveAllItems,
   hasNoSelectedItems,
-  transferSelectedItems,
-  transferAllItems,
-  DEFAULT_ITEMS_LEFT,
-  DEFAULT_ITEMS_RIGHT,
+  DEFAULT_LEFT_ITEMS,
+  DEFAULT_RIGHT_ITEMS,
 } from './helper';
 
 export const TransferList = () => {
-  const [itemsLeft, setItemsLeft] = useState(
-    generateItemsMap(DEFAULT_ITEMS_LEFT)
+  const [leftItems, setLeftItems] = useState(
+    generateItemsMap(DEFAULT_LEFT_ITEMS)
   );
-  const [itemsRight, setItemsRight] = useState(
-    generateItemsMap(DEFAULT_ITEMS_RIGHT)
+  const [rightItems, setRightItems] = useState(
+    generateItemsMap(DEFAULT_RIGHT_ITEMS)
   );
 
   const moveAllToLeft = () => {
-    transferAllItems(itemsRight, setItemsRight, itemsLeft, setItemsLeft);
+    moveAllItems(rightItems, leftItems, setRightItems, setLeftItems);
   };
   const moveAllToRight = () => {
-    transferAllItems(itemsLeft, setItemsLeft, itemsRight, setItemsRight);
+    moveAllItems(leftItems, rightItems, setLeftItems, setRightItems);
   };
   const moveSelectedToLeft = () => {
-    transferSelectedItems(itemsRight, setItemsRight, itemsLeft, setItemsLeft);
+    moveSelectedItems(rightItems, leftItems, setRightItems, setLeftItems);
   };
   const moveSelectedToRight = () => {
-    transferSelectedItems(itemsLeft, setItemsLeft, itemsRight, setItemsRight);
+    moveSelectedItems(leftItems, rightItems, setLeftItems, setRightItems);
   };
 
   return (
     <div className='transfer-list'>
-      <ItemList items={itemsLeft} setItems={setItemsLeft} />
+      <div className='left-box'>
+        <List items={leftItems} updateItems={setLeftItems} />
+      </div>
 
-      <div className='transfer-list__actions'>
-        <button
-          aria-label='Transfer all items to left list'
-          disabled={itemsRight.size === 0}
-          onClick={moveAllToLeft}
-        >
-          <span aria-hidden={true}>&lt;&lt;</span>
+      <div className='mid-box'>
+        <button onClick={moveAllToLeft} disabled={rightItems.size === 0}>
+          <span> &lt;&lt;</span>
         </button>
         <button
-          aria-label='Transfer selected items to left list'
-          disabled={hasNoSelectedItems(itemsRight)}
           onClick={moveSelectedToLeft}
+          disabled={hasNoSelectedItems(rightItems)}
         >
-          <span aria-hidden={true}>&lt;</span>
+          <span>&lt;</span>
+        </button>
+        <button onClick={moveAllToRight} disabled={leftItems.size === 0}>
+          <span> &gt;&gt;</span>
         </button>
         <button
-          aria-label='Transfer selected items to right list'
-          disabled={hasNoSelectedItems(itemsLeft)}
           onClick={moveSelectedToRight}
+          disabled={hasNoSelectedItems(leftItems)}
         >
-          <span aria-hidden={true}>&gt;</span>
-        </button>
-        <button
-          aria-label='Transfer all items to right list'
-          disabled={itemsLeft.size === 0}
-          onClick={moveAllToRight}
-        >
-          <span aria-hidden={true}>&gt;&gt;</span>
+          <span> &gt;</span>
         </button>
       </div>
 
-      <ItemList items={itemsRight} setItems={setItemsRight} />
+      <div className='right-box'>
+        <List items={rightItems} updateItems={setRightItems} />
+      </div>
     </div>
   );
 };

@@ -1,5 +1,4 @@
 /* eslint-disable no-unused-vars */
-import './App.css';
 import { AutocompleteWrapper } from './Autocomplete';
 import { CarouselWrapper } from './Carousel';
 import { CascaderWrapper } from './Cascader';

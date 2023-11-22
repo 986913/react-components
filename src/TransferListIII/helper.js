@@ -1,58 +1,76 @@
-export const DEFAULT_ITEMS_LEFT = ['HTML', 'JavaScript', 'CSS', 'TypeScript'];
-export const DEFAULT_ITEMS_RIGHT = ['React', 'Angular', 'Vue', 'Svelte'];
+export const DEFAULT_LEFT_ITEMS = ['Html', 'Css', 'Javascript'];
+export const DEFAULT_RIGHT_ITEMS = ['Vue', 'React', 'Vanilla'];
 
-/* Convert the default array of items into a map with the item name as a key and the value as a boolean:
-    {
-      "HTML" => false,
-      "JavaScript" => false,
-      "CSS" => false,
-      "TypeScript" => false
-    }
-    {
-      "React" => false,
-      "Angular" => false,
-      "Vue" => false,
-      "Svelte" => false
-    }
+/**
+ *
+ * @param {*} itemsArr 输入为字符串数组 ['html','css']
+ * @returns 输出为Map结构,比如{"html" => false, "css"=> false}
  */
-export const generateItemsMap = (items) =>
-  new Map(items.map((label) => [label, false]));
-
-// Determine if the list has no selected items.
-export const hasNoSelectedItems = (items) =>
-  Array.from(items.values()).filter((val) => Boolean(val)).length === 0;
-
-// Transfer all items from a source list to a destination list.
-export const transferAllItems = (
-  itemsSrc,
-  setItemsSrc,
-  itemsDst,
-  setItemsDst
-) => {
-  setItemsDst(new Map([...itemsDst, ...itemsSrc]));
-  setItemsSrc(new Map());
+export const generateItemsMap = (itemsArr) => {
+  const entries = itemsArr.map((item) => [item, false]);
+  return new Map(entries);
 };
 
-// Transfer selected items from a source list to a destination list.
-export const transferSelectedItems = (
-  itemsSrc,
-  setItemsSrc,
-  itemsDst,
-  setItemsDst
+/**
+ *
+ * @param {*} srcItems 从哪儿开始移
+ * @param {*} desItems 移到哪儿
+ * @param {*} updateSrcItemsFn 父组件的hook,更新items的，比如setLeftItems, setRightItems
+ * @param {*} updateDesItemsFn 父组件的hook,更新items的，比如setLeftItems, setRightItems
+ */
+export const moveAllItems = (
+  srcItems,
+  desItems,
+  updateSrcItemsFn,
+  updateDesItemsFn
 ) => {
-  const newItemsSrc = new Map(itemsSrc);
-  const newItemsDst = new Map(itemsDst);
+  /* 
+    desItems and srcItems 长得是这样:                  Map {"vue"=>false, "react"=>true}
+    then [...desItems] and [...srcItems] 长得是这样:  [['vue', false], ['react', true]]
+  */
+  updateDesItemsFn(new Map([...desItems, ...srcItems]));
+  updateSrcItemsFn(new Map());
+};
 
-  // Remove selected items from source list and add to the destination list.
-  itemsSrc.forEach((value, key) => {
+/**
+ *
+ * @param {*} srcItems 从哪儿开始移
+ * @param {*} desItems 移到哪儿
+ * @param {*} updateSrcItemsFn 父组件的hook,更新items的，比如setLeftItems, setRightItems
+ * @param {*} updateDesItemsFn 父组件的hook,更新items的，比如setLeftItems, setRightItems
+ */
+export const moveSelectedItems = (
+  srcItems,
+  desItems,
+  updateSrcItemsFn,
+  updateDesItemsFn
+) => {
+  const newSrcItems = new Map(srcItems);
+  const newDstItems = new Map(desItems);
+
+  //注意循环的是orignal srcItems map:s
+  srcItems.forEach((val, key) => {
     // if value is false, means no-selected, then return function directly
-    if (!value) return;
+    if (val === false) return;
 
     // if value is true, means selected, then remove selected items from source list and add to the destination list.
-    newItemsDst.set(key, value);
-    newItemsSrc.delete(key);
+    newDstItems.set(key, val);
+    newSrcItems.delete(key);
   });
 
-  setItemsSrc(newItemsSrc);
-  setItemsDst(newItemsDst);
+  updateSrcItemsFn(newSrcItems);
+  updateDesItemsFn(newDstItems);
+};
+
+/**
+ * Determine if the list has no selected items.
+ * @param {*} items
+ * @returns {boolean}
+ */
+export const hasNoSelectedItems = (items) => {
+  const values = Array.from(items.values());
+  for (let i = 0; i < values.length; i++) {
+    if (values[i] === true) return false;
+  }
+  return true;
 };
