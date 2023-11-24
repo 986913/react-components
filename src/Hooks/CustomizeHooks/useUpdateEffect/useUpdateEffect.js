@@ -6,7 +6,7 @@ import { useEffect, useRef } from 'react';
  */
 
 export const useUpdateEffect = (effect, deps) => {
-  const isFirstRender = useRef(true);
+  let isFirstRender = useRef(true);
 
   useEffect(() => {
     // if not 1st render, then no skip
