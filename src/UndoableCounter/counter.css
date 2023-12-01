@@ -1,0 +1,14 @@
+.counter-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.counter-row button {
+  padding: 1em 2em;
+}
+.counter-label {
+  font-size: 24px;
+  margin-left: 24px;
+  margin-right: 24px;
+}
