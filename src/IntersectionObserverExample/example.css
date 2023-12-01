@@ -1,0 +1,38 @@
+.example1-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #282c34;
+}
+
+.isVisible {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: cornflowerblue;
+  color: rgb(32, 36, 41);
+  font-size: 20px;
+  padding: 40px;
+}
+
+.example1-section{
+  height: 100vh;
+  width: 100%;
+}
+
+.example1-box{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: cornflowerblue;
+  color: rgb(32, 36, 41);
+  font-weight: 900;
+  font-size: 18px;
+  width: 500px;
+  height: 250px;
+}
+

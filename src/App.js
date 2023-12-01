@@ -40,6 +40,7 @@ import { TransferListWrapperIII } from './TransferListIII';
 import { TransferListWrapperIV } from './TransferListIV/';
 import { PaginationWrapperI } from './PaginationI/Wrapper';
 import { PaginationWrapperII } from './PaginationII/Wrapper';
+import { IntersectionObserverEx1lWrapper } from './IntersectionObserverExample';
 import { InfiniteScrollWrapper } from './InfiniteScroll/Wrapper';
 import { MultipleSelectWrapper } from './MultipleSelect';
 import { PhoneNoInputWrapper } from './PhoneNumberInput';
@@ -98,7 +99,8 @@ function App() {
       {/* <AccordionWrapper /> */}
       {/* <AccordionIIWrapper /> */}
       {/* <AccordionIIIWrapper /> */}
-      <InfiniteScrollWrapper />
+      <IntersectionObserverEx1lWrapper />
+      {/* <InfiniteScrollWrapper /> */}
       {/* <TransferListWrapperI /> */}
       {/* <TransferListWrapperII /> */}
       {/* <TransferListWrapperIII /> */}
