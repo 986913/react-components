@@ -27,9 +27,7 @@ export const MemoryGame = ({
     resetGame();
   }, [cols, rows, matchCount, resetGame]);
 
-  if (matchCount < 2) {
-    throw new Error(`${matchCount} should be 2 or more`);
-  }
+  if (matchCount < 2) throw new Error(`${matchCount} should be 2 or more`);
   if (totalCount % matchCount !== 0) {
     throw new Error(
       `Cannot divide total cells of ${totalCount} by ${matchCount}`
@@ -50,9 +48,7 @@ export const MemoryGame = ({
     setFlipped(newflipped);
 
     // Not enough cards are flipped.
-    if (newflipped.length < matchCount) {
-      return;
-    }
+    if (newflipped.length < matchCount) return;
 
     const allFlippedAreSame = newflipped.every(
       (index) => cards[newflipped[0]] === cards[index]
