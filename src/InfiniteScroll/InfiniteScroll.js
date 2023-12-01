@@ -1,53 +1,48 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './infinitescoll.css';
 
-export class InfiniteScroll extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      loading: false,
-      pageNo: 0,
-      prevY: 0,
-    };
-  }
+const options = {
+  root: null,
+  rootMargin: '0px',
+  threshold: 1.0,
+};
 
-  componentDidMount() {
-    const options = {
-      root: null,
-      rootMargin: '0px',
-      threshold: 1.0,
-    };
-    this.observer = new IntersectionObserver(this.handleObserver, options);
-    this.observer.observe(this.loadingRef);
-  }
+export const InfiniteScroll = ({ children, loadMore }) => {
+  let [loading, setLoading] = useState(false);
+  let [pageNo, setPageNo] = useState(0);
 
-  handleObserver = (entities, observer) => {
-    const { prevY, pageNo } = this.state;
-    const { loadMore } = this.props;
-    this.setState({ loading: true });
-    const y = entities[0].boundingClientRect.y;
-    if (prevY > y) {
-      loadMore(pageNo + 1);
-      this.setState({ pageNo: pageNo + 1, loading: false });
+  const containerRef = useRef();
+
+  const handleObserver = (entities, observer) => {
+    /* console.log('🟡IntersectionObserver callback function在目标元素出现或者消失于viewport时被call 🟡'); */
+    setLoading(false);
+
+    const [entry] = entities;
+    //也就是target element (containerRef) 与viewPort交合了：
+    if (entry.isIntersecting) {
+      setPageNo(pageNo++);
+      loadMore(pageNo);
+      setLoading(true);
     }
-    this.setState({ prevY: y });
   };
 
-  render() {
-    const { loading } = this.state;
-    const { children, height } = this.props;
-    return (
-      <div>
-        <div style={{ minHeight: `${height}px`, border: '1px solid black' }}>
-          {children}
-        </div>
-        <div
-          ref={(loadingRef) => (this.loadingRef = loadingRef)}
-          className='loading'
-        >
-          {loading && <span>Loading...</span>}
-        </div>
+  useEffect(() => {
+    // key is here: 创建IntersectionObserver实例obs, 然后obs监听target元素(containerRef)是否进入窗口
+    const obs = new IntersectionObserver(handleObserver, options);
+    if (containerRef.current) obs.observe(containerRef.current);
+
+    return () => {
+      if (containerRef.current) obs.unobserve(containerRef.current);
+    };
+  }, [containerRef, options]);
+
+  return (
+    <div>
+      <div className='photoBOx'>{children}</div>
+
+      <div ref={containerRef} className='loading'>
+        {loading && <span>Loading...</span>}
       </div>
-    );
-  }
-}
+    </div>
+  );
+};

@@ -98,11 +98,11 @@ function App() {
       {/* <AccordionWrapper /> */}
       {/* <AccordionIIWrapper /> */}
       {/* <AccordionIIIWrapper /> */}
-      {/* <InfiniteScrollWrapper /> */}
+      <InfiniteScrollWrapper />
       {/* <TransferListWrapperI /> */}
       {/* <TransferListWrapperII /> */}
       {/* <TransferListWrapperIII /> */}
-      <TransferListWrapperIV />
+      {/* <TransferListWrapperIV /> */}
       {/* <MultipleSelectWrapper /> */}
       {/* <PaginationWrapperI /> */}
       {/* <PaginationWrapperII /> */}
