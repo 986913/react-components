@@ -50,6 +50,7 @@ import { TicTacToeWrapper } from './TicTacToe-标准答案';
 import { TicTacToeWrapperII } from './TicTacToeII-标准答案';
 import { JobBoardWrapper } from './JobBoard';
 import { UndoableCounterWrapper } from './UndoableCounter';
+import { WhackAMoleWrapper } from './Whack-A-Mole';
 import { MortgageCalculatorWrapper } from './Mortgage Calculator/Wrapper';
 import { AppUseEffectOnceExample } from './Hooks/CustomizeHooks/useEffectOnce';
 import { AppUseDebounceExample } from './Hooks/CustomizeHooks/useDebounce';
@@ -148,8 +149,8 @@ function App() {
       {/* <TicTacToeWrapper /> */}
       {/* <TicTacToeWrapperII /> */}
       {/* <JobBoardWrapper /> */}
-      <UndoableCounterWrapper />
-
+      {/* <UndoableCounterWrapper /> */}
+      <WhackAMoleWrapper />
       {/* ----------------------- Customized Hooks examples------------------------- */}
       {/* <AppUseEffectOnceExample /> */}
       {/* <AppUseDebounceExample /> */}
