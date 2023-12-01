@@ -99,7 +99,7 @@ function App() {
       {/* <AccordionWrapper /> */}
       {/* <AccordionIIWrapper /> */}
       {/* <AccordionIIIWrapper /> */}
-      <IntersectionObserverEx1lWrapper />
+      {/* <IntersectionObserverEx1lWrapper /> */}
       {/* <InfiniteScrollWrapper /> */}
       {/* <TransferListWrapperI /> */}
       {/* <TransferListWrapperII /> */}
