@@ -92,7 +92,7 @@ function App() {
     <div>
       {/* ----------------------- React components practices ------------------------- */}
       {/* <AutocompleteWrapper /> */}
-      <AutocompleteWrapperII />
+      {/* <AutocompleteWrapperII /> */}
       {/* <CarouselWrapper /> */}
       {/* <CascaderWrapper /> */}
       {/* <PollWrapper /> */}
