@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-vars */
 import { AutocompleteWrapper } from './Autocomplete';
+import { AutocompleteWrapperII } from './AutocompleteII';
 import { CarouselWrapper } from './Carousel';
 import { CascaderWrapper } from './Cascader';
 import { PollWrapper } from './PollWidget/Wrapper';
@@ -91,6 +92,7 @@ function App() {
     <div>
       {/* ----------------------- React components practices ------------------------- */}
       {/* <AutocompleteWrapper /> */}
+      <AutocompleteWrapperII />
       {/* <CarouselWrapper /> */}
       {/* <CascaderWrapper /> */}
       {/* <PollWrapper /> */}
@@ -152,7 +154,7 @@ function App() {
       {/* <JobBoardWrapper /> */}
       {/* <UndoableCounterWrapper /> */}
       {/* <WhackAMoleWrapper /> */}
-      <MemoryGameWrapper />
+      {/* <MemoryGameWrapper /> */}
 
       {/* ----------------------- Customized Hooks examples------------------------- */}
       {/* <AppUseEffectOnceExample /> */}
