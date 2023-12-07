@@ -54,7 +54,8 @@ import { UndoableCounterWrapper } from './UndoableCounter';
 import { WhackAMoleWrapper } from './Whack-A-Mole';
 import { MemoryGameWrapper } from './MemoryGame';
 import { MortgageCalculatorWrapper } from './Mortgage Calculator/Wrapper';
-import { TurnTableWrapper } from './TurnTable/Wrapper';
+import { TurnTableWrapper } from './TurnTable';
+import { DataTableWrapper } from './DataTable';
 import { AppUseEffectOnceExample } from './Hooks/CustomizeHooks/useEffectOnce';
 import { AppUseDebounceExample } from './Hooks/CustomizeHooks/useDebounce';
 import { AppUseCurrentDateExample } from './Hooks/CustomizeHooks/useCurentDate';
@@ -157,6 +158,7 @@ function App() {
       {/* <WhackAMoleWrapper /> */}
       {/* <MemoryGameWrapper /> */}
       <TurnTableWrapper />
+      <DataTableWrapper />
       {/* ----------------------- Customized Hooks examples------------------------- */}
       {/* <AppUseEffectOnceExample /> */}
       {/* <AppUseDebounceExample /> */}
