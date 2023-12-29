@@ -1,8 +1,0 @@
-.calendar {
-  height: 300px;
-}
-
-.calender-date:hover {
-  background-color: lightblue;
-  transition: all 0.2s;
-}
