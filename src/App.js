@@ -55,6 +55,7 @@ import { WhackAMoleWrapper } from './Whack-A-Mole';
 import { MemoryGameWrapper } from './MemoryGame';
 import { MortgageCalculatorWrapper } from './Mortgage Calculator/Wrapper';
 import { TurnTableWrapper } from './TurnTable';
+import { CalendarWrapper } from './Calendar';
 import { DataTableWrapper } from './DataTable';
 import { AppUseEffectOnceExample } from './Hooks/CustomizeHooks/useEffectOnce';
 import { AppUseDebounceExample } from './Hooks/CustomizeHooks/useDebounce';
@@ -158,6 +159,7 @@ function App() {
       {/* <MemoryGameWrapper /> */}
       {/* <TurnTableWrapper /> 转盘还没开始做呢 */}
       {/* <FlightBookerWrapper /> */}
+      <CalendarWrapper />
       {/* <DataTableWrapper /> */}
       {/* ----------------------- Customized Hooks examples------------------------- */}
       {/* <AppUseEffectOnceExample /> */}

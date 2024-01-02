@@ -1,0 +1,58 @@
+.calendar-wrapper {
+  width: 50%;
+  margin: auto;
+  text-align: center;
+
+  --activeColor: steelblue;
+}
+
+.selected-date {
+  color: var(--activeColor)
+}
+
+.todayBtn {
+  margin: .5em;
+  padding: .5em 1em;
+  border: none;
+  background-color: var(--activeColor);
+}
+.todayBtn:hover {
+  cursor: pointer;
+}
+
+.calendar-control-panel {
+  display: flex;
+  justify-content: space-evenly;
+  width: 50%;
+  margin: .5em auto;
+}
+.calendar-control-panel button {
+  background: transparent;
+  border: none;
+}
+.calendar-control-panel button:hover{
+  cursor: pointer;
+}
+
+
+
+.calendar-display-grid {
+  display: grid;
+  grid-gap: 1px;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(7, 1fr);
+  grid-auto-flow: row;
+  margin-top: 2em;
+}
+
+.item {
+  display: grid;
+  place-items: center;
+  outline: 1px solid lightgray; /* The outline creates the border */
+  padding: 1em .5em;
+}
+
+
+.item.selected {
+  background-color: var(--activeColor);
+}

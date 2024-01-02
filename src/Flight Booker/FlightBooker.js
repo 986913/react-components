@@ -11,7 +11,7 @@ import './flightbooker.css';
 
 /* formatting Date() object to YYYY-MM_DD  */
 const TODAY = formatDate(new Date());
-const DAY_IN_SECONDS = 24 * 60 * 60 * 1000;
+const DAY_IN_MILLI_SECONDS = 24 * 60 * 60 * 1000; // 24小时*60分钟*60秒*1000毫秒
 
 function formatDate(date) {
   const year = date.getFullYear();
@@ -24,7 +24,7 @@ function formatDate(date) {
 export const FlightBooker = () => {
   const [flightOption, setFlightOption] = useState('one-way');
   const [departureDate, setDepartureDate] = useState(
-    formatDate(new Date(Date.now() + DAY_IN_SECONDS)) // Tomorrow.
+    formatDate(new Date(Date.now() + DAY_IN_MILLI_SECONDS)) // Tomorrow.
   );
   const [returnDate, setReturnDate] = useState(departureDate);
   const handleFlightTypeChange = (e) => setFlightOption(e.target.value);
