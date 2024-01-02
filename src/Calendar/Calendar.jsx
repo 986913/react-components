@@ -8,14 +8,13 @@ const DAY_IN_MILLI_SECONDS = 24 * 60 * 60 * 1000; // 24小时*60分钟*60秒*100
 
 const getCurrMonth = (date) => date.getMonth();
 const getCurrYear = (date) => date.getFullYear();
-const getCurrDate = date => date.getDate().toString().padStart(2, "0")
+const getCurrDate = date => date.getDate().toString().padStart(2, "0");
 const formatDate = (date) =>  `${getCurrDate(date)}-${MONTHS[getCurrMonth(date)]}-${getCurrYear(date)}`
-
 
 export const Calendar = ({value=new Date(), onChange}) => {
 
-  const [selectedDate, setSelectedDate] = useState(value);
-  const [selectedDateNumber, setSelectedDateNumber] = useState(1);
+  //selectedDateNumber用来记录当前用户点击了哪一个日期框框
+  const [selectedDateNumber, setSelectedDateNumber] = useState(value.getDate());
 
   // 根据当前的时间，算出这个月的第一天和最后一天：
   const startDay = new Date(value.getFullYear(), value.getMonth()); 
@@ -52,13 +51,13 @@ export const Calendar = ({value=new Date(), onChange}) => {
 
   const jumpToToday = () => {
     setSelectedDateNumber(new Date().getDate())
-    setSelectedDate(new Date());
+    // call父组件的方法 用来更改日历的当前时间的
     onChange(new Date())
   }
 
   return (
     <div className='calendar-wrapper'>
-      <h2>You selected <span className='selected-date'>{formatDate(selectedDate)}</span> </h2>
+      <h2>You selected <span className='selected-date'>{formatDate(new Date(getCurrYear(value), getCurrMonth(value), selectedDateNumber))}</span> </h2>
       <button className='todayBtn' onClick={jumpToToday}>Today</button>
 
       <div className='calendar-control-panel'>
@@ -71,23 +70,24 @@ export const Calendar = ({value=new Date(), onChange}) => {
 
       <div className='calendar-display-grid'>
         {/* Render weeks cells */}
-        {WEEK.map((day,index)=>{ return <Cell key={Math.random()} text={day} index={index}/>})}
+        {WEEK.map((day,index) => <Cell key={Math.random()} dateNumber={day} index={index}/>)}
+
         {/* Render prefix Days cells */}
         {Array(prefixDays).fill(null).map((_, i) => <Cell key={Math.random()}/>)}
+
         {/* Render current month Days cells */}
         {Array(numDays).fill(null).map((_,index) => <Cell 
           key={Math.random()} 
           index={index} 
-          text={index+1}  
+          dateNumber={index+1}  
           selected={selectedDateNumber === index+1}
-          // selected={value.getDate() === index+1}
-          updateSelectedDate={(date) => {
-            setSelectedDateNumber(date)
-            setSelectedDate(new Date(value.getFullYear(), value.getMonth(), date))
+          updateSelectedDateNumber={(dateNumber) => {
+            setSelectedDateNumber(dateNumber)
           }} 
         />)}
+
         {/* Render suffix Days cells */}
-        {Array(suffixDays).fill(null).map((_, i)=><Cell key={Math.random()}/>)}
+        {Array(suffixDays).fill(null).map((_, i) => <Cell key={Math.random()}/>)}
       </div>
 
     </div>

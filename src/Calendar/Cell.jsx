@@ -1,9 +1,6 @@
 import React from 'react';
 
-export const Cell = ({ text, selected, updateSelectedDate})=> {
-  const handleOnClick = () => {
-    updateSelectedDate(text);
-  }
-
-  return <div className={['item', selected && "selected"].filter(Boolean).join(' ')} onClick={handleOnClick}>{text}</div>
+export const Cell = ({ selected, dateNumber, updateSelectedDateNumber})=> {
+  const handleOnClick = () => updateSelectedDateNumber(dateNumber);
+  return <div className={['item', selected && "selected"].filter(Boolean).join(' ')} onClick={handleOnClick}>{dateNumber}</div>
 }
