@@ -1,21 +1,36 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React, { Fragment, useEffect, useRef } from 'react';
+import { createPortal } from 'react-dom'; /* key is here */
 import './modal.css';
 
-const modalRoot = document.getElementById('modal-root');
-export class Modal extends React.Component {
-  constructor(props) {
-    super(props);
-    this.el = document.createElement('div');
-  }
-  componentDidMount() {
-    modalRoot.appendChild(this.el);
-  }
-  componentWillUnmount() {
-    modalRoot.removeChild(this.el);
-  }
+export const Modal = ({ children, isOpen = false, onClose }) => {
+  const contentRef = useRef();
 
-  render() {
-    return ReactDOM.createPortal(this.props.children, this.el);
-  }
-}
+  useEffect(() => {
+    const closeModal = (e) => {
+      if (contentRef.current.contains(e.target)) return; //你点击了modal content本身,不做任何行动
+      onClose(); //你点击了overlay,关闭modal
+    };
+
+    document.addEventListener('mousedown', closeModal);
+    return () => {
+      document.removeEventListener('mousedown', closeModal);
+    };
+  }, [onClose]);
+
+  if (!isOpen) return null;
+
+  return (
+    <Fragment>
+      {createPortal(
+        <>
+          <div className='overlay' />
+          <div className='modal' ref={contentRef} role='dialog'>
+            <p>{children}</p>
+            <button onClick={onClose}>close</button>
+          </div>
+        </>,
+        document.getElementById('modal-root')
+      )}
+    </Fragment>
+  );
+};

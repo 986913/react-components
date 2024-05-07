@@ -99,7 +99,7 @@ function App() {
       {/* <CarouselWrapper /> */}
       {/* <CascaderWrapper /> */}
       {/* <PollWrapper /> */}
-      {/* <ModalWrapper /> */}
+      <ModalWrapper />
       {/* <GenerateTableWrapper /> */}
       {/* <TabsWrapper /> */}
       {/* <TabsIIWrapper /> */}
@@ -159,8 +159,9 @@ function App() {
       {/* <MemoryGameWrapper /> */}
       {/* <TurnTableWrapper /> 转盘还没开始做呢 */}
       {/* <FlightBookerWrapper /> */}
-      <CalendarWrapper />
+      {/* <CalendarWrapper /> */}
       {/* <DataTableWrapper /> */}
+
       {/* ----------------------- Customized Hooks examples------------------------- */}
       {/* <AppUseEffectOnceExample /> */}
       {/* <AppUseDebounceExample /> */}
