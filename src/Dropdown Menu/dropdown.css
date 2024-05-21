@@ -1,0 +1,19 @@
+.dropdown-container {
+  border: 1px solid black;
+  width: 200px;
+}
+
+.dropdown-btn {
+  background-color: gray;
+  padding: 1em;
+  border: none;
+  width: 100%;
+}
+
+.dropdown-btn:hover {
+  cursor: pointer;
+}
+
+.dropdown-list-item {
+  border-bottom: 1px solid lightgray;
+}

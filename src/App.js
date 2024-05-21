@@ -28,6 +28,7 @@ import { DigitalClockWrapper } from './DigitalClock';
 import { StopWatchWrapper } from './StopWatch';
 import { TimerWrapper } from './Timer';
 import { ModalWrapper } from './Modal';
+import { DropdownWrapper } from './Dropdown Menu/Wrapper';
 import { GenerateTableWrapper } from './GenerateTable';
 import { CalculatorWrapper } from './Calculator';
 import { TreeViewWrapperI } from './TreeViewI';
@@ -99,7 +100,8 @@ function App() {
       {/* <CarouselWrapper /> */}
       {/* <CascaderWrapper /> */}
       {/* <PollWrapper /> */}
-      <ModalWrapper />
+      {/* <ModalWrapper /> */}
+      <DropdownWrapper />
       {/* <GenerateTableWrapper /> */}
       {/* <TabsWrapper /> */}
       {/* <TabsIIWrapper /> */}
