@@ -8,22 +8,22 @@ export const Dropdown = ({ config, callBackAfterSelect }) => {
   const handleClick = () => setShowList(!showList);
   const handleSelectClick = (item) => callBackAfterSelect(item);
 
+  /************* 额外功能: 使用useRef实现点击外侧关闭list ***********/
   const buttonRef = useRef();
   const menuRef = useRef();
-
   const clickOutsideListener = (e) => {
-    if (menuRef.current && menuRef.current.contains(e.target)) {
-      return;
-    }
+    //点击到了任何一个item选项，什么都不用做直接return
+    if (menuRef.current && menuRef.current.contains(e.target)) return;
+    //点击到了外部，那就关闭list
     setShowList(false);
   };
-
   useEffect(() => {
     document.addEventListener('mousedown', clickOutsideListener);
     return () => {
       document.removeEventListener('mousedown', clickOutsideListener);
     };
   }, []);
+  /***********************************************************/
 
   return (
     <div className='dropdown-container'>
