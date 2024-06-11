@@ -101,7 +101,7 @@ function App() {
       {/* <CascaderWrapper /> */}
       {/* <PollWrapper /> */}
       {/* <ModalWrapper /> */}
-      <DropdownWrapper />
+      {/* <DropdownWrapper /> */}
       {/* <GenerateTableWrapper /> */}
       {/* <TabsWrapper /> */}
       {/* <TabsIIWrapper /> */}
