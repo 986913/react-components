@@ -1,47 +1,62 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import './infinitescoll.css';
 
-const options = {
-  root: null,
-  rootMargin: '0px',
-  threshold: 1.0,
-};
-
 export const InfiniteScroll = ({ children, loadMore }) => {
-  let [loading, setLoading] = useState(false);
-  let [pageNo, setPageNo] = useState(0);
+  let [curPage, setCurPage] = useState(0);
+  const bottomObserverRef = useRef();
 
-  const containerRef = useRef();
-
-  const handleObserver = (entities, observer) => {
-    /* console.log('🟡IntersectionObserver callback function在目标元素出现或者消失于viewport时被call 🟡'); */
-    setLoading(false);
-
+  /******** IntersectionObserver callback function ********/
+  const observerCallback = (entities, observer) => {
     const [entry] = entities;
-    //也就是target element (containerRef) 与viewPort交合了：
+    // If the bottom element is intersecting with the viewport:
     if (entry.isIntersecting) {
-      setPageNo(pageNo++);
-      loadMore(pageNo);
-      setLoading(true);
+      setCurPage((prevPageNo) => {
+        const nextPageNo = prevPageNo + 1;
+        loadMore(nextPageNo);
+
+        console.log('当前page is', nextPageNo);
+        return nextPageNo;
+      });
     }
   };
 
+  // Memoizes observerCallback to avoid unnecessary recreations unless loadMore changes.
+  const memoizedObserverCallback = useCallback(observerCallback, [loadMore]);
+
+  /******** Set up IntersectionObserver in useEffect ********/
   useEffect(() => {
-    // key is here: 创建IntersectionObserver实例obs, 然后obs监听target元素(containerRef)是否进入窗口
-    const obs = new IntersectionObserver(handleObserver, options);
-    if (containerRef.current) obs.observe(containerRef.current);
+    const observer = new IntersectionObserver(memoizedObserverCallback, {
+      threshold: 1.0,
+    });
+
+    const currElement = bottomObserverRef.current;
+    if (currElement) {
+      observer.observe(currElement);
+    }
 
     return () => {
-      if (containerRef.current) obs.unobserve(containerRef.current);
+      if (currElement) {
+        observer.unobserve(currElement);
+      }
     };
-  }, [containerRef, options]);
+  }, [memoizedObserverCallback]);
 
   return (
-    <div>
-      <div className='photoBOx'>{children}</div>
+    <div className='infinite-scroll-viewport'>
+      {children.map((item, idx) => {
+        const { id, thumbnailUrl } = item;
+        return (
+          <img
+            src={thumbnailUrl}
+            key={`${id}-${idx}`}
+            className='infinite-scroll-item'
+            alt='image'
+          />
+        );
+      })}
 
-      <div ref={containerRef} className='loading'>
-        {loading && <span>Loading...</span>}
+      <div className='bottom-observer' ref={bottomObserverRef}>
+        Load More
       </div>
     </div>
   );

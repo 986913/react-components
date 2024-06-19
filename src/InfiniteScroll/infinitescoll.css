@@ -1,12 +1,20 @@
-.photoBOx {
-  border: 1px solid black;
-  height: 100%;
-}
-.photo {
-  height: 100px;
+
+.infinite-scroll-viewport {
+  height: 600px;
   width: 200px;
+  border: 1px solid black;
+  overflow: auto;
+  margin: auto;
+  text-align: center;
 }
-.loading {
-  border: 1px solid red;
-  height: 50px;
+
+.infinite-scroll-item {
+  height: 20%;
+}
+
+
+.bottom-observer {
+  font-weight: bold;
+  padding: 1em;
+  border: 1px dashed gray;
 }
