@@ -1,9 +1,9 @@
 ## 👨‍👧 组件关系
 
 ```
-<ModalWrapper>
-    <Modal/>
-  <ModalWrapper/>
+<ProgressBarWrapper>
+    <ProgressBar/>
+  <ProgressBarWrapper/>
 ```
 
 ## 🔢 各组件的 state, props
