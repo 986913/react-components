@@ -4,7 +4,6 @@
   border-radius: 8px;
   height: 20px;
   width: 500px;
-  position: relative;
   overflow: hidden;
 }
 
@@ -12,6 +11,6 @@
   background-color: blue;
   height: 100%;
   color: white;
-  text-align: center;
-  transform-origin: left;
+  /* 注意这点： */
+  transform-origin: left; 
 }

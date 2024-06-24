@@ -110,7 +110,7 @@ function App() {
       {/* <AccordionIIWrapper /> */}
       {/* <AccordionIIIWrapper /> */}
       {/* <IntersectionObserverEx1lWrapper /> */}
-      <InfiniteScrollWrapper />
+      {/* <InfiniteScrollWrapper /> */}
       {/* <TransferListWrapperI /> */}
       {/* <TransferListWrapperII /> */}
       {/* <TransferListWrapperIII /> */}
@@ -128,7 +128,7 @@ function App() {
         下面4个progress components没有计算， 全都基于CSS:
           from transform: scaleX(0) to transform: scaleX(1) + transition-duration
       */}
-      {/* <ProgressBarWrapper /> */}
+      <ProgressBarWrapper />
       {/* <ProgressBarsWrapper /> */}
       {/* <ProgressBarsIIWrapper /> */}
       {/* <ProgressBarsIIIWrapper /> */}
