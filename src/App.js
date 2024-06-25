@@ -129,9 +129,9 @@ function App() {
           from transform: scaleX(0) to transform: scaleX(1) + transition-duration
       */}
       {/* <ProgressBarWrapper /> */}
-      <ProgressBarsWrapper />
+      {/* <ProgressBarsWrapper /> */}
       {/* <ProgressBarsIIWrapper /> */}
-      {/* <ProgressBarsIIIWrapper /> */}
+      <ProgressBarsIIIWrapper />
       {/* 
         下面ProgressBarsIIIIWrapper 和 ProgressBarIWrapper是重点， 因为场景更多见：
           1. 需要计算每10ms增加具体多少的progress

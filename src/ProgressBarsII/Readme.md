@@ -1,11 +1,11 @@
 ## 👨‍👧 组件关系
 
 ```
-<ProgressBarsWrapper>
-    <ProgressBars>
-        <ProgressBar/>
-    <ProgressBars/>
- <ProgressBarsWrapper/>
+<ProgressBarsIIWrapper>
+    <ProgressBarsII>
+        <ProgressBarII/>
+    <ProgressBarsII/>
+ <ProgressBarsIIWrapper/>
 ```
 
 ## 🔢 各组件的 state, props
@@ -17,13 +17,18 @@
 
 - ### `ProgressBars`
 
-  - states: `barCounts` - number, 表示当前总共有多少个 bars
+  - states:
+    - `barCounts` - number, 表示当前总共有多少个 bars
+    - `numOfFilledBars` - number, 表示当前总共有多少个 bars 已经 run 完了
   - props: 无
 
 - ### `ProgressBar`
 
-  - states: `isTransitinoStarted` - boolean, 表示当前 bar 有没有开始动画
-  - props: `duration` - number,单位是毫秒 ms 表示动画用多久时间
+  - states:`isTransitinoStarted` - boolean, 表示当前 bar 是否开始动画
+  - props:
+    - `duration` - number,单位是毫秒 ms 表示动画用多久时间
+    - `isTurn` - boolean, 表示是否轮到当前进度条
+    - `onComplete` - function,表示当前进度条完成之后的 callback function
 
 ## More CSS animations and transitions
 

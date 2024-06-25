@@ -21,11 +21,11 @@ export const ProgressBars = () => {
 
 /**************************************** Chind Component ***************************************/
 const ProgressBar = ({ duration }) => {
-  const [startTransition, setStartTransition] = useState(false);
+  const [isTransitinoStarted, setStartTransition] = useState(false);
 
-  //在组件首次渲染后启动动画: Start transition after first render and never apply this effect again.
+  //在组件首次渲染后启动动画 and never apply this effect again.
   useEffect(() => {
-    if (startTransition) return;
+    if (isTransitinoStarted) return;
     setStartTransition(true);
   }, []);
 
@@ -34,7 +34,7 @@ const ProgressBar = ({ duration }) => {
       <div
         style={{ transitionDuration: `${duration}ms` }}
         //在这动态添加"bar-filled" css class
-        className={['progress-inner', startTransition && 'bar-filled']
+        className={['progress-inner', isTransitinoStarted && 'bar-filled']
           .filter(Boolean)
           .join(' ')}
       ></div>
