@@ -8,12 +8,16 @@
 .progress-innerIII {
   background-color: green;
   height: 100%;
+  /* 动画前的效果 */
   transform: scaleX(0);
   transform-origin: left; 
+  /* css动画设置 */
   transition-property: transform;
+  /* transition-duration: 500 */
   transition-timing-function: linear;
 }
 
+/* bar-filled中是动画后抵达的效果 */
 .bar-filledIII {
   transform: scaleX(1)
 }

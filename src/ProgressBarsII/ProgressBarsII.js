@@ -18,7 +18,7 @@ export const ProgressBarsII = () => {
           <ProgressBarII
             key={index}
             duration={1000}
-            isTurn={index > numOfFilledBars} // <-- diff
+            isTurn={index <= numOfFilledBars} // <-- diff
             onCompleted={handleComplete} // <-- diff
           />
         ))}
@@ -34,7 +34,7 @@ const ProgressBarII = ({ duration, isTurn, onCompleted }) => {
 
   useEffect(() => {
     // diff is here ---> 没轮到当前进度条时,或者动画已经启动的情况下  直接退出,不启动动画
-    if (isTurn || isTransitinoStarted) return;
+    if (!isTurn || isTransitinoStarted) return;
     //轮到当前进度条时 会启动动画
     setStartTransition(true);
   }, [isTurn, isTransitinoStarted]);
@@ -44,11 +44,11 @@ const ProgressBarII = ({ duration, isTurn, onCompleted }) => {
   return (
     <div className='progress-outterII'>
       <div
+        style={{ transitionDuration: `${duration}ms` }}
         className={classNames(
           'progress-innerII',
           isTransitinoStarted && 'bar-filledII' //在这动态添加"bar-filledII" css class
         )}
-        style={{ transitionDuration: `${duration}ms` }}
         /* ❗重点❗ 自带的onTransitionEnd属性能detect when a CSS transition is complete */
         onTransitionEnd={handleTransitionEnd}
       ></div>
