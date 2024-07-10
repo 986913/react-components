@@ -1,9 +1,33 @@
 import React, { useState } from 'react';
 import './starrating.css';
 
-// 👍 helper function (这是简易版，完整版看src/classNames.js)
-const classNames = (...args) => args.filter(Boolean).join(' ');
+/**************************************** Parent Component ***************************************/
+export const StarRating = ({ max, value, changeValue }) => {
+  const [hoveredIndex, setHoveredIndex] = useState(null);
 
+  const handleMouseEnter = (e, idx) => setHoveredIndex(idx + 1);
+  const handleMouseLeave = (idx) => setHoveredIndex(idx);
+  const handleClick = (idx) => changeValue(idx + 1); //调用父亲传来的函数
+
+  return (
+    <div>
+      {Array.from({ length: max }).map((_, index) => (
+        <span
+          key={index}
+          tabIndex={0}
+          onMouseEnter={(e) => handleMouseEnter(e, index)}
+          onMouseLeave={() => handleMouseLeave(null)}
+          onClick={() => handleClick(index)}
+        >
+          {/* key point is here: 是或的关系 */}
+          <Star filled={index < hoveredIndex || index + 1 <= value} />
+        </span>
+      ))}
+    </div>
+  );
+};
+
+/**************************************** Chind Component ***************************************/
 const Star = ({ filled }) => {
   return (
     <svg
@@ -22,24 +46,5 @@ const Star = ({ filled }) => {
     </svg>
   );
 };
-
-export const StarRating = ({ value, max, changeValue }) => {
-  const [hoveredIndex, setHoveredIndex] = useState(null);
-
-  return (
-    <div>
-      {Array.from({ length: max }).map((_, index) => (
-        <span
-          key={index}
-          tabIndex={0}
-          onMouseEnter={() => setHoveredIndex(index + 1)}
-          onMouseLeave={() => setHoveredIndex(null)}
-          onClick={() => changeValue(index + 1)}
-        >
-          {/* key point is here */}
-          <Star filled={index < hoveredIndex || index < value} />
-        </span>
-      ))}
-    </div>
-  );
-};
+// 👍 helper function (这是简易版，完整版看src/classNames.js)
+const classNames = (...args) => args.filter(Boolean).join(' ');

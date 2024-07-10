@@ -3,10 +3,8 @@ import { useState } from 'react';
 import { StarRating } from './StarRating';
 
 export const StarRatingWrapper = () => {
-  const [rating, setRating] = useState(3);
+  const [currentRating, setCurrentRating] = useState(3);
   return (
-    <div>
-      <StarRating max={5} value={rating} changeValue={setRating} />
-    </div>
+    <StarRating max={5} value={currentRating} changeValue={setCurrentRating} />
   );
 };

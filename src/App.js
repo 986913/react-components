@@ -137,8 +137,8 @@ function App() {
           1. 需要计算每10ms增加具体多少的progress
           2. 有interaction行为，比如start, pause, reset etc
       */}
-      <ProgressBarIWrapper />
-      <ProgressBarsIIIIWrapper />
+      {/* <ProgressBarIWrapper /> */}
+      {/* <ProgressBarsIIIIWrapper /> */}
       {/* <TreeViewWrapperI /> */}
       {/* <TreeViewWrapperII /> */}
       {/* <LikeBtnWrapper /> */}
