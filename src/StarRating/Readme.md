@@ -20,8 +20,8 @@
   - states: `hoveredIndex` - number ｜ null, 表示当前哪个星星被 hover 了
   - props:
     - `max` - number, 表示总共有多少星星, 来源于用户设定
-    - `value` - number, 表示当前 rating 是多少,也就是当前多少星星亮着，来源于父级的`currentRating`
-    - `changeValue`-function, 用来改变当前 rating value, 来源于父级的`currentRating`的 setter 函数
+    - `rating` - number, 表示当前 rating 是多少,也就是当前多少星星亮着，来源于父级的`currentRating`
+    - `changeRating`-function, 用来改变当前 rating value, 来源于父级的`currentRating`的 setter 函数
 
 - ### `Star`
 
@@ -47,8 +47,8 @@
             onMouseLeave={() => handleMouseLeave(null)}
             onClick={() => handleClick(index)}
           >
-            {/* key point is here: 是或的关系 */}
-            <Star filled={index < hoveredIndex || index + 1 <= value} />
+            {/* key point is here */}
+            <Star filled={hoveredIndex!== null ? index <= hoveredIndex : index < rating} />
           </span>
         ))}
    </div>

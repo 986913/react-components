@@ -2,27 +2,35 @@ import React, { useState } from 'react';
 import './starrating.css';
 
 /**************************************** Parent Component ***************************************/
-export const StarRating = ({ max, value, changeValue }) => {
+export const StarRating = ({ max, rating, changeRating }) => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
-  const handleMouseEnter = (e, idx) => setHoveredIndex(idx + 1);
+  const handleMouseEnter = (e, idx) => setHoveredIndex(idx);
   const handleMouseLeave = (idx) => setHoveredIndex(idx);
-  const handleClick = (idx) => changeValue(idx + 1); //调用父亲传来的函数
+  const handleClick = (idx) => changeRating(idx + 1); //调用父亲传来的函数
 
   return (
     <div>
-      {Array.from({ length: max }).map((_, index) => (
-        <span
-          key={index}
-          tabIndex={0}
-          onMouseEnter={(e) => handleMouseEnter(e, index)}
-          onMouseLeave={() => handleMouseLeave(null)}
-          onClick={() => handleClick(index)}
-        >
-          {/* key point is here: 是或的关系 */}
-          <Star filled={index < hoveredIndex || index + 1 <= value} />
-        </span>
-      ))}
+      <p>Rating is {rating}</p>
+
+      {Array.from({ length: max }).map((_, index) => {
+        return (
+          <span
+            key={index}
+            tabIndex={0}
+            onMouseEnter={(e) => handleMouseEnter(e, index)}
+            onMouseLeave={() => handleMouseLeave(null)}
+            onClick={() => handleClick(index)}
+          >
+            {/* key point is here */}
+            <Star
+              filled={
+                hoveredIndex !== null ? index <= hoveredIndex : index < rating
+              }
+            />
+          </span>
+        );
+      })}
     </div>
   );
 };
@@ -32,7 +40,7 @@ const Star = ({ filled }) => {
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
-      className={classNames('star-icon', filled && 'star-icon-filled')}
+      className={classNames('star-icon', filled ? 'star-icon-filled' : '')}
       fill='none'
       viewBox='0 0 24 24'
       stroke='currentColor'

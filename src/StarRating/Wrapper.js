@@ -5,6 +5,10 @@ import { StarRating } from './StarRating';
 export const StarRatingWrapper = () => {
   const [currentRating, setCurrentRating] = useState(3);
   return (
-    <StarRating max={5} value={currentRating} changeValue={setCurrentRating} />
+    <StarRating
+      max={5}
+      rating={currentRating}
+      changeRating={setCurrentRating}
+    />
   );
 };
