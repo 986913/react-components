@@ -31,6 +31,7 @@ import { ModalWrapper } from './Modal';
 import { DropdownWrapper } from './Dropdown Menu/Wrapper';
 import { GenerateTableWrapper } from './GenerateTable';
 import { CalculatorWrapper } from './Calculator';
+import { NestedCheckboxWrapper } from './NestedCheckbox';
 import { TreeViewWrapperI } from './TreeViewI';
 import { TreeViewWrapperII } from './TreeViewII';
 import { TodolistWrapper } from './TodoList/Wrapper';
@@ -139,6 +140,7 @@ function App() {
       */}
       <ProgressBarIWrapper />
       <ProgressBarsIIIIWrapper />
+      <NestedCheckboxWrapper />
       {/* <TreeViewWrapperI /> */}
       {/* <TreeViewWrapperII /> */}
       {/* <LikeBtnWrapper /> */}
