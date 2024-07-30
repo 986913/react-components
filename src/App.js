@@ -106,7 +106,7 @@ function App() {
       {/* <GenerateTableWrapper /> */}
       {/* <TabsWrapper /> */}
       {/* <TabsIIWrapper /> */}
-      <StarRatingWrapper />
+      {/* <StarRatingWrapper /> */}
       {/* <AccordionWrapper /> */}
       {/* <AccordionIIWrapper /> */}
       {/* <AccordionIIIWrapper /> */}
@@ -140,7 +140,7 @@ function App() {
       */}
       <ProgressBarIWrapper />
       <ProgressBarsIIIIWrapper />
-      <NestedCheckboxWrapper />
+      {/* <NestedCheckboxWrapper /> */}
       {/* <TreeViewWrapperI /> */}
       {/* <TreeViewWrapperII /> */}
       {/* <LikeBtnWrapper /> */}
