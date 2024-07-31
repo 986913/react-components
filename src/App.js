@@ -138,8 +138,8 @@ function App() {
           1. 需要用setInterval,计算每10ms增加具体多少的progress steps
           2. 有interaction行为，比如start, pause, reset etc
       */}
-      <ProgressBarIWrapper />
-      {/* <ProgressBarsIIIIWrapper /> */}
+      {/* <ProgressBarIWrapper /> */}
+      <ProgressBarsIIIIWrapper />
       {/* <NestedCheckboxWrapper /> */}
       {/* <TreeViewWrapperI /> */}
       {/* <TreeViewWrapperII /> */}
