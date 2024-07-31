@@ -10,8 +10,6 @@
 
 .inner {
   background-color: blue;
-  height: 100%;
   color: white;
   text-align: center;
-  /* transform-origin: left; */
 }
