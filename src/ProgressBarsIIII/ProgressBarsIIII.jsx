@@ -1,17 +1,7 @@
 import React, { useState } from 'react';
 import './progressbarsIIII.css';
 
-const ProgressBarIIII = ({ progress }) => {
-  return (
-    <div className='progress-outterIIII'>
-      <div
-        className='progress-innerIIII'
-        style={{ transform: `scaleX(${progress / 100})` }}
-      ></div>
-    </div>
-  );
-};
-
+/************************************* Parent Component *****************************************/
 export const ProgressBarsIIII = ({ concurrencyLimit, duration }) => {
   const [progression, setProgression] = useState([0]);
   const [timerId, setTimerId] = useState(null);
@@ -75,13 +65,25 @@ export const ProgressBarsIIII = ({ concurrencyLimit, duration }) => {
 
       <div>
         {progression.map((progress, index) => (
-          <ProgressBarIIII key={index} progress={progress} />
+          <ProgressBar key={index} progress={progress} />
         ))}
       </div>
 
       <pre className='progressPre'>
         {JSON.stringify({ isProgressing, progression }, null, 2)}
       </pre>
+    </div>
+  );
+};
+
+/************************************* Child Component *****************************************/
+const ProgressBar = ({ progress }) => {
+  return (
+    <div className='progress-outterIIII'>
+      <div
+        className='progress-innerIIII'
+        style={{ transform: `scaleX(${progress / 100})` }}
+      ></div>
     </div>
   );
 };
