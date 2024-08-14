@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './progressbarsIIII.css';
 
-const CONCURT_LIMIT = 3; //   ---> 同时running的bars的个数
+const CONCURT_LIMIT = 4; //   ---> 同时running的bars的个数
 const DURATION = 2000; //     ---> run完单独的bar需要的毫秒数
 
 /************************************* Parent Component *****************************************/
@@ -17,36 +17,36 @@ export const ProgressBarsIIIIWrapper = () => {
 
   const start = () => {
     const timer = setInterval(() => {
+
       setProgressBars((curAllBars) => {
-        // Find the bars which aren't full.
+       // 注意这步 --> 过滤出尚未满的进度条索引
         const nonFullBars = curAllBars
-          .map((value, index) => {
-            return { value, index };
-          })
+          .map((value, index) => ({ value, index }))
           .filter(({ value }) => value < 100);
 
-        // if all bars are full, none to increment.
+        // 如果所有进度条都已经满了，直接返回当前状态
         if (nonFullBars.length === 0) return curAllBars;
 
-        // Get the first LIMIT non-full bars and increment them.
-        const barsToIncrement = nonFullBars.slice(0, CONCURT_LIMIT); // .slice提取数组或字符串的一部分  .slice(start, end)不包括end
         const newBars = curAllBars.slice();
 
-        // 更新相对应index的bars的进度
-        for (const { index } of barsToIncrement) {
-          /* when bar is not full: we need 计算每10ms该增加多少progress(也就是求x)
-              x        100
-            -----  =  -------
-            10(ms)   Duration(ms)
-           所以 x = (100 * 10) / DURATION, 意思是每10ms对应增加的progress
-        */
-          const increased = (100 * 10) / DURATION;
-          newBars[index] += increased;
+        // 使用for循环更新-未满进度条，只递增前CONCURT_LIMIT个未满的进度条
+        for (let i = 0; i < nonFullBars.length; i++) {
+          if(i<CONCURT_LIMIT){
+            const {value, index} = nonFullBars[i];
+            newBars[index] += ((100 * 10) / DURATION)
+            /* when bar is not full: we need 计算每10ms该增加多少progress(也就是求x)
+                x        100
+              -----  =  -------
+              10(ms)   Duration(ms)
+              所以 x = (100 * 10) / DURATION, 意思是每10ms对应增加的progress
+            */
+          }
         }
 
         // 返回更新后的all bars
         return newBars;
       });
+
     }, 10); // <--- 这里我写的每10ms， 你也可以改成其他数值的
 
     setTimerId(timer);

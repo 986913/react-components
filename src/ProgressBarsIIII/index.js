@@ -1,1 +1,1 @@
-export { ProgressBarsIIIIWrapper } from './Wrapper.js';
+export { ProgressBarsIIIIWrapper } from './Wrapper.jsx';
