@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './progressbar.css';
 
-const DURATION = 3000;
+const DURATION = 3000; //  ---> run完bar需要的毫秒数
 
 /************************************* Parent Component *****************************************/
 export const ProgressBarIWrapper = () => {
@@ -57,7 +57,11 @@ const ProgressBar = ({ progress }) => {
   return (
     <div className='outter'>
       {/* key point: 要用🟡transform: scaleX(百分数%)*/}
-      <div className='inner' style={{ transform: `scaleX(${progress}%)` }} role='progressbar' aria-valuenow={progress}>
+      <div className='inner' 
+        style={{ transform: `scaleX(${progress}%)` }} 
+        role='progressbar' 
+        aria-valuenow={progress}
+      >
         {`${Math.floor(progress)}%`}
       </div>
     </div>

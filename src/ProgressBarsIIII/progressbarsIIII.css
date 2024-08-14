@@ -1,6 +1,6 @@
 
 .progress-outterIIII{
-  height: 10px;
+  height: 20px;
   width: 300px;
   background-color: lightgray;
   margin-top: .5em !important;
@@ -8,10 +8,12 @@
 
 .progress-innerIIII {
   background-color: green;
+  color: white;
   height: 100%;
   transform-origin: left;
 }
 
-.progressPre {
+.discription {
   text-align: left;
+  color: gray;
 }
