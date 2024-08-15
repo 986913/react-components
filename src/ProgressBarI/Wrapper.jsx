@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 import './progressbar.css';
 
-const DURATION = 3000; //  ---> run完bar需要的毫秒数
+/*********************** Glocal Setting ***********************/
+const DURATION = 3000;  //run完bar需要的毫秒数
+/**************************************************************/
+
 
 /************************************* Parent Component *****************************************/
 export const ProgressBarIWrapper = () => {

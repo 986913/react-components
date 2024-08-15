@@ -1,5 +1,9 @@
 ## 👨‍👧 组件关系
 
+> **这道题和`ProgressBarI`是很相似的**， 只不过`ProgressBarI`是单个 bar, 这道题是多个 bars 同时独立 run
+>
+> 全局设置了变量：DURATION
+
 ```
 <ProgressBarIWrapper>
     <ProgressBar/>

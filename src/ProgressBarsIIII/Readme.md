@@ -1,17 +1,23 @@
 ## 👨‍👧 组件关系
 
+> **这道题和`ProgressBarI`是很相似的**， 只不过`ProgressBarI`是单个 bar, 这道题是多个 bars 同时独立 run
+>
+> 全局设置了变量：
+> CONCURENT_LIMIT
+> DURATION
+
 ```
-<ProgressBarIWrapper>
+<ProgressBarsIIIIWrapper>
     <ProgressBar/>
-  <ProgressBarIWrapper/>
+  <ProgressBarsIIIIWrapper/>
 ```
 
 ## 🔢 各组件的 state, props
 
-- ### `ProgressBarIWrapper`
+- ### `ProgressBarsIIIIWrapper`
 
   - states:
-    - `progress` - number, 控制当前的 progress 值是多少， 范围在 0-100
+    - `progressBars` - 数字组成的 array, 表示所有进度条的状态
     - `timerId` - object, 控制当前是不是 progressing 模式. 从而间接控制 button text 和对应事件
   - props: 无
 
@@ -43,15 +49,17 @@
 
 - 这道题入手点先是 figure out UI 长什么样， 参见上面 CSS
 - 再思考组件关系，参见上面
-- 对于父组件`ProgressBarIWrapper` , 要内部设置两个 state 来控制子组件`ProgressBar`的进度和当前模式, 参见上面
+- 对于父组件`ProgressBarsIIIIWrapper` , 要内部设置两个 state 来控制子组件`ProgressBar`的进度和当前模式, 参见上面
 
-  - 注意点 1: 全局定义好 DURATION, 因为下面 setInterval 会用到
-  - 注意点 2: setInterval 的使用, 用于计算每个 10 毫秒(自己可改时间间隔的)相对应该走的 progress steps
-  - 注意点 3: `useState` 钩子返回一个状态值和一个用于更新该状态的函数，在 `useState` 返回的更新函数中传入一个函数，这种方法确保状态的更新是基于最新的状态值，从而避免了由于异步状态更新可能带来的问题:
+  - 注意点 1: 全局定义好 `DURATION` `CONCURRENT_LIMIT`, 因为下面 `setInterval` 会用到
+  - 注意点 2: `setInterval` 的使用, 用于计算每个 `10` 毫秒 (自己可改时间间隔的)相对应该走的 progress steps
+  - 注意点 3: 这道题与`ProgressBarI`最大不同是此题 state 是所有进度条，所以要维持一个数组，而后者就只维持一个进度条，所以它的 state 就是 number 了
+  - 注意点 4: 店家`start`按钮时，会有`CONCURRENT_LIMIT`个进度条开始或者继续 run, 所有`start`中要更新`progressBars` state, 也就是说要新的`newBars`, 这个`newBars`其中每一条进度条要正确显示进度， 所以一定要确保
 
-    ```
-     setProgress((prevProgress) => {return prevProgress + something })
-    ```
+    - 进度 100%的进步条不要继续加载了 -- `nonFullBars` (只过滤出没到 100%的进度条的`{value,index}`)
+    - 确保 for loop 只 loop `nonFullBars`
+
+      - 确保最多 run`CONCURRENT_LIMIT`个进度条 (`i< CONCURRENT_LIMIT`)
 
 ## ♿ Accessibility (a11y)
 

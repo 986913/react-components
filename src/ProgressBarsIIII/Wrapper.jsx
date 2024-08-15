@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import './progressbarsIIII.css';
 
+/*********************** Glocal Setting ***********************/
 const CONCURT_LIMIT = 4; //   ---> 同时running的bars的个数
-const DURATION = 2000; //     ---> run完单独的bar需要的毫秒数
+const DURATION = 2000;  //     ---> run完单独的bar需要的毫秒数
+/**************************************************************/
+
 
 /************************************* Parent Component *****************************************/
 export const ProgressBarsIIIIWrapper = () => {
@@ -19,7 +22,7 @@ export const ProgressBarsIIIIWrapper = () => {
     const timer = setInterval(() => {
 
       setProgressBars((curAllBars) => {
-       // 注意这步 --> 过滤出尚未满的进度条索引
+       // !注意这步 --> 过滤出尚未满的进度条的进度value和index
         const nonFullBars = curAllBars
           .map((value, index) => ({ value, index }))
           .filter(({ value }) => value < 100);
@@ -28,7 +31,6 @@ export const ProgressBarsIIIIWrapper = () => {
         if (nonFullBars.length === 0) return curAllBars;
 
         const newBars = curAllBars.slice();
-
         // 使用for循环更新-未满进度条，只递增前CONCURT_LIMIT个未满的进度条
         for (let i = 0; i < nonFullBars.length; i++) {
           if(i<CONCURT_LIMIT){
@@ -42,7 +44,6 @@ export const ProgressBarsIIIIWrapper = () => {
             */
           }
         }
-
         // 返回更新后的all bars
         return newBars;
       });
@@ -92,7 +93,7 @@ const ProgressBar = ({ progress }) => {
       {/* key point: 要用🟡transform: scaleX(百分数%)*/}
       <div
         className='progress-innerIIII'
-        style={{ transform: `scaleX(${progress}%)` }}
+        style={{ transform: `scaleX(${progress}%)` }} 
         role='progressbar'
         aria-valuenow={progress}
       >
