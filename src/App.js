@@ -139,7 +139,7 @@ function App() {
           2. 有interaction行为，比如start, pause, reset etc
       */}
       {/* <ProgressBarIWrapper /> */}
-      <ProgressBarsIIIIWrapper />
+      {/* <ProgressBarsIIIIWrapper /> */}
       {/* <NestedCheckboxWrapper /> */}
       {/* <TreeViewWrapperI /> */}
       {/* <TreeViewWrapperII /> */}
