@@ -1,10 +1,10 @@
-.viewport {
+.carousel-viewport {
   /* width: 150px; */
   overflow: hidden;
   position: relative;
 }
 
-.container {
+.carousel-container {
   display: flex;
   list-style: none;
   margin: 0;

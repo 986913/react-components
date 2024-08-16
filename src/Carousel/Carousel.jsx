@@ -24,8 +24,8 @@ export const Carousel = ({ dataSource, viewWidth }) => {
   const handlePrev = () => setCurrentIndex(currentIndex + 1);
 
   return (
-    <div className='viewport' style={viewPortStyle}>
-      <ul className='container' style={containerStyle}>
+    <div className='carousel-viewport' style={viewPortStyle}>
+      <ul className='carousel-container' style={containerStyle}>
         {dataSource.map((data) => {
           return (
             <li key={data.id}>

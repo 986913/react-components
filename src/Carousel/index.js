@@ -1,1 +1,1 @@
-export { CarouselWrapper } from './Wrapper.js';
+export { CarouselWrapper } from './Wrapper.jsx';

@@ -2,6 +2,7 @@
 import { AutocompleteWrapper } from './Autocomplete';
 import { AutocompleteWrapperII } from './AutocompleteII';
 import { CarouselWrapper } from './Carousel';
+import { CarouselWrapperII } from './Carousel_II';
 import { CascaderWrapper } from './Cascader';
 import { PollWrapper } from './PollWidget/Wrapper';
 import { ProgressBarWrapper } from './ProgressBar';
@@ -99,13 +100,14 @@ function App() {
       {/* <AutocompleteWrapper /> */}
       {/* <AutocompleteWrapperII /> */}
       {/* <CarouselWrapper /> */}
+      <CarouselWrapperII />
       {/* <CascaderWrapper /> */}
       {/* <PollWrapper /> */}
       {/* <ModalWrapper /> */}
       {/* <DropdownWrapper /> */}
       {/* <GenerateTableWrapper /> */}
       {/* <TabsWrapper /> */}
-      <TabsIIWrapper />
+      {/* <TabsIIWrapper /> */}
       {/* <StarRatingWrapper /> */}
       {/* <AccordionWrapper /> */}
       {/* <AccordionIIWrapper /> */}
