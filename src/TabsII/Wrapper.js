@@ -22,10 +22,4 @@ const data = [
   },
 ];
 
-export const TabsIIWrapper = () => {
-  return (
-    <div>
-      <TabsII items={data} />
-    </div>
-  );
-};
+export const TabsIIWrapper = () => <TabsII items={data} />;

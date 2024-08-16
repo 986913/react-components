@@ -1,17 +1,12 @@
 import React, { useState } from 'react';
 import './tabs.css';
 
-// 👍 helper function (这是简易版，完整版看src/classNames.js)
-const classNames = (...args) => {
-  return args.filter(Boolean).join(' ');
-};
-
 export const Tabs = ({ items }) => {
   const [activeId, setActiveId] = useState(1);
   const handleClick = (id) => setActiveId(id);
 
   return (
-    <div>
+    <>
       <div>
         {items.map(({ id, label }) => (
           <button
@@ -32,6 +27,9 @@ export const Tabs = ({ items }) => {
           </p>
         ))}
       </div>
-    </div>
+    </>
   );
 };
+
+// 👍 helper function (这是简易版，完整版看src/classNames.js)
+const classNames = (...args) => args.filter(Boolean).join(' ');

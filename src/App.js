@@ -105,7 +105,7 @@ function App() {
       {/* <DropdownWrapper /> */}
       {/* <GenerateTableWrapper /> */}
       {/* <TabsWrapper /> */}
-      {/* <TabsIIWrapper /> */}
+      <TabsIIWrapper />
       {/* <StarRatingWrapper /> */}
       {/* <AccordionWrapper /> */}
       {/* <AccordionIIWrapper /> */}
