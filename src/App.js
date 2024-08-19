@@ -99,7 +99,7 @@ function App() {
       {/* ----------------------- React components practices ------------------------- */}
       {/* <AutocompleteWrapper /> */}
       {/* <AutocompleteWrapperII /> */}
-      <CarouselWrapper />
+      {/* <CarouselWrapper /> */}
       {/* <CarouselWrapperII /> */}
       {/* <CascaderWrapper /> */}
       {/* <PollWrapper /> */}
