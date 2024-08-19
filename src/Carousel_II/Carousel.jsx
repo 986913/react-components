@@ -32,14 +32,9 @@ export const Carousel = ({ images }) => {
       <div className="image-carousel-container" ref={ref}>
         <div
           onTransitionEnd={stopTransition}
-          className={classNames(
-            'images-container',
-            isTransitioning && 'images-container--transitioning'
-          )}
+          className={classNames('images-container', isTransitioning && 'images-container--transitioning')}
           //!重点在这里：transfrom:translateX(-多少px) ---> 用来向左平移
-          style={{
-            transform: imageWidth ? `translateX(-${currIndex * imageWidth}px)` : undefined,
-          }}
+          style={{ transform: imageWidth ? `translateX(-${currIndex * imageWidth}px)` : undefined }}
         >
           {images.map(({ alt, src }) => (
             <img
@@ -72,15 +67,10 @@ export const Carousel = ({ images }) => {
           {images.map(({ alt, src }, index) => (
             <button
               key={src}
-              className={classNames(
-                'dot',
-                index === currIndex && 'dot-active'
-              )}
-              onClick={() => {
-                goSpecific(index);
-              }}
-                            aria-label={`Navigate to ${alt}`}
-                                          disabled={isTransitioning}
+              className={classNames('dot', index === currIndex && 'dot-active')}
+              onClick={() => {goSpecific(index)}}
+              aria-label={`Navigate to ${alt}`}
+              disabled={isTransitioning}
             />
           ))}
         </div>
