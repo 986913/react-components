@@ -54,6 +54,7 @@ import { TicTacToeWrapper } from './TicTacToe-标准答案';
 import { TicTacToeWrapperII } from './TicTacToeII-标准答案';
 import { JobBoardWrapper } from './JobBoard';
 import { UndoableCounterWrapper } from './UndoableCounter';
+import { SliderWrapper } from './Slider';
 import { WhackAMoleWrapper } from './Whack-A-Mole';
 import { MemoryGameWrapper } from './MemoryGame';
 import { MortgageCalculatorWrapper } from './Mortgage Calculator/Wrapper';
@@ -109,6 +110,7 @@ function App() {
       {/* <TabsWrapper /> */}
       {/* <TabsIIWrapper /> */}
       {/* <StarRatingWrapper /> */}
+      <SliderWrapper />
       {/* <AccordionWrapper /> */}
       {/* <AccordionIIWrapper /> */}
       {/* <AccordionIIIWrapper /> */}
