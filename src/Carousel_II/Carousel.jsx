@@ -29,10 +29,10 @@ export const Carousel = ({ images }) => {
   }, []);
 
   return (
-      <div className="image-carousel-container" ref={containerRef}>
+      <div className="carousel-container" ref={containerRef}>
         <div
-          onTransitionEnd={stopTransition}
           className={classNames('images-container', isTransitioning && 'images-container--transitioning')}
+          onTransitionEnd={stopTransition}
           //!重点在这里：transfrom:translateX(-多少px) ---> 用来向左平移
           style={{ transform: imageWidth ? `translateX(-${currIndex * imageWidth}px)` : undefined }}
         >

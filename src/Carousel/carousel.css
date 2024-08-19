@@ -1,19 +1,23 @@
-.carousel-viewport {
-  /* width: 150px; */
+.Carousel-container {
+  width: 600px;  /* <--- 简易版的carousel最外层的宽度可以写死的 */
   overflow: hidden;
   position: relative;
+  border: 1px solid green;
 }
 
-.carousel-container {
+.imgs-container {
   display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  transition: all 1s; /* animation is here! */
+  transition: all 1s; /* <--- transition会被添加到变化之前的CSS类中 */
   -webkit-transition: all 1s;
   -moz-transition: all 1s;
   -ms-transition: all 1s;
   -o-transition: all 1s;
+}
+
+.imgs-container li {
+  list-style: none;
+  margin: 0;
+  padding: 0
 }
 
 .btn {

@@ -2,49 +2,41 @@ import React from 'react';
 import './carousel.css';
 import { useState } from 'react';
 
-/**
- *
- * Carousel component:
- *  2 props: dataSource, viewWidth
- *  1 state: currentIndex
- *
- */
-export const Carousel = ({ dataSource, viewWidth }) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
 
-  const viewPortStyle = {
-    width: viewWidth + 'px',
-  };
-  // key point is here: translateX用来左右平移
-  const containerStyle = {
-    transform: 'translateX(' + currentIndex * 150 + 'px)',
-  };
+export const Carousel = ({ images }) => {
+  const [currIndex, setCurrentIndex] = useState(0);
 
-  const handleNext = () => setCurrentIndex(currentIndex - 1);
-  const handlePrev = () => setCurrentIndex(currentIndex + 1);
+  const goNext = () => setCurrentIndex(currIndex + 1);
+  const goPrev = () => setCurrentIndex(currIndex - 1);
 
   return (
-    <div className='carousel-viewport' style={viewPortStyle}>
-      <ul className='carousel-container' style={containerStyle}>
-        {dataSource.map((data) => {
-          return (
-            <li key={data.id}>
-              <img src={data.thumbnailUrl} alt={data.title} />
-            </li>
-          );
-        })}
+    <div className='Carousel-container'>
+      <ul 
+        className='imgs-container' 
+        //!重点在这里：transfrom:translateX(-多少px) ---> 用来向左平移
+        style={{ transform: `translateX(-${currIndex * 150}px)`}}>
+          {images.map((data) => {
+            return (
+              <li key={data.id}>
+                <img src={data.thumbnailUrl} alt={data.title} />
+              </li>
+            )
+          })}
       </ul>
+
       <button
         className='btn left-btn'
-        onClick={handlePrev}
-        disabled={currentIndex === 0}
+        onClick={goPrev}
+        disabled={currIndex === 0}
+        aria-label="Previous image"
       >
         prev
       </button>
       <button
         className='btn right-btn'
-        onClick={handleNext}
-        disabled={currentIndex === dataSource.length - 1}
+        onClick={goNext}
+        disabled={currIndex === images.length - 1}
+        aria-label="Next image"
       >
         next
       </button>
