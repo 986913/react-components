@@ -1,54 +1,56 @@
-import React, {useState, useEffect, useRef} from 'react';
+import React, { useState, useRef } from 'react';
 import './slider.css';
 
-
-export const Slider = ({initial, max, onChange}) => {
-  const sliderRef = useRef();
-  const thumbRef = useRef();
-  const diffRef = useRef();
-
-
-  const getPercentage = (current, max) => (100 * current) / max;
+export const Slider = ({ initial, onChange }) => {
+  const sliderRef = useRef(null);
   
-  const initialPercentage = getPercentage(initial, max);
-
-  const getValue = (percentage, max) => (max / 100) * percentage;
-  const getLeft = percentage => `calc(${percentage}% - 5px)`;
+  const [percentage, setPercentage] = useState(initial);
 
   const handleMouseMove = (e) => {
-    let newX = e.clientX - diffRef.current - sliderRef.current.getBoundingClientRect().left;
+    if (!sliderRef.current) return;
 
-    const end = sliderRef.current.offsetWidth - thumbRef.current.offsetWidth;
+    // 直接使用鼠标当前位置相对于 slider 左边缘的位置
+    let newX = e.clientX - sliderRef.current.getBoundingClientRect().left;
+
+    const sliderWidth = sliderRef.current.offsetWidth;
+    const thumbWidth = 10; // 假设滑块的宽度10px
     const start = 0;
-    if(newX<start) newX = 0;
-    if(newX>end) newX = end;
+    const end = sliderWidth - thumbWidth;
 
-    const newPercentage = getPercentage(newX, end);
-    const newValue = getValue(newPercentage, max).toFixed(0)
-    thumbRef.current.style.left = getLeft(newPercentage);
-    onChange(newValue);
-  }
+    // 限制 newX 在 slider 的范围内
+    if (newX < start) newX = start;
+    if (newX > end) newX = end;
+
+    // 计算 newX 对应的百分比位置
+    const newPercentage = (newX / end) * 100;
+    setPercentage(newPercentage); // 更新状态
+
+    // 调用 onChange 回调，将滑块位置的值传递给父组件
+    onChange(newPercentage.toFixed(0));
+  };
+
   const handleMouseUp = () => {
     document.removeEventListener('mousemove', handleMouseMove);
-  }
-  const handleOnMouseDown = (e) => {
-    diffRef.current = e.clientX - thumbRef.current.getBoundingClientRect().left;
+    document.removeEventListener('mouseup', handleMouseUp);
+  };
 
+  const handleOnMouseDown = (e) => {
+    if (!sliderRef.current) return;
+
+    // 添加 mousemove 和 mouseup 事件监听器
     document.addEventListener('mousemove', handleMouseMove);
     document.addEventListener('mouseup', handleMouseUp);
-  }
-
+  };
 
   return (
-    <div className='sidebar-outter' ref={sliderRef}>
-        <div className='sidebar-inner'>
-            <span 
-              className='thumb' 
-              ref={thumbRef} 
-              style={{left: getLeft(initialPercentage) }} 
-              onMouseDown={handleOnMouseDown} >
-            </span>
-        </div>
+    <div className='slider-outer' ref={sliderRef}>
+      <div className='slider-inner'>
+        <span
+          className='thumb'
+          style={{ left: `calc(${percentage}% - 5px)` }} // 根据百分比设置滑块的位置
+          onMouseDown={handleOnMouseDown} // 当鼠标按下时开始滑动
+        />
+      </div>
     </div>
-  )
-}
+  );
+};
