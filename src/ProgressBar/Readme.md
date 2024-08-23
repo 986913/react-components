@@ -18,7 +18,7 @@
   - states：无
   - props: `value` - number 表示进度条的“进度”
 
-## More CSS animations and transitions
+## 💃More CSS animations and transitions
 
 进度条的“进度”在 CSS 中可以用`width`表示，但是一旦动起来的话，性能不好，所以要用`transform: scaleX(百分比值)`做，这样将来有动画就比较好操作，且记得搭配`transform-origin: left`来使用.
 
