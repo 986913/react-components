@@ -59,7 +59,7 @@
 
 ### ` transform` VS `transition`: `
 
-> 一句话总结： transform`是“怎么变”，而`transition` 是“怎么动画地变”
+> 一句话总结： transform`是“变什么”，而`transition` 是“怎么动画地变”
 
 ### 1.**CSS `transform`**：
 
