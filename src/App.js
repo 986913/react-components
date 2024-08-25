@@ -1,4 +1,5 @@
 /* eslint-disable no-unused-vars */
+import { AnimationWrapper } from './AnimationExample';
 import { AutocompleteWrapper } from './Autocomplete';
 import { AutocompleteWrapperII } from './AutocompleteII';
 import { CarouselWrapper } from './Carousel';
@@ -98,6 +99,7 @@ function App() {
   return (
     <div>
       {/* ----------------------- React components practices ------------------------- */}
+      <AnimationWrapper />
       {/* <AutocompleteWrapper /> */}
       {/* <AutocompleteWrapperII /> */}
       {/* <CarouselWrapper /> */}
@@ -110,7 +112,7 @@ function App() {
       {/* <TabsWrapper /> */}
       {/* <TabsIIWrapper /> */}
       {/* <StarRatingWrapper /> */}
-      <SliderWrapper />
+      {/* <SliderWrapper /> */}
       {/* <AccordionWrapper /> */}
       {/* <AccordionIIWrapper /> */}
       {/* <AccordionIIIWrapper /> */}
