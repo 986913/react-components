@@ -99,13 +99,13 @@ function App() {
   return (
     <div>
       {/* ----------------------- React components practices ------------------------- */}
-      <AnimationWrapper />
+      {/* <AnimationWrapper /> */}
       {/* <AutocompleteWrapper /> */}
       {/* <AutocompleteWrapperII /> */}
       {/* <CarouselWrapper /> */}
       {/* <CarouselWrapperII /> */}
       {/* <CascaderWrapper /> */}
-      {/* <PollWrapper /> */}
+      <PollWrapper />
       {/* <ModalWrapper /> */}
       {/* <DropdownWrapper /> */}
       {/* <GenerateTableWrapper /> */}

@@ -1,21 +1,20 @@
 ## 👨‍👧 组件关系
 
 ```
-<ModalWrapper>
-    <Modal/>
-  <ModalWrapper/>
+<PollWrapper>
+    <Poll/>
+  <PollWrapper/>
 ```
 
 ## 🔢 各组件的 state, props
 
-- ### `ModalWrapper`
+- ### `PollWrapper`： 没实际意义，只给 Poll 组件初始值
 
-  - states：`showModal` - 控制 `<Modal>`组件的显示和隐藏
-  - props: 无
+  - states && props: 无
 
-- ### `Modal`
+- ### `Poll`
 
-  - states：无
+  - states：
   - props:
 
 ## 👀 知识点
