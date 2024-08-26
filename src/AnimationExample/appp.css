@@ -3,14 +3,15 @@
   height: 50px;
   background-color: navy;
   border-radius: 50%;
-  animation:slideToRight 1s calc(var(--myIdx)* 0.1s) both;
+  
+  /*这里calc(var(--myIdx)*0.1s)是对应的animation-delay,起到css stagger效果*/
+  animation:slideToRight 1s calc(var(--myIdx)* 0.1s) both infinite;
   /*
     animation-name:      slideToRight ;
     animation-duration:  1s;
     animation-delay:     calc(var(--myIdx)* 0.1s);
-    animation-fill-mode: both;  
+    animation-fill-mode: both;
   */
-  animation-iteration-count: infinite;
 }
 
 
@@ -19,6 +20,7 @@
     transform:none ;
   }
   to {
+    /*向右平移*/
     transform: translateX(50vw);
-  }
+}
 }
