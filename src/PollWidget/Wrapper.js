@@ -9,5 +9,9 @@ const data = [
 ];
 
 export const PollWrapper = () => (
-  <Poll initData={data} header='please vote your fav framework!' />
+  <Poll
+    header='please vote your fav framework!'
+    initData={data}
+    onChange={({ title }) => console.log(`you selected ${title}`)}
+  />
 );

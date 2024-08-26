@@ -14,13 +14,61 @@
 
 - ### `Poll`
 
-  - states：
   - props:
+    - `header` - string, optional, 显示 poll 组件的标题
+    - `initData` - array, required, render poll 组件的初始数据
+    - `onChange` - function, optional, 用户投票之后的 callback function
+  - states：
+    - `list` - array, required, 用于渲染显示当前所有数据
+    - `isVoted` - boolean, required, 表示当前用户有没有投票，用于控制投票进度条和文字的显示和隐藏
+    - `prevSelectedID`- number, required, 表示之前选的哪个，用于计算新的`list`
 
 ## 👀 知识点
 
-## ♿ Accessibility (a11y)
+也没啥知识点，就是更新 state`list`时候， 记得要使用`.map`这种，因为它输出全新的 array
 
-## More CSS animations and transitions
+```
+  const handleClick = (item) => {
+    const newList = list.map((n) => {
+      if (n.id === prevSelectedID) n.voteRate -= 10;
+      if (n.id === item.id){
+        n.voteRate += 10;
+        onChange(item);
+      }
+      return n; //不要忘了return
+    });
+```
 
-## Internationalization (i18n)
+## 💃🏻 CSS animations and transitions
+
+### ` transform` VS `transition`: `
+
+> 一句话总结： transform`是“变什么”，而`transition` 是“怎么动画地变”
+
+### 1.**CSS `transform`**：
+
+- **作用**：`transform` 用于对元素进行变形，如旋转（rotate）、缩放（scale）、平移（translate）或倾斜（skew）。它只定义了元素如何变化，但不包含动画的过渡效果。
+- **例子**：如果你使用 `transform: rotate(45deg);`，元素会立即旋转 45 度，没有任何过渡效果，变化是瞬间完成的。
+
+### 2. CSS `transition`：
+
+- **作用**：`transition` 用于设置元素属性在一段时间内平滑过渡的效果。它可以对元素的属性变化进行动画处理，包括 `transform` 的变化。
+- **例子**：如果你想让元素在 2 秒内从 0 度旋转到 45 度，你可以这样结合 `transition` 和 `transform`：
+
+  ```
+  .element {
+    transition: transform 2s;  // <--- transition会被添加到变化之前的CSS类中
+    transform: rotate(0deg);
+  }
+
+  .element:hover {
+    transform: rotate(45deg);
+  }
+  ```
+
+  在这个例子中，当用户将鼠标悬停在元素上时，元素会在 2 秒内平滑地从 0 度旋转到 45 度。
+
+  ### 区别总结：
+
+  - **`transform`**：定义元素将发生什么样的变形（变化本身），比如旋转、缩放等。
+  - **`transition`**：定义这个变形或任何其他属性的变化在多长时间内、以什么方式发生，从而实现动画效果。
