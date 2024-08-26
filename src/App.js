@@ -6,7 +6,6 @@ import { CarouselWrapper } from './Carousel';
 import { CarouselWrapperII } from './Carousel_II';
 import { CascaderWrapper } from './Cascader';
 import { PollWrapper } from './PollWidget';
-import { PollWrapperII } from './PollWidgetII';
 import { ProgressBarWrapper } from './ProgressBar';
 import { ProgressBarIWrapper } from './ProgressBarI';
 import { ProgressBarsWrapper } from './ProgressBars';
@@ -107,7 +106,6 @@ function App() {
       {/* <CarouselWrapperII /> */}
       {/* <CascaderWrapper /> */}
       {/* <PollWrapper /> */}
-      {/* <PollWrapperII /> */}
       {/* <ModalWrapper /> */}
       {/* <DropdownWrapper /> */}
       {/* <GenerateTableWrapper /> */}
