@@ -10,6 +10,7 @@
     animation-delay:     calc(var(--myIdx)* 0.1s);
     animation-fill-mode: both;  
   */
+  animation-iteration-count: infinite;
 }
 
 
