@@ -1,19 +1,19 @@
- /* .autocomplete {
-  border: 1px solid gray;
+.autocomplete2 {
   width: 70%;
   margin: auto;
-} 
-
-#searchInput,
-section {
-  width: 100%;
 }
 
-#searchInput {
+.autocomplete2 ul li {
+  list-style: none;
+  padding: 0.5em;
+}
+
+.autocomplete2 li:hover {
+  background-color: lightgray;
+  cursor: pointer;
+}
+
+#searchInput2{
+  width: 100%;
   height: 3em;
 }
-
-.section {
-  max-height: 300px;
-  overflow: auto;
-} */

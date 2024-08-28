@@ -2,44 +2,36 @@ import React from 'react';
 import './autoCompleteII.css';
 import { useDebounce } from './useDebounce';
 import { useState, useEffect } from 'react';
-import { USA_STATES } from './constants';
+import { USA_STATES } from './mockData';
 
 export const AutoComplete = () => {
   const [searchText, setSearchText] = useState('');
-  const [list, setList] = useState([]);
+  const [list, setList] = useState(USA_STATES);
 
   const debouncedSearchTerm = useDebounce(searchText, 500);
   useEffect(() => {
-    if (debouncedSearchTerm) {
+      console.log('用户停止type后,在这看更改list');
       const filteredList = USA_STATES.filter((item) =>
         item.toLowerCase().includes(debouncedSearchTerm.toLowerCase())
       );
       setList(filteredList);
-    } else {
-      setList([]);
-    }
   }, [debouncedSearchTerm]);
 
+  /* 这是不用useDebounce的时候：
+    useEffect(() => {
+      console.log('用户type时,在这看更改list goes crazy');
+      const filteredList = USA_STATES.filter((item) => item.toLowerCase().includes(searchText.toLowerCase()));
+      setList(filteredList);
+    }, [searchText]);
+  */
+
   const handleOnchange = (e) => setSearchText(e.target.value);
-  const handleOnClick = (name) => {
-    alert(`
-      choose result : ${name},
-      🚀 works good. should redirect to ${name} page!
-    `);
-    setSearchText('');
-    setList([]);
-  };
-  const handleOnKeyDown = (e, name) => {
-    e.stopPropagation();
-    if (e.keyCode === 13) {
-      handleOnClick(name);
-    }
-  };
+  const handleOnClick = (name) => console.log('choose result:', name);
 
   return (
-    <form className='autocomplete'>
+    <form className='autocomplete2'>
       <input
-        id='searchInput'
+        id='searchInput2'
         type='text'
         placeholder='serach here..'
         onChange={handleOnchange}
@@ -47,20 +39,17 @@ export const AutoComplete = () => {
       />
 
       {list && searchText && (
-        <section className='section'>
           <ul>
             {list.map((item) => (
               <li
                 key={Math.random()}
                 tabIndex={0}
                 onClick={() => handleOnClick(item)}
-                onKeyDown={(e) => handleOnKeyDown(e, item)}
               >
                 {item}
               </li>
             ))}
           </ul>
-        </section>
       )}
     </form>
   );

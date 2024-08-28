@@ -17,7 +17,7 @@ export const AutocompleteWrapper = () => {
 
   /* 这是不用useDebounce的时候：
     useEffect(() => {
-      console.log('用户停止type后，在这看fetch api goes crazy');
+      console.log('用户type时，在这看fetch api goes crazy');
       fetch('https://jsonplaceholder.typicode.com/users')
         .then((res) => res.json())
         .then((res) => setDta(res));
