@@ -101,7 +101,7 @@ function App() {
     <div>
       {/* ----------------------- React components practices ------------------------- */}
       {/* <AnimationWrapper /> */}
-      <StateMachineWrapper />
+      {/* <StateMachineWrapper /> */}
       {/* <AutocompleteWrapper /> */}
       {/* <AutocompleteWrapperII /> */}
       {/* <CarouselWrapper /> */}
