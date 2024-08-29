@@ -1,0 +1,24 @@
+.stateMachine {
+  height: 50vh;
+  background-color: black;
+
+  --myTransparency: 1;
+  /* 使用css自定义变量：  --myTransparency */
+  opacity: var(--myTransparency); 
+  transition: all 1s ease-in-out;
+}
+
+/* 重点1在这：🟡 css选择器，选react设置的data-任意名={动态state值} */
+.stateMachine[data-status='loading'] {
+  --myTransparency: 0.3
+}
+
+.stateMachine .square {
+  margin: 1em;
+  width: 50px;
+  height: 50px;
+  background-color: wheat;
+
+  transform:translateX( calc(var(--myLeft) * 1px) );  /* 重点2在这：🟡 直接使用react设置的'--自定义css属性'的动态值 */
+  transition: transform 0.5s ease-in-out;
+}
