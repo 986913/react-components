@@ -1,9 +1,45 @@
 ## 👀 知识点
 
-1. `Array.from({length: 5})`的使用，把数字 5 变成数组
-2. **🚀 在 react 中如何自定义 css 属性**?
-   🚀 通过`style={{}}`属性, 具体设置为：`style={{ '--自定义css属性' ：值 }}`
-   🚀 在 css 中使用`var(--自定义css属性)`
+1. 🚀 在 react 中如何自定义 css 属性?
+
+   - 通过`style={{}}`属性, 具体设置为：`style={{ '--自定义css属性' ：值 }}`
+   - 在 css 中使用`var(--自定义css属性)`
+
+     ```
+
+     /* style={{ '--自定义css属性': 动态值 }}  */
+     <div className='square' 🟡style={{'--myLeft': leftValue}} />
+
+
+     .square {
+       background-color: wheat;
+       /* css使用react设置的🟡'--自定义css属性'的动态值 */
+       transform:translateX( calc(var(--myLeft) * 1px) );
+       transition: transform 0.5s ease-in-out;
+     }
+     ```
+
+2. 🚀 在 react 中如何定义`data-`属性？
+
+   - 先在 react jsx 元素上绑定`data-任意名`,比如`data-status`
+   - 后来给`data-任意名` 附上动态值，一般赋 state 值
+   - 再后来在 css 中应用`data-任意名`，表示在“特定状态”下呈现出不同的 css
+
+     ```
+     <div className='stateMachine' 🟡data-status={status}>
+
+     .stateMachine {
+       background-color: black;
+       --myTransparency: 1;
+       opacity: var(--myTransparency);
+       transition: all 1s ease-in-out;
+     }
+     /* 🟡 css选择器，选react设置的data-任意名={动态state值} */
+     .stateMachine[data-status='loading'] {
+       --myTransparency: 0.3
+     }
+     ```
+
 3. css 中的`transition` VS `animation`, 具体看下
 
 ## 💃 CSS
