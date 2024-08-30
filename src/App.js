@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-vars */
 import { StateMachineWrapper } from './StateMachineExample1';
+import { StateMachineWrapperII } from './StateMachineExample2';
 import { AnimationWrapper } from './AnimationExample';
 import { AutocompleteWrapper } from './Autocomplete';
 import { AutocompleteWrapperII } from './AutoCompleteII';
@@ -102,6 +103,7 @@ function App() {
       {/* ----------------------- React components practices ------------------------- */}
       {/* <AnimationWrapper /> */}
       {/* <StateMachineWrapper /> */}
+      <StateMachineWrapperII />
       {/* <AutocompleteWrapper /> */}
       {/* <AutocompleteWrapperII /> */}
       {/* <CarouselWrapper /> */}

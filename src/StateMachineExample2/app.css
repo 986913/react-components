@@ -1,0 +1,43 @@
+.stateMachineII {
+  --themeColor: gray;
+}
+.stateMachineII[data-theme='pending'] {
+  --themeColor: yellow;
+}
+.stateMachineII[data-theme='error'] {
+  --themeColor: red;
+}
+.stateMachineII[data-theme='success'] {
+  --themeColor: green;
+}
+
+
+.stateMachineII input {
+  border-color: var(--themeColor);
+}
+.stateMachineII button {
+  margin-left: 1.5em;
+
+  border-color: var(--themeColor);
+  background-color: var(--themeColor);
+}
+
+.stateMachineII[data-theme='error'] button {
+  animation: shake .3s ease-in-out ;
+  animation-iteration-count: 2;
+}
+
+@keyframes shake {
+  0%{
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-20px);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(20px);
+  }
+}
