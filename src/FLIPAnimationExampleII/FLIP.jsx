@@ -22,20 +22,16 @@ export const Flip = ({ children }) => {
 
       // 获取子元素的初始位置
       const start = startPositionsRef.current[key];
-      
       // 获取子元素的当前（新）位置
       const end = domMapRef.current[key].getBoundingClientRect();
       
       // 计算子元素的位移差
       const deltaX = start.left - end.left;
       const deltaY = start.top - end.top;
-
       // 如果子元素没有移动，直接返回
       if (deltaX === 0 && deltaY === 0) return;
-
       // 记录子元素的新位置，为下一次动画做准备
       startPositionsRef.current[key] = domMapRef.current[key].getBoundingClientRect();
-
       // 关闭 transition，将子元素偏移至其初始位置
       setStyleMap(data => ({
         ...data,
