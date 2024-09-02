@@ -1,0 +1,11 @@
+.boxcontainer {
+  display: flex;
+}
+.boxcontainer .box {
+  width: 60px;
+  height: 60px;
+  background-color: skyblue;
+  color: white;
+  font-size: 30px;
+  margin: 10px;
+}

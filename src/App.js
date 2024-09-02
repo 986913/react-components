@@ -2,6 +2,7 @@
 import { StateMachineWrapper } from './StateMachineExample1';
 import { StateMachineWrapperII } from './StateMachineExample2';
 import { LayoutAnimationWrapper } from './FLIPAnimationExample';
+import { LayoutAnimationWrapperII } from './FLIPAnimationExampleII';
 import { AnimationWrapper } from './AnimationExample';
 import { AutocompleteWrapper } from './Autocomplete';
 import { AutocompleteWrapperII } from './AutoCompleteII';
@@ -105,7 +106,8 @@ function App() {
       {/* <AnimationWrapper /> */}
       {/* <StateMachineWrapper /> */}
       {/* <StateMachineWrapperII /> */}
-      <LayoutAnimationWrapper />
+      {/* <LayoutAnimationWrapper /> */}
+      <LayoutAnimationWrapperII />
       {/* <AutocompleteWrapper /> */}
       {/* <AutocompleteWrapperII /> */}
       {/* <CarouselWrapper /> */}
