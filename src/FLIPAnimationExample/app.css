@@ -1,0 +1,9 @@
+#containeer {
+  display: flex;
+}
+
+#containeer > div {
+  height: 100px;
+  box-sizing: border-box;
+  margin: 4px;
+}
