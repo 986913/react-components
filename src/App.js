@@ -139,16 +139,13 @@ function App() {
       {/* <TodolistWrapper /> */}
       {/* <TodolistWrapperII /> */}
       {/* <TodolistWrapperIII /> */}
-      {/* 
-        下面4个progress components没有计算， 全都基于CSS:
-          from transform: scaleX(0) to transform: scaleX(1) + transition-duration
-      */}
+      {/* 下面4个progress components没有计算,全基于CSS --> from transform: scaleX(0) to transform: scaleX(1) + transition-duration  */}
       {/* <ProgressBarWrapper /> */}
       {/* <ProgressBarsWrapper /> */}
       {/* <ProgressBarsIIWrapper /> */}
       {/* <ProgressBarsIIIWrapper /> */}
       {/* 
-        下面ProgressBarIWrapper 和 ProgressBarsIIIIWrapper是重点， 因为场景更多见：
+        下面ProgressBarIWrapper 和 ProgressBarsIIIIWrapper是重点，因为场景更多见：
           1. 需要用setInterval,计算每10ms增加具体多少的progress steps
           2. 有interaction行为，比如start, pause, reset etc
       */}
