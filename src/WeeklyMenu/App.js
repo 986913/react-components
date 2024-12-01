@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import './index.css';
-import { MeunTable } from './MenuTable';
 import { ALL_FOOD } from './foodData';
 
 const App = () => {
@@ -25,13 +24,99 @@ const App = () => {
   };
 
   return (
-    <div className='meunApp'>
-      <button id='generateBtn' onClick={hanldeClick}>
-        Generate
-      </button>
-      <MeunTable indexList={menuList} updateActive={(id) => setActiveIdx(id)} />
-      <RecipeContent active={activeIdx} />
+    <div className='meun-app-container'>
+      <div className='meunApp'>
+        <button id='generateBtn' onClick={hanldeClick}>
+          Generate
+        </button>
+        <MeunTable
+          indexList={menuList}
+          updateActive={(id) => setActiveIdx(id)}
+        />
+        <RecipeContent active={activeIdx} />
+      </div>
+
+      <button id='recipe-btn'> Get All Recipe </button>
     </div>
+  );
+};
+
+/************************************* Chind Components ****************************************/
+const MeunTable = ({ indexList, updateActive }) => {
+  const handleHoverIn = (e, activeIdx) => {
+    const tag = e.target.tagName;
+    if (tag === 'TD') {
+      console.log(activeIdx);
+      updateActive(activeIdx);
+    }
+  };
+  const handleHoverOut = (e) => {
+    const tag = e.target.tagName;
+    if (tag === 'TD') {
+      updateActive(-1);
+    }
+  };
+  // console.log(indexList);
+  return (
+    <>
+      <table>
+        <thead>
+          <tr>
+            <th>Days</th>
+            <th>午饭</th>
+            <th>晚饭</th>
+          </tr>
+        </thead>
+        <tbody>
+          {indexList.map((_, idx) => {
+            if (idx % 2 === 0) {
+              const lunch = ALL_FOOD[indexList[idx]];
+              const dinner = ALL_FOOD[indexList[idx + 1]] || { name: 'N/A' };
+
+              return (
+                <tr key={Math.random() * idx}>
+                  <th> 星期{Math.floor(idx / 2) + 1} </th>
+                  <td
+                    onMouseEnter={(e) => handleHoverIn(e, indexList[idx])}
+                    onMouseLeave={(e) => handleHoverOut(e)}
+                  >
+                    {lunch.src ? (
+                      <a
+                        href={lunch.src}
+                        target='_blank'
+                        id='link'
+                        rel='noreferrer'
+                      >
+                        {lunch.name}
+                      </a>
+                    ) : (
+                      <span>{lunch.name}</span>
+                    )}
+                  </td>
+                  <td
+                    onMouseEnter={(e) => handleHoverIn(e, indexList[idx + 1])}
+                    onMouseLeave={(e) => handleHoverOut(e)}
+                  >
+                    {dinner.src ? (
+                      <a
+                        href={dinner.src}
+                        target='_blank'
+                        id='link'
+                        rel='noreferrer'
+                      >
+                        {dinner.name}
+                      </a>
+                    ) : (
+                      <span>{dinner.name}</span>
+                    )}
+                  </td>
+                </tr>
+              );
+            } else return null;
+          })}
+        </tbody>
+      </table>
+    </>
   );
 };
 

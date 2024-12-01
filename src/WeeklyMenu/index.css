@@ -1,9 +1,21 @@
-.meunApp {
-  border: 1px dashed gray;
+.meun-app-container {
+  display: flex;
+  flex-direction: column;
   width: 50%;
   height: 50%;
   margin: 0 auto;
+}
 
+#recipe-btn {
+  margin-top: 2em;
+  padding: .7em;
+  border: none;
+  transition: all 0.2s linear;
+}
+
+.meunApp {
+  border: 1px dashed gray;
+  border-radius:10px;
   display: flex;
 }
 
@@ -11,6 +23,8 @@
 #generateBtn {
   padding: .7em;
   border: none;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
   transition: all 0.2s linear;
   -webkit-transition: all 0.2s linear;
   -moz-transition: all 0.2s linear;
@@ -18,9 +32,10 @@
   -o-transition: all 0.2s linear;
 }
 
-#generateBtn:hover {
+#generateBtn:hover,
+#recipe-btn:hover {
   cursor: pointer;
-  background-color: navy;
+  background-color: black;
   color: white;
 }
 
@@ -28,6 +43,7 @@
   flex-basis: 50%;
   flex: 1;
   justify-content: space-between;
+  text-align: center;
 }
 
 .meunApp table tr {
@@ -36,7 +52,8 @@
 }
 
 .meunApp td:hover {
-  background-color: lightcyan;
+  background-color: black;
+  color: white;
   cursor: pointer;
 }
 
