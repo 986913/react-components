@@ -1,14 +1,26 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './index.css';
 import { ALL_FOOD } from './foodData';
+import { MARKETS } from './marketsCategory';
 
 const App = () => {
   const [menuList, setMenuList] = useState([]);
   const [activeIdx, setActiveIdx] = useState(-1);
 
+  const [allReceiptList, setAllReceiptList] = useState([]);
+  const [costcoList, setCostcoList] = useState([]);
+  const [hmartList, setHmartList] = useState([]);
+  const [greatwallList, setGreatWallList] = useState([]);
+  const [wegmansList, setWegmansList] = useState([]);
+
+  useEffect(() => {
+    category(allReceiptList);
+  }, [allReceiptList]);
+
   const hanldeClick = () => {
     const randomIndexArr = shuffle();
     setMenuList(randomIndexArr);
+    getAllRecipe();
   };
   const shuffle = () => {
     let arr = Array.from({ length: ALL_FOOD.length }, (_, idx) => idx);
@@ -21,6 +33,49 @@ const App = () => {
 
     // arr slice here:
     return arr.slice(0, 10);
+  };
+  const getAllRecipe = () => {
+    let list = [];
+    menuList.forEach((item) => {
+      list.push(...ALL_FOOD[item].recipe);
+    });
+    setAllReceiptList(list);
+  };
+  const category = (list) => {
+    let costo = [];
+    let hmart = [];
+    let greatwall = [];
+    let wegmans = [];
+
+    for (let i = 0; i < list.length; i++) {
+      let curr = list[i];
+      for (const key in MARKETS) {
+        const values = MARKETS[key];
+        if (values.indexOf(curr) !== -1) {
+          switch (key) {
+            case 'Costco':
+              costo.push(curr);
+              break;
+            case 'Hmart':
+              hmart.push(curr);
+              break;
+            case 'Wegmans':
+              wegmans.push(curr);
+              break;
+            case 'GreateWall':
+              greatwall.push(curr);
+              break;
+            default:
+              return;
+          }
+        }
+      }
+    }
+
+    setCostcoList(costo);
+    setGreatWallList(greatwall);
+    setWegmansList(wegmans);
+    setHmartList(hmart);
   };
 
   return (
@@ -36,7 +91,14 @@ const App = () => {
         <RecipeContent active={activeIdx} />
       </div>
 
-      <button id='recipe-btn'> Get All Recipe </button>
+      {menuList.length > 0 && <button id='recipe-btn'>All Recipe</button>}
+
+      <NeedToBuy
+        costcoList={costcoList}
+        hmartList={hmartList}
+        greatwallList={greatwallList}
+        wegmansList={wegmansList}
+      />
     </div>
   );
 };
@@ -46,7 +108,6 @@ const MeunTable = ({ indexList, updateActive }) => {
   const handleHoverIn = (e, activeIdx) => {
     const tag = e.target.tagName;
     if (tag === 'TD') {
-      console.log(activeIdx);
       updateActive(activeIdx);
     }
   };
@@ -119,17 +180,47 @@ const MeunTable = ({ indexList, updateActive }) => {
     </>
   );
 };
-
 const RecipeContent = ({ active }) => {
   if (active === -1) return <div className='receipt-box'> No Content </div>;
 
   const { recipe } = ALL_FOOD[active];
   return (
     <ul className='receipt-box'>
-      {recipe.map((recipe) => (
-        <li> - {recipe}</li>
+      {recipe.map((recipe, idx) => (
+        <li key={Math.random() * idx}> - {recipe}</li>
       ))}
     </ul>
   );
 };
+const NeedToBuy = ({ wegmansList, costcoList, greatwallList, hmartList }) => {
+  return (
+    <div className='need-to-buy-container'>
+      <ul className='market costo'>
+        <h3>Costo</h3>
+        {costcoList.map((item) => (
+          <li>{item}</li>
+        ))}
+      </ul>
+      <ul className='market greatwall'>
+        <h3>Greate Wall</h3>
+        {greatwallList.map((item) => (
+          <li>{item}</li>
+        ))}
+      </ul>
+      <ul className='market wegmans'>
+        <h3>Wegmans</h3>
+        {wegmansList.map((item) => (
+          <li>{item}</li>
+        ))}
+      </ul>
+      <ul className='market hmart'>
+        <h3>Hmart</h3>
+        {hmartList.map((item) => (
+          <li>{item}</li>
+        ))}
+      </ul>
+    </div>
+  );
+};
+
 export default App;

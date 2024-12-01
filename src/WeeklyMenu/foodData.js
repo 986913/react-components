@@ -6,7 +6,7 @@ export const ALL_FOOD = [
   },
   {
     name: 'Burger',
-    recipe: ['Buns', 'Lettuce', 'Burger Meat'],
+    recipe: ['Burger buns', 'Lettuce', 'Burger Meat', '🧅洋葱'],
   },
   {
     name: '韩国Bibabam',
@@ -25,7 +25,7 @@ export const ALL_FOOD = [
   },
   {
     name: '咖喱鸡肉土豆',
-    recipe: ['🥔土豆', '鸡肉', '🍛咖喱', '🥕胡萝卜'],
+    recipe: ['🥔土豆', '🐔鸡肉', '🍛咖喱', '🥕胡萝卜'],
   },
   {
     name: '白菜炖粉条',
@@ -64,7 +64,7 @@ export const ALL_FOOD = [
   {
     name: '烩麻食',
     src: 'https://www.xiachufang.com/recipe/103941109/',
-    recipe: ['🥔土豆', '豇豆', '木耳', '金针菇', '🍅西红柿', '豆腐', '青菜'],
+    recipe: ['🥔土豆', '豇豆', '木耳', '金针菇', '🍅西红柿', '豆腐', '🥬青菜'],
   },
   {
     name: '韩国炒年糕',

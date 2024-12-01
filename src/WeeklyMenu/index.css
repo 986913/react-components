@@ -10,7 +10,6 @@
   margin-top: 2em;
   padding: .7em;
   border: none;
-  transition: all 0.2s linear;
 }
 
 .meunApp {
@@ -32,8 +31,7 @@
   -o-transition: all 0.2s linear;
 }
 
-#generateBtn:hover,
-#recipe-btn:hover {
+#generateBtn:hover {
   cursor: pointer;
   background-color: black;
   color: white;
@@ -66,4 +64,34 @@
   width: 90%;
   flex-basis: 40%;
   padding: .8em;
+}
+
+.need-to-buy-container {
+  text-align: center;
+  max-height: 400px;
+  overflow: auto;
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+}
+
+.need-to-buy-container h3 {
+  margin-bottom: .5em;
+}
+
+.market {
+  padding: .5em;
+  height: 100%;
+} 
+.greatwall{
+  background-color: lightblue;
+}
+.hmart{
+  background-color: lavender;
+}
+.costo {
+  background-color: lightcoral;
+}
+.wegmans {
+  background-color: lightgoldenrodyellow;
 }
