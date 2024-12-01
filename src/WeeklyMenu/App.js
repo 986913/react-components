@@ -14,14 +14,18 @@ const App = () => {
   const [wegmansList, setWegmansList] = useState([]);
 
   useEffect(() => {
+    if (menuList.length > 0) getAllRecipe();
+  }, [menuList]);
+
+  useEffect(() => {
     category(allReceiptList);
   }, [allReceiptList]);
 
-  const hanldeClick = () => {
+  const generateMeun = () => {
     const randomIndexArr = shuffle();
     setMenuList(randomIndexArr);
-    getAllRecipe();
   };
+
   const shuffle = () => {
     let arr = Array.from({ length: ALL_FOOD.length }, (_, idx) => idx);
 
@@ -34,6 +38,7 @@ const App = () => {
     // arr slice here:
     return arr.slice(0, 10);
   };
+
   const getAllRecipe = () => {
     let list = [];
     menuList.forEach((item) => {
@@ -41,6 +46,7 @@ const App = () => {
     });
     setAllReceiptList(list);
   };
+
   const category = (list) => {
     let costo = [];
     let hmart = [];
@@ -81,7 +87,7 @@ const App = () => {
   return (
     <div className='meun-app-container'>
       <div className='meunApp'>
-        <button id='generateBtn' onClick={hanldeClick}>
+        <button id='generateBtn' onClick={generateMeun}>
           Generate
         </button>
         <MeunTable

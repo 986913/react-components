@@ -68,11 +68,12 @@
 
 .need-to-buy-container {
   text-align: center;
-  max-height: 400px;
   overflow: auto;
   display: flex;
   flex: 1;
   justify-content: space-between;
+  border: 1px dashed gray;
+  border-radius: 10px;
 }
 
 .need-to-buy-container h3 {
@@ -81,7 +82,7 @@
 
 .market {
   padding: .5em;
-  height: 100%;
+  flex-basis: 25%;
 } 
 .greatwall{
   background-color: lightblue;
