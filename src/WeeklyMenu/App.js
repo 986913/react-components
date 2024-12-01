@@ -88,7 +88,7 @@ const App = () => {
     <div className='meun-app-container'>
       <div className='meunApp'>
         <button id='generateBtn' onClick={generateMeun}>
-          Generate
+          点击生成菜单
         </button>
         <MeunTable
           indexList={menuList}
