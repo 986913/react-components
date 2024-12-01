@@ -1,0 +1,52 @@
+.meunApp {
+  border: 1px dashed gray;
+  width: 50%;
+  height: 50%;
+  margin: 0 auto;
+
+  display: flex;
+}
+
+
+#generateBtn {
+  padding: .7em;
+  border: none;
+  transition: all 0.2s linear;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -ms-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+}
+
+#generateBtn:hover {
+  cursor: pointer;
+  background-color: navy;
+  color: white;
+}
+
+.meunApp table {
+  flex-basis: 50%;
+  flex: 1;
+  justify-content: space-between;
+}
+
+.meunApp table tr {
+  border: 1px solid gray;
+  padding: 1em;
+}
+
+.meunApp td:hover {
+  background-color: lightcyan;
+  cursor: pointer;
+}
+
+.meunApp li {
+  margin-top: .2em;
+}
+
+.meunApp .receipt-box {
+  margin: 0 2em;
+  width: 90%;
+  flex-basis: 40%;
+  padding: .8em;
+}

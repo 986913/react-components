@@ -1,4 +1,5 @@
 /* eslint-disable no-unused-vars */
+import { WeeklyMenuWrapper } from './WeeklyMenu';
 import { StateMachineWrapper } from './StateMachineExample1';
 import { StateMachineWrapperII } from './StateMachineExample2';
 import { LayoutAnimationWrapper } from './FLIPAnimationExample';
@@ -176,6 +177,7 @@ function App() {
       {/* <FlightBookerWrapper /> */}
       {/* <CalendarWrapper /> */}
       {/* <DataTableWrapper /> */}
+      <WeeklyMenuWrapper />
 
       {/* ----------------------- Customized Hooks examples------------------------- */}
       {/* <AppUseEffectOnceExample /> */}
