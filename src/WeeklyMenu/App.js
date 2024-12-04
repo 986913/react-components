@@ -200,13 +200,13 @@ const NeedToBuy = ({ wegmansList, costcoList, greatwallList, hmartList }) => {
   return (
     <div className='need-to-buy-container'>
       <ul className='market costo'>
-        <h3>Costo</h3>
+        <h3>Costco</h3>
         {formatUtil(costcoList).map((item, idx) => (
           <li key={Math.random() * idx}>{item}</li>
         ))}
       </ul>
       <ul className='market greatwall'>
-        <h3>Greate Wall</h3>
+        <h3>Great Wall</h3>
         {formatUtil(greatwallList).map((item, idx) => (
           <li key={Math.random() * idx}>{item}</li>
         ))}
