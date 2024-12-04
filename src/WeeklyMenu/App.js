@@ -85,29 +85,35 @@ const App = () => {
   };
 
   return (
-    <div className='meun-app-container'>
-      <div className='meunApp'>
-        <button id='generateBtn' onClick={generateMeun}>
-          点击生成菜单
-        </button>
-        <MeunTable
-          indexList={menuList}
-          updateActive={(id) => setActiveIdx(id)}
+    <div className='all-box'>
+      <div className='meun-app-container'>
+        <div className='meunApp'>
+          <button id='generateBtn' onClick={generateMeun}>
+            点击生成菜单
+          </button>
+          <MeunTable
+            indexList={menuList}
+            updateActive={(id) => setActiveIdx(id)}
+          />
+          {/* <RecipeContent active={activeIdx} /> */}
+        </div>
+
+        {menuList.length > 0 && <button id='recipe-btn'>All Recipe</button>}
+
+        <NeedToBuy
+          costcoList={costcoList}
+          hmartList={hmartList}
+          greatwallList={greatwallList}
+          wegmansList={wegmansList}
         />
-        <RecipeContent active={activeIdx} />
       </div>
-
-      {menuList.length > 0 && <button id='recipe-btn'>All Recipe</button>}
-
-      <NeedToBuy
-        costcoList={costcoList}
-        hmartList={hmartList}
-        greatwallList={greatwallList}
-        wegmansList={wegmansList}
-      />
+      <div className='right-box'>
+        {menuList.length > 0 && <RecipeContentDisplay menuList={menuList} />}
+      </div>
     </div>
   );
 };
+export default App;
 
 /************************************* Chind Components ****************************************/
 const MeunTable = ({ indexList, updateActive }) => {
@@ -186,6 +192,28 @@ const MeunTable = ({ indexList, updateActive }) => {
     </>
   );
 };
+
+const RecipeContentDisplay = ({ menuList }) => {
+  return (
+    <>
+      <ul>
+        {menuList.map((item, idx) => {
+          const { name, recipe } = ALL_FOOD[item];
+          return (
+            <li key={Math.random() * idx}>
+              <strong>{name} </strong>
+              <br />
+              {recipe.map((each) => (
+                <span>{each}, </span>
+              ))}
+            </li>
+          );
+        })}
+      </ul>
+    </>
+  );
+};
+
 const RecipeContent = ({ active }) => {
   if (active === -1) return <div className='receipt-box'> No Content </div>;
 
@@ -198,35 +226,52 @@ const RecipeContent = ({ active }) => {
     </ul>
   );
 };
+
 const NeedToBuy = ({ wegmansList, costcoList, greatwallList, hmartList }) => {
   return (
     <div className='need-to-buy-container'>
       <ul className='market costo'>
         <h3>Costo</h3>
-        {costcoList.map((item) => (
-          <li>{item}</li>
+        {formatUtil(costcoList).map((item, idx) => (
+          <li key={Math.random() * idx}>{item}</li>
         ))}
       </ul>
       <ul className='market greatwall'>
         <h3>Greate Wall</h3>
-        {greatwallList.map((item) => (
-          <li>{item}</li>
+        {formatUtil(greatwallList).map((item, idx) => (
+          <li key={Math.random() * idx}>{item}</li>
         ))}
       </ul>
       <ul className='market wegmans'>
         <h3>Wegmans</h3>
-        {wegmansList.map((item) => (
-          <li>{item}</li>
+        {formatUtil(wegmansList).map((item, idx) => (
+          <li key={Math.random() * idx}>{item}</li>
         ))}
       </ul>
       <ul className='market hmart'>
         <h3>Hmart</h3>
-        {hmartList.map((item) => (
-          <li>{item}</li>
+        {hmartList.map((item, idx) => (
+          <li key={Math.random() * idx}>{item}</li>
         ))}
       </ul>
     </div>
   );
 };
 
-export default App;
+/************************************* Helper functions ****************************************/
+const formatUtil = (arr) => {
+  arr.sort();
+  let newArr = [];
+  let count = 1;
+
+  for (let i = 0; i < arr.length - 1; i++) {
+    if (arr[i] === arr[i + 1]) {
+      count++;
+    } else {
+      if (count > 1) newArr.push(`${arr[i]} X${count}`);
+      else newArr.push(arr[i]);
+      count = 1; //reset count
+    }
+  }
+  return newArr;
+};

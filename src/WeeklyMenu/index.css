@@ -1,3 +1,7 @@
+.all-box {
+  display: flex;
+}
+
 .meun-app-container {
   display: flex;
   flex-direction: column;
@@ -67,7 +71,7 @@
 }
 
 .need-to-buy-container {
-  text-align: center;
+  text-align: left;
   overflow: auto;
   display: flex;
   flex: 1;
@@ -95,4 +99,12 @@
 }
 .wegmans {
   background-color: lightgoldenrodyellow;
+}
+
+.right-box li {
+  margin: 1em;
+}
+
+.right-box li span {
+  color: darkgray
 }
