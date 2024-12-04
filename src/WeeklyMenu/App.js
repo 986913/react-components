@@ -5,7 +5,6 @@ import { MARKETS } from './marketsCategory';
 
 const App = () => {
   const [menuList, setMenuList] = useState([]);
-  const [activeIdx, setActiveIdx] = useState(-1);
 
   const [allReceiptList, setAllReceiptList] = useState([]);
   const [costcoList, setCostcoList] = useState([]);
@@ -211,19 +210,6 @@ const RecipeContentDisplay = ({ menuList }) => {
         })}
       </ul>
     </>
-  );
-};
-
-const RecipeContent = ({ active }) => {
-  if (active === -1) return <div className='receipt-box'> No Content </div>;
-
-  const { recipe } = ALL_FOOD[active];
-  return (
-    <ul className='receipt-box'>
-      {recipe.map((recipe, idx) => (
-        <li key={Math.random() * idx}> - {recipe}</li>
-      ))}
-    </ul>
   );
 };
 
