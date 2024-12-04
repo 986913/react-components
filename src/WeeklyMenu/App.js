@@ -39,7 +39,6 @@ const App = () => {
     const newAllReceiptList = menuList
       .map((item) => ALL_FOOD[item].recipe)
       .flat();
-    console.log(...newAllReceiptList);
     setAllReceiptList(newAllReceiptList);
   }, [menuList]);
 
