@@ -72,7 +72,7 @@ export const ALL_FOOD = [
   },
   {
     name: 'Pasta',
-    recipe: ['Pasta', 'Meatball', 'garlic toaste'],
+    recipe: ['Pasta', 'Meatball', 'Garlic toast'],
   },
   {
     name: '蒜蓉油麦菜',
@@ -97,5 +97,29 @@ export const ALL_FOOD = [
     name: '番茄浓汤面',
     src: 'https://m.xiachufang.com/recipe/106489104/',
     recipe: ['🍅西红柿', '🥚鸡蛋', '🧅洋葱', '挂面', '🥫番茄酱(公司有)'],
+  },
+  {
+    name: 'Beef Stew',
+    recipe: ['🍅西红柿', 'Beef', '🧅洋葱', 'Tomato paste', '🥕胡萝卜'],
+  },
+  {
+    name: '菜疙瘩',
+    src: 'https://www.youtube.com/watch?v=kteAQwcg-cU&ab_channel=%E9%99%95%E8%A5%BF%E7%BE%8E%E5%8E%A8%E5%A8%98AuthenticShaanxiCuisine',
+    recipe: ['油麦菜', '中筋面粉', '🫚生姜', '🧄蒜', '小葱'],
+  },
+  {
+    name: 'Chicken tortilla Soup',
+    recipe: [
+      '🍅西红柿',
+      '🐔鸡肉',
+      '🧅洋葱',
+      '🧄蒜',
+      '🌶️辣椒',
+      'Crushed Tomato',
+      'Chicken broth',
+      'Black beans (optional)',
+      'Corn (optional)',
+      '🥑牛油果',
+    ],
   },
 ];
