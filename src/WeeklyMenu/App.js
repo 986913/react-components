@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import './index.css';
 import { ALL_FOOD } from './foodData';
 import { MARKETS } from './marketsCategory';
@@ -11,14 +11,6 @@ const App = () => {
   const [hmartList, setHmartList] = useState([]);
   const [greatwallList, setGreatWallList] = useState([]);
   const [wegmansList, setWegmansList] = useState([]);
-
-  useEffect(() => {
-    if (menuList.length > 0) getAllRecipe();
-  }, [menuList]);
-
-  useEffect(() => {
-    category(allReceiptList);
-  }, [allReceiptList]);
 
   const generateMeun = () => {
     const randomIndexArr = shuffle();
@@ -38,13 +30,26 @@ const App = () => {
     return arr.slice(0, 10);
   };
 
-  const getAllRecipe = () => {
-    let list = [];
-    menuList.forEach((item) => {
-      list.push(...ALL_FOOD[item].recipe);
-    });
-    setAllReceiptList(list);
-  };
+  const getAllRecipe = useCallback(() => {
+    // let list = [];
+    // menuList.forEach((item) => {
+    //   list.push(...ALL_FOOD[item].recipe);
+    // });
+    // setAllReceiptList(list);
+    const newAllReceiptList = menuList
+      .map((item) => ALL_FOOD[item].recipe)
+      .flat();
+    console.log(...newAllReceiptList);
+    setAllReceiptList(newAllReceiptList);
+  }, [menuList]);
+
+  useEffect(() => {
+    if (menuList.length > 0) getAllRecipe();
+  }, [menuList, getAllRecipe]);
+
+  useEffect(() => {
+    category(allReceiptList);
+  }, [allReceiptList]);
 
   const category = (list) => {
     let costo = [];
@@ -179,10 +184,10 @@ const RecipeContentDisplay = ({ menuList }) => {
           const { name, recipe } = ALL_FOOD[item];
           return (
             <li key={Math.random() * idx}>
-              <strong>{name} </strong>
+              <strong>{name}</strong>
               <br />
-              {recipe.map((each) => (
-                <span>{each}, </span>
+              {recipe.sort().map((each, index) => (
+                <span key={Math.random() * index}>{each}, </span>
               ))}
             </li>
           );
