@@ -90,10 +90,7 @@ const App = () => {
           <button id='generateBtn' onClick={generateMeun}>
             点击生成菜单
           </button>
-          <MeunTable
-            indexList={menuList}
-            updateActive={(id) => setActiveIdx(id)}
-          />
+          <MeunTable indexList={menuList} />
           {/* <RecipeContent active={activeIdx} /> */}
         </div>
 
@@ -115,19 +112,7 @@ const App = () => {
 export default App;
 
 /************************************* Chind Components ****************************************/
-const MeunTable = ({ indexList, updateActive }) => {
-  const handleHoverIn = (e, activeIdx) => {
-    const tag = e.target.tagName;
-    if (tag === 'TD') {
-      updateActive(activeIdx);
-    }
-  };
-  const handleHoverOut = (e) => {
-    const tag = e.target.tagName;
-    if (tag === 'TD') {
-      updateActive(-1);
-    }
-  };
+const MeunTable = ({ indexList }) => {
   // console.log(indexList);
   return (
     <>
@@ -148,10 +133,7 @@ const MeunTable = ({ indexList, updateActive }) => {
               return (
                 <tr key={Math.random() * idx}>
                   <th> 星期{Math.floor(idx / 2) + 1} </th>
-                  <td
-                    onMouseEnter={(e) => handleHoverIn(e, indexList[idx])}
-                    onMouseLeave={(e) => handleHoverOut(e)}
-                  >
+                  <td>
                     {lunch.src ? (
                       <a
                         href={lunch.src}
@@ -165,10 +147,7 @@ const MeunTable = ({ indexList, updateActive }) => {
                       <span>{lunch.name}</span>
                     )}
                   </td>
-                  <td
-                    onMouseEnter={(e) => handleHoverIn(e, indexList[idx + 1])}
-                    onMouseLeave={(e) => handleHoverOut(e)}
-                  >
+                  <td>
                     {dinner.src ? (
                       <a
                         href={dinner.src}
