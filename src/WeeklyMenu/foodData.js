@@ -11,12 +11,12 @@ export const ALL_FOOD = [
   {
     name: '韩国Bibabam',
     recipe: [
-      '香菇🍄',
-      '黄瓜🥒',
-      '牛油果🥑',
       'peterZhang-糖醋鸡',
       'Lettuce',
       '白萝卜',
+      '香菇🍄',
+      'Cucumber🥒',
+      'Avocado🥑',
     ],
   },
   {
@@ -118,16 +118,16 @@ export const ALL_FOOD = [
   {
     name: 'Chicken tortilla Soup',
     recipe: [
+      'Crushed Tomato',
+      'Chicken broth',
+      'Black beans (optional)',
+      'Corn (optional)',
+      'Avocado🥑',
       '西红柿🍅',
       '鸡肉🐔',
       '洋葱🧅',
       '蒜🧄',
       '辣椒🌶️',
-      'Crushed Tomato',
-      'Chicken broth',
-      'Black beans (optional)',
-      'Corn (optional)',
-      '牛油果🥑',
     ],
   },
   {

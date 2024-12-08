@@ -19,7 +19,7 @@ export const MARKETS = {
     'Chicken broth',
     'Black beans (optional)',
     'Corn (optional)',
-    '牛油果🥑',
+    'Avocado🥑',
     '培根🥓',
   ],
   GreateWall: [
@@ -47,7 +47,7 @@ export const MARKETS = {
     '蒜苔',
     '麻婆豆腐料汁',
     '蒜🧄',
-    '黄瓜🥒',
+    'Cucumber🥒',
     '洋葱🧅',
     '生姜🫚',
     '虾🦐',
