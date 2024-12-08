@@ -122,4 +122,8 @@ export const ALL_FOOD = [
       '🥑牛油果',
     ],
   },
+  {
+    name: 'Costco indian butter chicken',
+    recipe: ['Costco indian butter chicken'],
+  },
 ];

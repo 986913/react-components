@@ -1,5 +1,12 @@
 export const MARKETS = {
-  Costco: ['Lettuce', '🥔土豆', '蔬菜冻粒', '🐔鸡肉', '🥚鸡蛋'],
+  Costco: [
+    'Lettuce',
+    '🥔土豆',
+    '蔬菜冻粒',
+    '🐔鸡肉',
+    '🥚鸡蛋',
+    'Costco indian butter chicken',
+  ],
   Hmart: ['年糕酱', '年糕', '海鲜汤'],
   Wegmans: [
     'Burger buns',
