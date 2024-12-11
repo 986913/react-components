@@ -52,6 +52,8 @@ import { PaginationWrapperI } from './PaginationI/Wrapper';
 import { PaginationWrapperII } from './PaginationII/Wrapper';
 import { IntersectionObserverEx1lWrapper } from './IntersectionObserverExample';
 import { InfiniteScrollWrapper } from './InfiniteScroll';
+import { MutationObserverWrapper } from './MutationObserverExample';
+import { ResizeObserverWrapper } from './ResizeObserverExample';
 import { MultipleSelectWrapper } from './MultipleSelect';
 import { PhoneNoInputWrapper } from './PhoneNumberInput';
 import { ValtioWrapper } from './Valtio';
@@ -127,6 +129,8 @@ function App() {
       {/* <AccordionIIIWrapper /> */}
       {/* <IntersectionObserverEx1lWrapper /> */}
       {/* <InfiniteScrollWrapper /> */}
+      <MutationObserverWrapper />
+      {/* <ResizeObserverWrapper /> */}
       {/* <TransferListWrapperI /> */}
       {/* <TransferListWrapperII /> */}
       {/* <TransferListWrapperIII /> */}
@@ -177,7 +181,7 @@ function App() {
       {/* <FlightBookerWrapper /> */}
       {/* <CalendarWrapper /> */}
       {/* <DataTableWrapper /> */}
-      <WeeklyMenuWrapper />
+      {/* <WeeklyMenuWrapper /> */}
 
       {/* ----------------------- Customized Hooks examples------------------------- */}
       {/* <AppUseEffectOnceExample /> */}
