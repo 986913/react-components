@@ -1,5 +1,6 @@
 
-li {
+.treeSideBar li {
   cursor: pointer;
   list-style: none;
+  margin-left: 2em;
 }

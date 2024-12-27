@@ -2,7 +2,7 @@ export const getRoot = () => {
   return [{ type: 'folder', name: 'Root', id: Math.random() * 100 }];
 };
 
-export const getFolderForParent = (foldername) => {
+export const getSubFolderForParent = (foldername) => {
   // This is a mock for API call. It will fetch the data by folder name:
   switch (foldername) {
     case 'Root':
@@ -51,7 +51,7 @@ export const getFolderForParent = (foldername) => {
   }
 };
 
-export const getFilesForParent = (foldername) => {
+export const getSubFilesForParent = (foldername) => {
   // do somthing
   switch (foldername) {
     case 'Root':

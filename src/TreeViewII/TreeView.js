@@ -32,7 +32,7 @@ export const TreeView = ({ dataSource, onClickCallback }) => {
 
   const recurrsionRender = (data) => {
     return (
-      <ul>
+      <ul className='treeSideBar'>
         {data.map((d) => {
           const isExpand = expandKeys.indexOf(d.id) !== -1;
 

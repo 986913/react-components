@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { TreeView } from './TreeView';
-import { getRoot, getFolderForParent, getFilesForParent } from './fetch';
+import './treeview.css';
+import { getRoot, getSubFolderForParent, getSubFilesForParent } from './fetch';
 
 /* TreeViewWrapperII as parent component, shows how to use TreeView component: */
 export const TreeViewWrapperII = () => {
@@ -14,8 +15,8 @@ export const TreeViewWrapperII = () => {
   const loadSubData = (e, folder) => {
     e.stopPropagation();
     const { id, name } = folder;
-    const subFolders = getFolderForParent(name);
-    const subFiles = getFilesForParent(name);
+    const subFolders = getSubFolderForParent(name);
+    const subFiles = getSubFilesForParent(name);
     const newSourceData = recurrsionInsertData(
       dataSource,
       subFolders,
