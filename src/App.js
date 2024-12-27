@@ -47,7 +47,7 @@ import { TodolistWrapperIII } from './TodoListIII/Wrapper';
 import { TransferListWrapperI } from './TransferListI-明';
 import { TransferListWrapperII } from './TransferListII-明';
 import { TransferListWrapperIII } from './TransferListIII';
-import { TransferListWrapperIV } from './TransferListIV/';
+import { TransferListWrapperIV } from './TransferListIV';
 import { PaginationWrapperI } from './PaginationI/Wrapper';
 import { PaginationWrapperII } from './PaginationII/Wrapper';
 import { IntersectionObserverEx1lWrapper } from './IntersectionObserverExample';
@@ -129,8 +129,8 @@ function App() {
       {/* <AccordionIIIWrapper /> */}
       {/* <IntersectionObserverEx1lWrapper /> */}
       {/* <InfiniteScrollWrapper /> */}
-      {/* <MutationObserverWrapper /> */}
-      {/* <ResizeObserverWrapper /> */}
+      <MutationObserverWrapper />
+      <ResizeObserverWrapper />
       {/* <TransferListWrapperI /> */}
       {/* <TransferListWrapperII /> */}
       {/* <TransferListWrapperIII /> */}
