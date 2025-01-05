@@ -218,6 +218,7 @@ function App() {
       {/* <AppUseMemoExample2 /> */}
       {/* <AppUseCallbackExample1 /> */}
       {/* <AppUseCallbackExample2 /> */}
+      {/* 找一个更好的例子 去说明useMemo VS  useCallback */}
     </div>
   );
 }
