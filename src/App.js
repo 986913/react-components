@@ -52,6 +52,7 @@ import { PaginationWrapperI } from './PaginationI/Wrapper';
 import { PaginationWrapperII } from './PaginationII/Wrapper';
 import { IntersectionObserverEx1lWrapper } from './IntersectionObserverExample';
 import { InfiniteScrollWrapper } from './InfiniteScroll';
+import { InfiniteScrollWrapperII } from './InfiniteScrollV2';
 import { MutationObserverWrapper } from './MutationObserverExample';
 import { ResizeObserverWrapper } from './ResizeObserverExample';
 import { MultipleSelectWrapper } from './MultipleSelect';
@@ -130,7 +131,8 @@ function App() {
       {/* <IntersectionObserverEx1lWrapper /> */}
       {/* <InfiniteScrollWrapper /> */}
       <MutationObserverWrapper />
-      <ResizeObserverWrapper />
+      {/* <InfiniteScrollWrapperII /> */}
+      {/* <ResizeObserverWrapper />  */}
       {/* <TransferListWrapperI /> */}
       {/* <TransferListWrapperII /> */}
       {/* <TransferListWrapperIII /> */}
