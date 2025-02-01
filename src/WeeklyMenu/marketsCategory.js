@@ -6,6 +6,8 @@ export const MARKETS = {
     '鸡肉',
     '鸡蛋',
     '土豆',
+    'pizza',
+    'steak',
   ],
   Hmart: ['年糕酱', '年糕', '海鲜汤'],
   Wegmans: [

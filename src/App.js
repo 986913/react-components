@@ -54,6 +54,7 @@ import { IntersectionObserverEx1lWrapper } from './IntersectionObserverExample';
 import { InfiniteScrollWrapper } from './InfiniteScroll';
 import { InfiniteScrollWrapperII } from './InfiniteScrollV2';
 import { MutationObserverWrapper } from './MutationObserverExample';
+import { TextEditorWrapper } from './TextEditor';
 import { ResizeObserverWrapper } from './ResizeObserverExample';
 import { MultipleSelectWrapper } from './MultipleSelect';
 import { PhoneNoInputWrapper } from './PhoneNumberInput';
@@ -131,7 +132,8 @@ function App() {
       {/* <IntersectionObserverEx1lWrapper /> */}
       {/* <InfiniteScrollWrapper /> */}
       <MutationObserverWrapper />
-      {/* <InfiniteScrollWrapperII /> */}
+      <InfiniteScrollWrapperII />
+      <TextEditorWrapper />
       {/* <ResizeObserverWrapper />  */}
       {/* <TransferListWrapperI /> */}
       {/* <TransferListWrapperII /> */}
@@ -183,7 +185,7 @@ function App() {
       {/* <FlightBookerWrapper /> */}
       {/* <CalendarWrapper /> */}
       {/* <DataTableWrapper /> */}
-      {/* <WeeklyMenuWrapper /> */}
+      <WeeklyMenuWrapper />
 
       {/* ----------------------- Customized Hooks examples------------------------- */}
       {/* <AppUseEffectOnceExample /> */}
