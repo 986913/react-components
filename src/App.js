@@ -103,6 +103,7 @@ import { AppUseCallbackExample1 } from './Hooks/ReacBuildIntHooks/useCallback_eg
 import { AppUseCallbackExample2 } from './Hooks/ReacBuildIntHooks/useCallback_eg2';
 import { AppUseReducerExample1 } from './Hooks/ReacBuildIntHooks/useReducer_eg1';
 import { AppUseReducerExample2 } from './Hooks/ReacBuildIntHooks/useReducer_eg2';
+import { AppUseReducerExample3 } from './Hooks/ReacBuildIntHooks/useReducer_eg3';
 
 function App() {
   return (
@@ -185,7 +186,7 @@ function App() {
       {/* <FlightBookerWrapper /> */}
       {/* <CalendarWrapper /> */}
       {/* <DataTableWrapper /> */}
-      <WeeklyMenuWrapper />
+      {/* <WeeklyMenuWrapper /> */}
 
       {/* ----------------------- Customized Hooks examples------------------------- */}
       {/* <AppUseEffectOnceExample /> */}
@@ -210,8 +211,9 @@ function App() {
 
       {/* ----------------------- React build-in Hooks examples-------------------- */}
       {/* <AppUseEffectExample1 /> */}
-      {/* <AppUseReducerExample1 /> */}
-      {/* <AppUseReducerExample2 /> */}
+      <AppUseReducerExample1 />
+      <AppUseReducerExample2 />
+      <AppUseReducerExample3 />
       {/* <AppUseRefExample1 /> */}
       {/* <AppUseRefExample2 /> */}
       {/* <AppUseRefExample3 /> */}
