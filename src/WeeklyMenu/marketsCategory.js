@@ -8,6 +8,7 @@ export const MARKETS = {
     '土豆',
     'pizza',
     'steak',
+    'taco',
   ],
   Hmart: ['年糕酱', '年糕', '海鲜汤'],
   Wegmans: [

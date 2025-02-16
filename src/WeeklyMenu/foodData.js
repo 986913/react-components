@@ -138,4 +138,8 @@ export const ALL_FOOD = [
     name: 'steak',
     recipe: ['steak'],
   },
+  {
+    name: 'Costco Taco',
+    recipe: ['taco'],
+  },
 ];
