@@ -210,8 +210,8 @@ function App() {
 
       {/* ----------------------- React build-in Hooks examples-------------------- */}
       {/* <AppUseEffectExample1 /> */}
-      <AppUseReducerExample1 />
-      <AppUseReducerExample2 />
+      {/* <AppUseReducerExample1 /> */}
+      {/* <AppUseReducerExample2 /> */}
       {/* <AppUseRefExample1 /> */}
       {/* <AppUseRefExample2 /> */}
       {/* <AppUseRefExample3 /> */}
