@@ -23,3 +23,37 @@ const [state, dispatch] = useReducer(reducer, initialState);
 
 - 只管理简单的 state，如 `useState(0)` 这种简单的数字、布尔值。
 - 代码量较小且 `useState` 足够时，避免过度使用 `useReducer`
+
+## **3. useReducer 适用场景**
+
+如果 state 是一个对象，并且多个属性需要更新时，`useReducer` 比 `useState` 更方便：
+
+```javascript
+const reducer = (state, action) => {
+  switch (action.type) {
+    case 'changeName':
+      return { ...state, name: action.payload };
+    case 'changeAge':
+      return { ...state, age: action.payload };
+    default:
+      return state;
+  }
+};
+
+const Profile = () => {
+  const [state, dispatch] = useReducer(reducer, { name: 'Alice', age: 25 });
+
+  return (
+    <div>
+      <p>Name: {state.name}</p>
+      <p>Age: {state.age}</p>
+      <button onClick={() => dispatch({ type: 'changeName', payload: 'Bob' })}>
+        Change Name
+      </button>
+      <button onClick={() => dispatch({ type: 'changeAge', payload: 30 })}>
+        Change Age
+      </button>
+    </div>
+  );
+};
+```

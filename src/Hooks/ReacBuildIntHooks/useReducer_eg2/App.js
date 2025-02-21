@@ -1,22 +1,16 @@
 import React, { useReducer, useState } from 'react';
 
-const ACTIONS = {
-  ADD_TODO: 'add todo',
-  DEL_TODO: 'delete todo',
-  TOGGLE_TODO: 'toggle todo',
-};
-
 const reducer = (todos, action) => {
   switch (action.type) {
-    case ACTIONS.ADD_TODO:
+    case 'ADD_TODO':
       return [...todos, newTodo(action.payload.name)];
-    case ACTIONS.TOGGLE_TODO:
+    case 'TOGGLE_TODO':
       return todos.map((todo) => {
         if (todo.id === action.payload.id)
           return { ...todo, complete: !todo.complete };
         return todo;
       });
-    case ACTIONS.DEL_TODO:
+    case 'DEL_TODO':
       return todos.filter((todo) => {
         return todo.id !== action.payload.id;
       });
@@ -33,27 +27,30 @@ const newTodo = (name) => {
   };
 };
 
+const initState = [{ name: 'ming', id: Date.now(), completed: false }];
 export default function App() {
-  const [name, setName] = useState('ming');
-  const [todos, dispatch] = useReducer(reducer, []);
+  const [input, setInput] = useState('cook');
+  const [todos, dispatch] = useReducer(reducer, initState);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch({ type: ACTIONS.ADD_TODO, payload: { name } });
-    setName('');
+    dispatch({ type: 'ADD_TODO', payload: { name: input } });
+    setInput('');
   };
-  const handleToggle = (id) =>
-    dispatch({ type: ACTIONS.TOGGLE_TODO, payload: { id } });
-  const handleDelete = (id) =>
-    dispatch({ type: ACTIONS.DEL_TODO, payload: { id } });
+  const handleToggle = (id) => {
+    dispatch({ type: 'TOGGLE_TODO', payload: { id } });
+  };
+  const handleDelete = (id) => {
+    dispatch({ type: 'DEL_TODO', payload: { id } });
+  };
 
   return (
     <div className='App'>
       <form onSubmit={handleSubmit}>
         <input
           type='text'
-          value={name}
-          onChange={(e) => setName(e.target.value)}
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
         ></input>
       </form>
 

@@ -5,12 +5,12 @@ const reducer = (state, action) => {
     case 'ADD':
       return {
         ...state,
-        count: state.count + 1,
+        count: state.count + action.payload,
       };
     case 'MIUNS':
       return {
         ...state,
-        count: state.count - 1,
+        count: state.count - action.payload,
       };
     default:
       return state;
@@ -19,12 +19,18 @@ const reducer = (state, action) => {
 
 export default function App() {
   const [state, dispatch] = useReducer(reducer, { count: 0 });
+  const plus = () => {
+    dispatch({ type: 'ADD', payload: 5 });
+  };
+  const minus = () => {
+    dispatch({ type: 'MIUNS', payload: 5 });
+  };
 
   return (
     <>
       <div>state: {state.count}</div>
-      <button onClick={() => dispatch({ type: 'ADD' })}>add</button>
-      <button onClick={() => dispatch({ type: 'MIUNS' })}>miuns</button>
+      <button onClick={plus}>add</button>
+      <button onClick={minus}>miuns</button>
     </>
   );
 }
