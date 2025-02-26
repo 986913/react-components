@@ -185,7 +185,7 @@ function App() {
       {/* <FlightBookerWrapper /> */}
       {/* <CalendarWrapper /> */}
       {/* <DataTableWrapper /> */}
-      {/* <WeeklyMenuWrapper /> */}
+      <WeeklyMenuWrapper />
 
       {/* ----------------------- Customized Hooks examples------------------------- */}
       {/* <AppUseEffectOnceExample /> */}
