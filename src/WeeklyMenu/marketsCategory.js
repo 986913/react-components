@@ -26,6 +26,8 @@ export const MARKETS = {
     '培根',
   ],
   GreateWall: [
+    '五花肉',
+    '豆角',
     '干辣椒',
     '辣椒面',
     '油麦菜',
@@ -48,6 +50,7 @@ export const MARKETS = {
     '孜然',
     '豆腐',
     '蒜苔',
+    '蒜苗',
     '麻婆豆腐料汁',
     '蒜',
     'Cucumber',
@@ -62,5 +65,7 @@ export const MARKETS = {
     '辣椒',
     '鱼肉',
     '茄子',
+    '乌冬面',
+    '豆豉',
   ],
 };

@@ -102,11 +102,6 @@ export const ALL_FOOD = [
     name: 'Beef Stew',
     recipe: ['西红柿', 'Beef', '洋葱', 'Tomato paste', '胡萝卜'],
   },
-  // {
-  //   name: '菜疙瘩',
-  //   src: 'https://www.youtube.com/watch?v=kteAQwcg-cU&ab_channel=%E9%99%95%E8%A5%BF%E7%BE%8E%E5%8E%A8%E5%A8%98AuthenticShaanxiCuisine',
-  //   recipe: ['油麦菜', '中筋面粉', '生姜', '蒜', '小葱'],
-  // },
   {
     name: 'Chicken tortilla Soup',
     recipe: [
@@ -141,5 +136,29 @@ export const ALL_FOOD = [
   {
     name: 'Costco Taco',
     recipe: ['taco'],
+  },
+  {
+    name: '炒乌冬面',
+    recipe: ['乌冬面', '上海青菜', '辣椒', '鸡蛋'],
+  },
+  {
+    name: '手撕包菜',
+    recipe: ['包菜', '干辣椒', '蒜'],
+  },
+  {
+    name: '干煸豆角土豆',
+    recipe: ['土豆', '豆角'],
+  },
+  {
+    name: '饺子',
+    recipe: ['饺子'],
+  },
+  {
+    name: 'Garlic steak bites & mashed potates',
+    recipe: ['steak', '土豆'],
+  },
+  {
+    name: '回锅肉',
+    recipe: ['蒜苗', '五花肉', '生姜', '辣椒', '豆豉'],
   },
 ];
