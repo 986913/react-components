@@ -95,6 +95,7 @@ import { AppUseRefExample1 } from './Hooks/ReacBuildIntHooks/useRef_eg1';
 import { AppUseRefExample2 } from './Hooks/ReacBuildIntHooks/useRef_eg2';
 import { AppUseRefExample3 } from './Hooks/ReacBuildIntHooks/useRef_eg3';
 import { AppUseRefExample4 } from './Hooks/ReacBuildIntHooks/useRef_eg4';
+import { AppUseRefExample5 } from './Hooks/ReacBuildIntHooks/useRef_eg5';
 import { AppUseContextExample1 } from './Hooks/ReacBuildIntHooks/useContext_eg1';
 import { AppUseContextExample2 } from './Hooks/ReacBuildIntHooks/useContext_eg2';
 import { AppUseMemoExample1 } from './Hooks/ReacBuildIntHooks/useMemo_eg1';
@@ -185,7 +186,7 @@ function App() {
       {/* <FlightBookerWrapper /> */}
       {/* <CalendarWrapper /> */}
       {/* <DataTableWrapper /> */}
-      <WeeklyMenuWrapper />
+      {/* <WeeklyMenuWrapper /> */}
 
       {/* ----------------------- Customized Hooks examples------------------------- */}
       {/* <AppUseEffectOnceExample /> */}
@@ -216,6 +217,7 @@ function App() {
       {/* <AppUseRefExample2 /> */}
       {/* <AppUseRefExample3 /> */}
       {/* <AppUseRefExample4 /> */}
+      {/* <AppUseRefExample5 /> */}
       {/* <AppUseContextExample1 /> */}
       {/* <AppUseContextExample2 /> */}
       {/* <AppUseMemoExample1 /> */}

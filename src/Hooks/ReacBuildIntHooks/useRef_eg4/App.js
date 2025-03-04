@@ -23,7 +23,7 @@ export default function App() {
   const handleSentClick = () => setTimeout(showMessage, 3000);
   return (
     <div className='App'>
-      <input value={latestMsg.current.value} onChange={handleMessageChange} />
+      <input value={latestMsg.current} onChange={handleMessageChange} />
       <button onClick={handleSentClick}>sent</button>
     </div>
   );
