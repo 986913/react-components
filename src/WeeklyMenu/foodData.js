@@ -180,4 +180,8 @@ export const ALL_FOOD = [
     name: '酸辣粉',
     recipe: ['酸辣粉'],
   },
+  {
+    name: '寿司',
+    recipe: ['寿司'],
+  },
 ];
