@@ -184,4 +184,8 @@ export const ALL_FOOD = [
     name: '寿司',
     recipe: ['寿司'],
   },
+  {
+    name: '大盘鸡',
+    recipe: ['鸡腿肉(切块的)', '大青椒', '土豆', '洋葱', 'Noodle', '大盘鸡料'],
+  },
 ];
