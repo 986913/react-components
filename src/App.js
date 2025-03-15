@@ -183,10 +183,10 @@ function App() {
       {/* <DataTableWrapper /> */}
       <VirtualizedListWindowingWrapper />
       {/* <IntersectionObserverEx1lWrapper /> */}
-      <VirtualizedListInfiniteScrollWrapper />
+      {/* <VirtualizedListInfiniteScrollWrapper /> */}
       {/* <VirtualizedListInfiniteScrollWrapperII /> */}
-      <MutationObserverWrapper />
-      <TextEditorWrapper />
+      {/* <MutationObserverWrapper /> */}
+      {/* <TextEditorWrapper /> */}
       {/* <ResizeObserverWrapper />  */}
       {/* <WeeklyMenuWrapper /> */}
 
