@@ -53,7 +53,7 @@ import { PaginationWrapperII } from './PaginationII/Wrapper';
 import { VirtualizedListWindowingWrapper } from './VirtualizedList-Windowing';
 import { IntersectionObserverEx1lWrapper } from './IntersectionObserverExample';
 import { VirtualizedListInfiniteScrollWrapper } from './VirtualizedList-InfiniteScroll';
-import { VirtualizedListInfiniteScrollWrapperII } from './InfiniteScrollV2';
+import { VirtualizedListInfiniteScrollWrapperII } from './VirtualizedList-InfiniteScrollV2';
 import { MutationObserverWrapper } from './MutationObserverExample';
 import { TextEditorWrapper } from './TextEditor';
 import { ResizeObserverWrapper } from './ResizeObserverExample';
