@@ -181,7 +181,7 @@ function App() {
       {/* <FlightBookerWrapper /> */}
       {/* <CalendarWrapper /> */}
       {/* <DataTableWrapper /> */}
-      <VirtualizedListWindowingWrapper />
+      {/* <VirtualizedListWindowingWrapper /> */}
       {/* <IntersectionObserverEx1lWrapper /> */}
       {/* <VirtualizedListInfiniteScrollWrapper /> */}
       {/* <VirtualizedListInfiniteScrollWrapperII /> */}

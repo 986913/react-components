@@ -1,0 +1,13 @@
+.virtualizedList-window {
+  overflow: auto;
+  position: relative;
+  border: 1px solid black;
+}
+
+.single-item {
+  border: 1px dashed lightgray;
+  position: absolute;
+  left: 0;
+  right:0
+}
+
