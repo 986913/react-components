@@ -50,9 +50,10 @@ import { TransferListWrapperIII } from './TransferListIII';
 import { TransferListWrapperIV } from './TransferListIV';
 import { PaginationWrapperI } from './PaginationI/Wrapper';
 import { PaginationWrapperII } from './PaginationII/Wrapper';
+import { VirtualizedListWindowingWrapper } from './VirtualizedList-Windowing';
 import { IntersectionObserverEx1lWrapper } from './IntersectionObserverExample';
-import { InfiniteScrollWrapper } from './InfiniteScroll';
-import { InfiniteScrollWrapperII } from './InfiniteScrollV2';
+import { VirtualizedListInfiniteScrollWrapper } from './VirtualizedList-InfiniteScroll';
+import { VirtualizedListInfiniteScrollWrapperII } from './InfiniteScrollV2';
 import { MutationObserverWrapper } from './MutationObserverExample';
 import { TextEditorWrapper } from './TextEditor';
 import { ResizeObserverWrapper } from './ResizeObserverExample';
@@ -130,12 +131,6 @@ function App() {
       {/* <AccordionWrapper /> */}
       {/* <AccordionIIWrapper /> */}
       {/* <AccordionIIIWrapper /> */}
-      {/* <IntersectionObserverEx1lWrapper /> */}
-      {/* <InfiniteScrollWrapper /> */}
-      <MutationObserverWrapper />
-      <InfiniteScrollWrapperII />
-      <TextEditorWrapper />
-      {/* <ResizeObserverWrapper />  */}
       {/* <TransferListWrapperI /> */}
       {/* <TransferListWrapperII /> */}
       {/* <TransferListWrapperIII /> */}
@@ -186,7 +181,14 @@ function App() {
       {/* <FlightBookerWrapper /> */}
       {/* <CalendarWrapper /> */}
       {/* <DataTableWrapper /> */}
-      <WeeklyMenuWrapper />
+      <VirtualizedListWindowingWrapper />
+      {/* <IntersectionObserverEx1lWrapper /> */}
+      <VirtualizedListInfiniteScrollWrapper />
+      {/* <VirtualizedListInfiniteScrollWrapperII /> */}
+      <MutationObserverWrapper />
+      <TextEditorWrapper />
+      {/* <ResizeObserverWrapper />  */}
+      {/* <WeeklyMenuWrapper /> */}
 
       {/* ----------------------- Customized Hooks examples------------------------- */}
       {/* <AppUseEffectOnceExample /> */}

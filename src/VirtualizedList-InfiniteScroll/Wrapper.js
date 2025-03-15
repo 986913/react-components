@@ -17,7 +17,7 @@ import { InfiniteScroll } from './InfiniteScroll';
       
  */
 
-export const InfiniteScrollWrapper = () => {
+export const VirtualizedListInfiniteScrollWrapper = () => {
   let [dataList, setDataList] = useState([]);
 
   const fetchPhotosData = (pageNo = 0) => {

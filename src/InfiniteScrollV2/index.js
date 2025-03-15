@@ -1,1 +1,1 @@
-export { InfiniteScrollWrapperII } from './Wrapper.js';
+export { VirtualizedListInfiniteScrollWrapperII } from './Wrapper.js';
