@@ -7,9 +7,9 @@ export const InfiniteScroll = ({ children, loadMore }) => {
 
   /******** IntersectionObserver callback function ********/
   const observerCallback = (entities, observer) => {
-    const [entry] = entities;
-    // If the bottom element is intersecting with the viewport:
-    if (entry.isIntersecting) {
+    // 因为只有1个目标元素bottomObserverRef,所以所以 entries 通常只有1个元素，取 entries[0] 直接使用就行了：
+    // If the 观察元素 is intersecting with the viewport:
+    if (entities[0].isIntersecting) {
       setCurPage((prevPageNo) => {
         const nextPageNo = prevPageNo + 1;
         loadMore(nextPageNo);
@@ -31,7 +31,7 @@ export const InfiniteScroll = ({ children, loadMore }) => {
 
     const currElement = bottomObserverRef.current;
     if (currElement) {
-      observer.observe(currElement);
+      observer.observe(currElement); //这里就只观察👀一个目标元素: bottomObserverRef
     }
 
     return () => {

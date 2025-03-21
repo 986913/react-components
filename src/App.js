@@ -188,7 +188,7 @@ function App() {
       {/* <MutationObserverWrapper /> */}
       {/* <TextEditorWrapper /> */}
       {/* <ResizeObserverWrapper />  */}
-      {/* <WeeklyMenuWrapper /> */}
+      <WeeklyMenuWrapper />
 
       {/* ----------------------- Customized Hooks examples------------------------- */}
       {/* <AppUseEffectOnceExample /> */}

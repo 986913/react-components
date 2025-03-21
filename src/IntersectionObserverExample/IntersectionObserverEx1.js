@@ -12,8 +12,7 @@ export const IntersectionObserverEx1 = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   const cbFunction = (entries) => {
-    const [entry] = entries;
-    setIsVisible(entry.isIntersecting);
+    setIsVisible(entries[0].isIntersecting);
   };
 
   useEffect(() => {
