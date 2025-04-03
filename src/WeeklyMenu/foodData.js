@@ -188,4 +188,8 @@ export const ALL_FOOD = [
     name: '大盘鸡',
     recipe: ['鸡腿肉(切块的)', '大青椒', '土豆', '洋葱', 'Noodle', '大盘鸡料'],
   },
+  {
+    name: 'Sandwich',
+    recipe: ['Lettuce', 'Toast', '鸡蛋', 'Meat Slice', 'mayo sauce'],
+  },
 ];
