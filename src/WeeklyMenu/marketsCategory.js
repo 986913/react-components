@@ -2,7 +2,6 @@ export const MARKETS = {
   Costco: [
     'Lettuce',
     '蔬菜冻粒',
-    'Costco indian butter chicken',
     '鸡肉',
     '鸡蛋',
     '土豆',

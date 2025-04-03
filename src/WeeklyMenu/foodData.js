@@ -118,10 +118,6 @@ export const ALL_FOOD = [
     ],
   },
   {
-    name: 'Costco indian butter chicken',
-    recipe: ['Costco indian butter chicken'],
-  },
-  {
     name: 'Koearn Chicken Meal',
     recipe: ['Cucumber', '鸡肉'],
   },
