@@ -18,17 +18,12 @@ const ThemeContext = createContext({ theme: "light", setTheme: () => {} });
 const ThemeProvider = ({ children }) => {
   const [theme, setTheme] = useState("light");
 
-  const value = useMemo(() => ({ theme, setTheme }), [theme]); // 仅在 `theme` 变化时重新创建对象
+  const contextValue = useMemo(() => ({ theme, setTheme }), [theme]); // 仅在 `theme` 变化时重新创建对象
 
-  return <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>;
+  return <ThemeContext.Provider value={contextValue}> {children} </ThemeContext.Provider>;
 };
 
-// 3️⃣ 自定义 Hook，封装 `useContext`，简化调用
-const useTheme = () => {
-  return useContext(ThemeContext); // 直接返回 `{ theme, setTheme }`
-};
-
-// 4️⃣ 使用 Provider 包裹整个应用
+// 3️⃣ 使用 Provider 包裹整个应用
 const App = () => {
   return (
     <ThemeProvider>
@@ -37,9 +32,10 @@ const App = () => {
   );
 };
 
-// 5️⃣ 在子组件中使用 `useTheme`
+// 4️⃣ 在子组件中使用 `useTheme`
 const ChildComponent = () => {
-  const { theme, setTheme } = useTheme(); // 通过解构获取 `theme` 和 `setTheme`
+   // useContext(ThemeContext)返回 {theme, setTheme}, 通过解构获取 `theme` 和 `setTheme`
+  const { theme, setTheme } = useContext(ThemeContext);
 
   return (
     <div>
@@ -60,17 +56,17 @@ export default App;
 
 ### **✅ `useContext`**
 
-- **适用于：\*\***被许多组件共享但很少改变的值\*\*（如主题 Theme、语言 Language、用户信息 UserInfo）。
+- 适用于：被许多组件共享但很少改变的值（如主题 Theme、语言 Language、用户信息 UserInfo）。
 - **为什么？**`useContext` 本质上是个订阅机制，`Context.Provider` 的 `value` 发生变化时，所有 `useContext` 的组件都会重新渲染，因此不适合高频更新的状态。
 
 ### **✅ `useReducer`**
 
-- **适用于：\*\***需要复杂状态逻辑的局部状态\*\*（如表单状态、购物车）。
+- 适用于：需要复杂状态逻辑的局部状态（如表单状态、购物车）。
 - **为什么？**`useReducer` 提供 `dispatch(action)`，让状态管理更加清晰且可预测。
 
 ### **✅ Redux**
 
-- **适用于：\*\***大规模应用的全局状态管理\*\*（如身份认证、缓存、异步数据）。
+- 适用于：大规模应用的全局状态管理（如身份认证、缓存、异步数据）。
 - **为什么？** Redux 提供**持久化、DevTools 调试、中间件**，但成本更高。
 
 | 场景               | `useContext`                   | `useReducer`                    | Redux                           |
@@ -97,8 +93,8 @@ export default App;
 ### **✅ 正确写法（使用 `useMemo` 避免不必要渲染）**
 
 ```
-const value = useMemo(() => ({ theme, setTheme }), [theme]);
-<ThemeContext.Provider value={value}> {children} </ThemeContext.Provider>;
+const contextValue = useMemo(() => ({ theme, setTheme }), [theme]);
+<ThemeContext.Provider value={contextValue}> {children} </ThemeContext.Provider>;
 ```
 
 - 这样 `value` 只会在 `theme` 变化时重新计算，而不是每次渲染都创建新对象。
