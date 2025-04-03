@@ -105,6 +105,9 @@ import { AppUseCallbackExample1 } from './Hooks/ReacBuildIntHooks/useCallback_eg
 import { AppUseCallbackExample2 } from './Hooks/ReacBuildIntHooks/useCallback_eg2';
 import { AppUseReducerExample1 } from './Hooks/ReacBuildIntHooks/useReducer_eg1';
 import { AppUseReducerExample2 } from './Hooks/ReacBuildIntHooks/useReducer_eg2';
+import { AppUseRandomTitleExample } from './Hooks/CustomizeHooks/useRandomTitle';
+import { AppUseWindowSizeExample } from './Hooks/CustomizeHooks/useWindowSize';
+import { AppUseLocalStorageExample } from './Hooks/CustomizeHooks/useLocalStorage';
 
 function App() {
   return (
@@ -210,6 +213,9 @@ function App() {
       {/* <AppUseIsMountedExample /> */}
       {/* <AppUseArrayExample /> */}
       {/* <AppUseUpdateEffectExample /> */}
+      {/* <AppUseRandomTitleExample /> */}
+      <AppUseWindowSizeExample />
+      <AppUseLocalStorageExample />
 
       {/* ----------------------- React build-in Hooks examples-------------------- */}
       {/* <AppUseEffectExample1 /> */}
