@@ -191,7 +191,7 @@ function App() {
       {/* <MutationObserverWrapper /> */}
       {/* <TextEditorWrapper /> */}
       {/* <ResizeObserverWrapper />  */}
-      <WeeklyMenuWrapper />
+      {/* <WeeklyMenuWrapper /> */}
 
       {/* ----------------------- Customized Hooks examples------------------------- */}
       {/* <AppUseEffectOnceExample /> */}
@@ -214,7 +214,7 @@ function App() {
       {/* <AppUseArrayExample /> */}
       {/* <AppUseUpdateEffectExample /> */}
       {/* <AppUseRandomTitleExample /> */}
-      <AppUseWindowSizeExample />
+      {/* <AppUseWindowSizeExample /> */}
       <AppUseLocalStorageExample />
 
       {/* ----------------------- React build-in Hooks examples-------------------- */}
