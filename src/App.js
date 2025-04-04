@@ -108,6 +108,7 @@ import { AppUseReducerExample2 } from './Hooks/ReacBuildIntHooks/useReducer_eg2'
 import { AppUseRandomTitleExample } from './Hooks/CustomizeHooks/useRandomTitle';
 import { AppUseWindowSizeExample } from './Hooks/CustomizeHooks/useWindowSize';
 import { AppUseLocalStorageExample } from './Hooks/CustomizeHooks/useLocalStorage';
+import { AppUseThemeExampleI } from './Hooks/CustomizeHooks/useThemeI';
 
 function App() {
   return (
@@ -215,7 +216,8 @@ function App() {
       {/* <AppUseUpdateEffectExample /> */}
       {/* <AppUseRandomTitleExample /> */}
       {/* <AppUseWindowSizeExample /> */}
-      <AppUseLocalStorageExample />
+      {/* <AppUseLocalStorageExample /> */}
+      <AppUseThemeExampleI />
 
       {/* ----------------------- React build-in Hooks examples-------------------- */}
       {/* <AppUseEffectExample1 /> */}
