@@ -109,6 +109,7 @@ import { AppUseRandomTitleExample } from './Hooks/CustomizeHooks/useRandomTitle'
 import { AppUseWindowSizeExample } from './Hooks/CustomizeHooks/useWindowSize';
 import { AppUseLocalStorageExample } from './Hooks/CustomizeHooks/useLocalStorage';
 import { AppUseThemeExampleI } from './Hooks/CustomizeHooks/useThemeI';
+import { AppUseFetchExample } from './Hooks/CustomizeHooks/useFetch';
 
 function App() {
   return (
@@ -217,7 +218,8 @@ function App() {
       {/* <AppUseRandomTitleExample /> */}
       {/* <AppUseWindowSizeExample /> */}
       {/* <AppUseLocalStorageExample /> */}
-      <AppUseThemeExampleI />
+      {/* <AppUseThemeExampleI /> */}
+      {/* <AppUseFetchExample /> */}
 
       {/* ----------------------- React build-in Hooks examples-------------------- */}
       {/* <AppUseEffectExample1 /> */}
