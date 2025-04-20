@@ -17,11 +17,12 @@
 
 - ### `Autocomplete`
 
-  - props:s
+  - props:
     - `searchText` - string, 用于展示输入框的当前值
     - `setSearchText` - function, 用于更改输入框的当前值
     - `list`- array, 用于 api response list
-  - states: 无
+  - states:
+    - `suggestionList` - array, dropdown list 里面的内容
 
 ## 👀 知识点
 
