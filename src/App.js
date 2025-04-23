@@ -110,6 +110,8 @@ import { AppUseWindowSizeExample } from './Hooks/CustomizeHooks/useWindowSize';
 import { AppUseLocalStorageExample } from './Hooks/CustomizeHooks/useLocalStorage';
 import { AppUseThemeExampleI } from './Hooks/CustomizeHooks/useThemeI';
 import { AppUseFetchExample } from './Hooks/CustomizeHooks/useFetch';
+import { AppUseTransitionExample1 } from './Hooks/ReacBuildIntHooks/useTransition_eg1';
+import { AppUseDeferredValueExample1 } from './Hooks/ReacBuildIntHooks/useDeferredValue_eg1';
 
 function App() {
   return (
@@ -232,6 +234,8 @@ function App() {
       {/* <AppUseRefExample5 /> */}
       {/* <AppUseContextExample1 /> */}
       {/* <AppUseContextExample2 /> */}
+      {/* <AppUseTransitionExample1 /> */}
+      {/* <AppUseDeferredValueExample1 /> */}
       {/* <AppUseMemoExample1 /> */}
       {/* <AppUseMemoExample2 /> */}
       {/* <AppUseCallbackExample1 /> */}
