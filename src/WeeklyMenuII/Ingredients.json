@@ -1,0 +1,258 @@
+[
+  {
+    "name": "Egg",
+    "category": "Costco"
+  },
+  {
+    "name": "Hotpot meat",
+    "category": "Costco"
+  },
+  {
+    "name": "Bagel",
+    "category": "Costco"
+  },
+  {
+    "name": "Lettuce",
+    "category": "Costco"
+  },
+  {
+    "name": "Salmon",
+    "category": "Costco"
+  },
+  {
+    "name": "Milk",
+    "category": "Costco"
+  },
+  {
+    "name": "Chinese sausage",
+    "category": "Costco"
+  },
+  {
+    "name": "Bagel",
+    "category": "Costco"
+  },
+  {
+    "name": "Chicken breast",
+    "category": "Costco"
+  },
+  {
+    "name": "Cream cheese",
+    "category": "Costco"
+  },
+  {
+    "name": "Turkey slice",
+    "category": "Costco"
+  },
+  {
+    "name": "Squid鱿鱼须",
+    "category": "GreatWall"
+  },
+  {
+    "name": "Sirloin牛腩",
+    "category": "Wegmans"
+  },
+  {
+    "name": "Sushi",
+    "category": "Wegmans"
+  },
+  {
+    "name": "Pizza",
+    "category": "Wegmans"
+  },
+  {
+    "name": "Toste面包片",
+    "category": "Wegmans"
+  },
+  {
+    "name": "Thyme百里香",
+    "category": "Wegmans"
+  },
+  {
+    "name": "Quinoa藜麦",
+    "category": "Wegmans"
+  },
+  {
+    "name": "Asparagus芦笋",
+    "category": "Wegmans"
+  },
+  {
+    "name": "Low-fat salad dressing",
+    "category": "Wegmans"
+  },
+  {
+    "name": "Snow pea荷兰豆",
+    "category": "Wegmans"
+  },
+  {
+    "name": "Avacado",
+    "category": "Wegmans"
+  },
+  {
+    "name": "Pumpkin南瓜",
+    "category": "GreatWall"
+  },
+  {
+    "name": "Shrimp虾仁",
+    "category": "GreatWall"
+  },
+  {
+    "name": "Shanghai vegi上海青",
+    "category": "GreatWall"
+  },
+  {
+    "name": "Eggplan茄子",
+    "category": "GreatWall"
+  },
+  {
+    "name": "Broccoli西兰花",
+    "category": "GreatWall"
+  },
+  {
+    "name": "Bean sprouts豆芽",
+    "category": "GreatWall"
+  },
+  {
+    "name": "Noodle油泼面",
+    "category": "GreatWall"
+  },
+  {
+    "name": "Cucumber",
+    "category": "GreatWall"
+  },
+  {
+    "name": "Ginger",
+    "category": "GreatWall"
+  },
+  {
+    "name": "Onion",
+    "category": "GreatWall"
+  },
+  {
+    "name": "Red pepper朝天椒",
+    "category": "GreatWall"
+  },
+  {
+    "name": "Garlic",
+    "category": "GreatWall"
+  },
+  {
+    "name": "Big green pepper大青椒",
+    "category": "GreatWall"
+  },
+  {
+    "name": "Big red pepper大红椒",
+    "category": "GreatWall"
+  },
+  {
+    "name": "Potato",
+    "category": "GreatWall"
+  },
+  {
+    "name": "Sweet potato",
+    "category": "GreatWall"
+  },
+  {
+    "name": "Curry sauce",
+    "category": "GreatWall"
+  },
+  {
+    "name": "Small Cabbage小白菜",
+    "category": "GreatWall"
+  },
+  {
+    "name": "Carot",
+    "category": "GreatWall"
+  },
+  {
+    "name": "Lotus",
+    "category": "GreatWall"
+  },
+  {
+    "name": "Pepper powder辣椒面",
+    "category": "GreatWall"
+  },
+  {
+    "name": "Cauliflower白菜花",
+    "category": "Wegmans"
+  },
+  {
+    "name": "Small onion小葱",
+    "category": "GreatWall"
+  },
+  {
+    "name": "Big onion大葱",
+    "category": "GreatWall"
+  },
+  {
+    "name": "Tomato",
+    "category": "GreatWall"
+  },
+  {
+    "name": "Tomato sauce",
+    "category": "Wegmans"
+  },
+  {
+    "name": "Burger buns",
+    "category": "Wegmans"
+  },
+  {
+    "name": "Burger meat",
+    "category": "Wegmans"
+  },
+  {
+    "name": "荞麦面",
+    "category": "GreatWall"
+  },
+  {
+    "name": "杏鲍菇",
+    "category": "GreatWall"
+  },
+  {
+    "name": "Basa fish巴沙鱼",
+    "category": "Costco"
+  },
+  {
+    "name": "香菇",
+    "category": "GreatWall"
+  },
+  {
+    "name": "豆皮",
+    "category": "GreatWall"
+  },
+  {
+    "name": "Tofu",
+    "category": "GreatWall"
+  },
+  {
+    "name": "Spinach菠菜",
+    "category": "GreatWall"
+  },
+  {
+    "name": "Woodear木耳",
+    "category": "GreatWall"
+  },
+  {
+    "name": "Star anise八角",
+    "category": "GreatWall"
+  },
+  {
+    "name": "Cinnamon桂皮",
+    "category": "GreatWall"
+  },
+  {
+    "name": "White sesame芝麻",
+    "category": "GreatWall"
+  },
+  {
+    "name": "Chives韭菜",
+    "category": "GreatWall"
+  },
+  {
+    "name": "Dry pepper干辣椒",
+    "category": "GreatWall"
+  },
+  {
+    "name": "Konjac魔芋丝结",
+    "category": "GreatWall"
+  }
+]

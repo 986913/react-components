@@ -1,0 +1,21 @@
+[
+  {
+    "title": "番茄炒蛋(Stir-fried tomato and eggs)",
+    "type": ["lunch", "dinner"],
+    "ingredients": [
+      { "name": "Tomato", "quantity": 2 },
+      { "name": "Egg", "quantity": 3 },
+      { "name": "Tomato sauce", "quantity": 1 }
+    ]
+  },
+    {
+    "title": "Burger",
+    "type": ["lunch", "dinner"], 
+    "ingredients": [
+      { "name": "Burger buns", "quantity": 1 },
+      { "name": "Burger meat", "quantity": 1 },
+      { "name": "Lettuce", "quantity": 1 },
+      { "name": "Onion", "quantity": 1 }
+    ]
+  }
+]
