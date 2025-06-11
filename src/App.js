@@ -72,6 +72,7 @@ import { MortgageCalculatorWrapper } from './Mortgage Calculator/Wrapper';
 import { TurnTableWrapper } from './TurnTable';
 import { CalendarWrapper } from './Calendar';
 import { DataTableWrapper } from './DataTable';
+import { TemperatureConverterWrapper } from './TemperatureConverter';
 import { AppUseEffectOnceExample } from './Hooks/CustomizeHooks/useEffectOnce';
 import { AppUseDebounceExample } from './Hooks/CustomizeHooks/useDebounce';
 import { AppUseCurrentDateExample } from './Hooks/CustomizeHooks/useCurentDate';
@@ -122,6 +123,7 @@ function App() {
       {/* <StateMachineWrapperII /> */}
       {/* <LayoutAnimationWrapper /> */}
       {/* <LayoutAnimationWrapperII /> */}
+      <TemperatureConverterWrapper />
       {/* <AutocompleteWrapper /> */}
       {/* <AutocompleteWrapperII /> */}
       {/* <CarouselWrapper /> */}
