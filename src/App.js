@@ -123,7 +123,7 @@ function App() {
       {/* <StateMachineWrapperII /> */}
       {/* <LayoutAnimationWrapper /> */}
       {/* <LayoutAnimationWrapperII /> */}
-      <TemperatureConverterWrapper />
+      {/* <TemperatureConverterWrapper /> */}
       {/* <AutocompleteWrapper /> */}
       {/* <AutocompleteWrapperII /> */}
       {/* <CarouselWrapper /> */}
@@ -197,7 +197,7 @@ function App() {
       {/* <MutationObserverWrapper /> */}
       {/* <TextEditorWrapper /> */}
       {/* <ResizeObserverWrapper />  */}
-      {/* <WeeklyMenuWrapper /> */}
+      <WeeklyMenuWrapper />
 
       {/* ----------------------- Customized Hooks examples------------------------- */}
       {/* <AppUseEffectOnceExample /> */}

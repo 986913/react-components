@@ -188,4 +188,8 @@ export const ALL_FOOD = [
     name: 'Sandwich',
     recipe: ['Lettuce', 'Toast', '鸡蛋', 'Meat Slice', 'mayo sauce'],
   },
+  {
+    name: 'Buffalo chicken burrito',
+    recipe: ['Ranch season', '韭菜'],
+  },
 ];
