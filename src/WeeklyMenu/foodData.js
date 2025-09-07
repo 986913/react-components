@@ -192,4 +192,14 @@ export const ALL_FOOD = [
     name: 'Buffalo chicken burrito',
     recipe: ['Ranch season', '韭菜'],
   },
+  {
+    name: '蒜蓉虾滑粉丝煲',
+    recipe: ['虾滑', '小白菜', '金针菇', '小葱', '朝天椒'],
+    src: 'http://xhslink.com/o/1zCT0Fzq9fX',
+  },
+  {
+    name: '紫菜口菇汤',
+    recipe: ['紫菜', '口菇'],
+    src: 'http://xhslink.com/o/6sPeqVZIa6p',
+  },
 ];
