@@ -202,4 +202,14 @@ export const ALL_FOOD = [
     recipe: ['紫菜', '口菇'],
     src: 'http://xhslink.com/o/6sPeqVZIa6p',
   },
+  {
+    name: '白菜豆腐虾滑',
+    recipe: ['小白菜', '嫩豆腐', '虾滑'],
+    src: 'http://xhslink.com/o/A0tvoPwkanQ',
+  },
+  {
+    name: '菠萝排骨',
+    recipe: ['小白菜', '嫩豆腐', '虾滑'],
+    src: 'http://xhslink.com/o/Aw5Pj2aEhfT',
+  },
 ];

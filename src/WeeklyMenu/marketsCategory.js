@@ -28,6 +28,7 @@ export const MARKETS = {
     'Meat Slice',
     'mayo sauce',
     'Ranch season',
+    '菠萝',
   ],
   GreateWall: [
     '五花肉',
@@ -83,5 +84,8 @@ export const MARKETS = {
     '朝天椒',
     '紫菜',
     '口菇',
+    '嫩豆腐',
+    '排骨',
+    '冰糖',
   ],
 };
