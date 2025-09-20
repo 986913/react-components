@@ -194,7 +194,7 @@ export const ALL_FOOD = [
   },
   {
     name: '蒜蓉虾滑粉丝煲',
-    recipe: ['虾滑', '小白菜', '金针菇', '小葱', '朝天椒'],
+    recipe: ['虾滑', '小白菜', '金针菇', '小葱', '朝天椒', '粉丝'],
     src: 'http://xhslink.com/o/1zCT0Fzq9fX',
   },
   {
@@ -211,5 +211,20 @@ export const ALL_FOOD = [
     name: '菠萝排骨',
     recipe: ['小白菜', '嫩豆腐', '虾滑'],
     src: 'http://xhslink.com/o/Aw5Pj2aEhfT',
+  },
+  {
+    name: '蒜蓉粉丝蒸带子',
+    recipe: ['粉丝', '带子'],
+    src: 'https://www.xiaohongshu.com/explore/6458117d0000000027000435?xsec_token=ABrvKQWGphcgw5azvJfXupaGx-8gv6XU0ILfOWeRTq4T4=&xsec_source=pc_search&source=web_explore_feed',
+  },
+  {
+    name: '鱼香肉丝盖饭',
+    recipe: ['胡萝卜', '大青椒', '木耳', '鸡胸肉'],
+    src: 'https://www.xiaohongshu.com/explore/671e10ed000000001b012777?xsec_token=AB6LMLJaGcZ489mTIFPIr6kiyEIdKtWq213PkxNKUkqYY=&xsec_source=pc_search&source=web_search_result_notes',
+  },
+  {
+    name: '海苔拌饭',
+    recipe: ['辣椒', '午餐肉', '鸡蛋', '海苔碎'],
+    src: 'https://www.xiaohongshu.com/explore/682995a60000000023013ee1?xsec_token=ABEf10W--MmYP5fyqbkDwMN3P6QRFqBZUnKBszvNTCGTU=&xsec_source=pc_search&source=web_search_result_notes',
   },
 ];
