@@ -134,8 +134,8 @@ export const ALL_FOOD = [
     recipe: ['taco'],
   },
   {
-    name: '炒乌冬面',
-    recipe: ['乌冬面', '上海青菜', '辣椒', '鸡蛋'],
+    name: '虾仁炒乌冬面',
+    recipe: ['乌冬面', '上海青菜', '辣椒', '鸡蛋', '虾仁'],
   },
   {
     name: '手撕包菜',
@@ -223,8 +223,13 @@ export const ALL_FOOD = [
     src: 'https://www.xiaohongshu.com/explore/671e10ed000000001b012777?xsec_token=AB6LMLJaGcZ489mTIFPIr6kiyEIdKtWq213PkxNKUkqYY=&xsec_source=pc_search&source=web_search_result_notes',
   },
   {
-    name: '海苔拌饭',
-    recipe: ['辣椒', '午餐肉', '鸡蛋', '海苔碎'],
-    src: 'https://www.xiaohongshu.com/explore/682995a60000000023013ee1?xsec_token=ABEf10W--MmYP5fyqbkDwMN3P6QRFqBZUnKBszvNTCGTU=&xsec_source=pc_search&source=web_search_result_notes',
+    name: '芦笋牛肉',
+    recipe: ['牛肉', '芦笋', '蒜'],
+    src: 'https://www.xiaohongshu.com/explore/682d8d76000000002202fc20?xsec_token=ABfUonRCkIaKKQb0FC-X5F4vf3Cth9snKDxCUifi0Srco=&xsec_source=pc_search&source=web_explore_feed',
+  },
+  {
+    name: '酸辣柠檬虾',
+    recipe: ['虾仁', '柠檬', '香菜', '洋葱'],
+    src: 'https://www.xiaohongshu.com/explore/682d8d76000000002202fc20?xsec_token=ABfUonRCkIaKKQb0FC-X5F4vf3Cth9snKDxCUifi0Srco=&xsec_source=pc_search&source=web_explore_feed',
   },
 ];

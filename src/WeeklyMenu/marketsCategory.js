@@ -8,6 +8,7 @@ export const MARKETS = {
     'pizza',
     'steak',
     'taco',
+    '虾仁',
   ],
   Hmart: ['年糕酱', '年糕', '海鲜汤'],
   Wegmans: [
@@ -30,8 +31,12 @@ export const MARKETS = {
     'Ranch season',
     '菠萝',
     '鸡胸肉',
+    'Asparagus',
+    '牛肉',
+    '柠檬',
   ],
   GreateWall: [
+    '香菜',
     '五花肉',
     '豆角',
     '莴笋',
