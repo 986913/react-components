@@ -232,4 +232,19 @@ export const ALL_FOOD = [
     recipe: ['虾仁', '柠檬', '香菜', '洋葱'],
     src: 'https://www.xiaohongshu.com/explore/682d8d76000000002202fc20?xsec_token=ABfUonRCkIaKKQb0FC-X5F4vf3Cth9snKDxCUifi0Srco=&xsec_source=pc_search&source=web_explore_feed',
   },
+  {
+    name: '凉拌生菜鸡蛋',
+    recipe: ['鸡蛋', '生菜'],
+    src: 'https://www.xiaohongshu.com/explore/68cd74e00000000013005304?xsec_token=ABm0aqANoGJSIOs4Vayj0nGLNxK8oIf2bDMKXyOPm0D1w=&xsec_source=pc_search',
+  },
+  {
+    name: '咸香豆腐脑',
+    recipe: ['嫩豆腐', '木耳', '小葱', '鸡蛋', '虾皮'],
+    src: 'https://www.xiaohongshu.com/explore/68cd74e00000000013005304?xsec_token=ABm0aqANoGJSIOs4Vayj0nGLNxK8oIf2bDMKXyOPm0D1w=&xsec_source=pc_search',
+  },
+  {
+    name: '西兰花番茄木耳炒鸡蛋',
+    recipe: ['西红柿', '西兰花', '木耳', '鸡蛋'],
+    src: 'https://www.xiaohongshu.com/explore/68cd74e00000000013005304?xsec_token=ABm0aqANoGJSIOs4Vayj0nGLNxK8oIf2bDMKXyOPm0D1w=&xsec_source=pc_search',
+  },
 ];
