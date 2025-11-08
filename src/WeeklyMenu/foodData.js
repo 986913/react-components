@@ -247,4 +247,14 @@ export const ALL_FOOD = [
     recipe: ['西红柿', '西兰花', '木耳', '鸡蛋'],
     src: 'https://www.xiaohongshu.com/explore/68cd74e00000000013005304?xsec_token=ABm0aqANoGJSIOs4Vayj0nGLNxK8oIf2bDMKXyOPm0D1w=&xsec_source=pc_search',
   },
+  {
+    name: '萝卜排骨汤',
+    recipe: ['白萝卜', '排骨', '生姜', '芹菜'],
+    src: 'https://www.xiaohongshu.com/explore/67af0a84000000001701ec8c?xsec_token=ABcREmdH2-NDFerrtrc9vk1WEaNQkIq9OTMIsp7bp77s4=&xsec_source=pc_search',
+  },
+  {
+    name: '番茄牛肉烩饭',
+    recipe: ['洋葱', '小葱', '西红柿', '番茄酱', '牛肉片'],
+    src: 'https://www.xiaohongshu.com/explore/67af0a84000000001701ec8c?xsec_token=ABcREmdH2-NDFerrtrc9vk1WEaNQkIq9OTMIsp7bp77s4=&xsec_source=pc_search',
+  },
 ];
