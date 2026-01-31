@@ -72,6 +72,7 @@ import { MortgageCalculatorWrapper } from './Mortgage Calculator/Wrapper';
 import { TurnTableWrapper } from './TurnTable';
 import { CalendarWrapper } from './Calendar';
 import { DataTableWrapper } from './DataTable';
+import { HybirdWrapper } from './HybirdInfinitePagination';
 import { TemperatureConverterWrapper } from './TemperatureConverter';
 import { AppUseEffectOnceExample } from './Hooks/CustomizeHooks/useEffectOnce';
 import { AppUseDebounceExample } from './Hooks/CustomizeHooks/useDebounce';
@@ -197,7 +198,8 @@ function App() {
       {/* <MutationObserverWrapper /> */}
       {/* <TextEditorWrapper /> */}
       {/* <ResizeObserverWrapper />  */}
-      <WeeklyMenuWrapper />
+      {/* <WeeklyMenuWrapper /> */}
+      <HybirdWrapper />
 
       {/* ----------------------- Customized Hooks examples------------------------- */}
       {/* <AppUseEffectOnceExample /> */}
@@ -224,7 +226,6 @@ function App() {
       {/* <AppUseLocalStorageExample /> */}
       {/* <AppUseThemeExampleI /> */}
       {/* <AppUseFetchExample /> */}
-
       {/* ----------------------- React build-in Hooks examples-------------------- */}
       {/* <AppUseEffectExample1 /> */}
       {/* <AppUseReducerExample1 /> */}
