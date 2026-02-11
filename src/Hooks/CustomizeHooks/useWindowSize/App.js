@@ -2,7 +2,7 @@ import { useWindowSize } from './useWindowSize';
 
 export default function App() {
   /*********************  hook usage **************************/
-  const { curWidth: width, curHeight: height } = useWindowSize();
+  const { width, height } = useWindowSize();
 
   return (
     <div className='App'>

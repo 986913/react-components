@@ -199,7 +199,7 @@ function App() {
       {/* <TextEditorWrapper /> */}
       {/* <ResizeObserverWrapper />  */}
       {/* <WeeklyMenuWrapper /> */}
-      <HybirdWrapper />
+      {/* <HybirdWrapper /> */}
 
       {/* ----------------------- Customized Hooks examples------------------------- */}
       {/* <AppUseEffectOnceExample /> */}
@@ -226,6 +226,8 @@ function App() {
       {/* <AppUseLocalStorageExample /> */}
       {/* <AppUseThemeExampleI /> */}
       {/* <AppUseFetchExample /> */}
+      {/* 还没开始练习的，可以好好练习一下  */}
+      {/* <AppUseScrollPositionExample /> */}
       {/* ----------------------- React build-in Hooks examples-------------------- */}
       {/* <AppUseEffectExample1 /> */}
       {/* <AppUseReducerExample1 /> */}
