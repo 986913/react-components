@@ -114,6 +114,7 @@ import { AppUseThemeExampleI } from './Hooks/CustomizeHooks/useThemeI';
 import { AppUseFetchExample } from './Hooks/CustomizeHooks/useFetch';
 import { AppUseTransitionExample1 } from './Hooks/ReacBuildIntHooks/useTransition_eg1';
 import { AppUseDeferredValueExample1 } from './Hooks/ReacBuildIntHooks/useDeferredValue_eg1';
+import { LocalStorageWrapperI } from './LocakStorageI';
 
 function App() {
   return (
@@ -122,6 +123,7 @@ function App() {
       {/* <AnimationWrapper /> */}
       {/* <StateMachineWrapper /> */}
       {/* <StateMachineWrapperII /> */}
+      <LocalStorageWrapperI />
       {/* <LayoutAnimationWrapper /> */}
       {/* <LayoutAnimationWrapperII /> */}
       {/* <TemperatureConverterWrapper /> */}
