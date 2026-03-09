@@ -1,0 +1,55 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: sans-serif;
+  margin: 24px;
+  gap: 24px;
+}
+
+.label-container {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+}
+
+.label {
+  background-color: #fff;
+  color: #333;
+  border: 1px solid #333;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  padding: 6px 12px;
+  cursor: pointer;
+  transition: 0.1s ease-in-out;
+}
+
+.label:hover {
+  opacity: 0.8;
+}
+
+/* 选中状态的样式 */
+.label.selected {
+  background-color: #333;
+  color: #fff;
+}
+
+.tile-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 12px;
+  width: 100%;
+  max-width: 600px;
+}
+
+.tile {
+  background-color: #333;
+  color: #fff;
+  padding: 12px;
+  border-radius: 4px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+}

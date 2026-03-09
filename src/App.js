@@ -114,7 +114,8 @@ import { AppUseThemeExampleI } from './Hooks/CustomizeHooks/useThemeI';
 import { AppUseFetchExample } from './Hooks/CustomizeHooks/useFetch';
 import { AppUseTransitionExample1 } from './Hooks/ReacBuildIntHooks/useTransition_eg1';
 import { AppUseDeferredValueExample1 } from './Hooks/ReacBuildIntHooks/useDeferredValue_eg1';
-import { LocalStorageWrapperI } from './LocakStorageI';
+import { LocalStorageWrapperI } from './LocalStorageI';
+import { LabelFilterDashboardWrapper } from './LabelFilterDashboard';
 
 function App() {
   return (
@@ -123,9 +124,10 @@ function App() {
       {/* <AnimationWrapper /> */}
       {/* <StateMachineWrapper /> */}
       {/* <StateMachineWrapperII /> */}
-      <LocalStorageWrapperI />
+      {/* <LocalStorageWrapperI /> */}
       {/* <LayoutAnimationWrapper /> */}
       {/* <LayoutAnimationWrapperII /> */}
+      <LabelFilterDashboardWrapper />
       {/* <TemperatureConverterWrapper /> */}
       {/* <AutocompleteWrapper /> */}
       {/* <AutocompleteWrapperII /> */}
