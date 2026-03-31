@@ -86,6 +86,7 @@ import { AppUsePreviousExample } from './Hooks/CustomizeHooks/usePrevious';
 import { AppUseToggleExample } from './Hooks/CustomizeHooks/useToggle';
 import { AppUseSWRExample } from './Hooks/CustomizeHooks/useSWR';
 import { AppUseTimeoutExample } from './Hooks/CustomizeHooks/useTimeout';
+import { AppUseTimerExample } from './Hooks/CustomizeHooks/useTimer';
 import { AppUseTimeoutIIExample } from './Hooks/CustomizeHooks/useTimeoutII';
 import { AppUseTimeIntervalExample } from './Hooks/CustomizeHooks/useTimeInterval';
 import { AppUseClickOutsideExample } from './Hooks/CustomizeHooks/useClickOutside';
@@ -218,6 +219,7 @@ function App() {
       {/* <AppUseToggleExample /> */}
       {/* <AppUsePreviousExample /> */}
       {/* <AppUseTimeoutExample /> */}
+      <AppUseTimerExample />
       {/* <AppUseTimeoutIIExample /> */}
       {/* <AppUseTimeIntervalExample /> */}
       {/* <AppUseSWRExample /> */}
@@ -229,7 +231,7 @@ function App() {
       {/* <AppUseRandomTitleExample /> */}
       {/* <AppUseWindowDimensionsExample /> */}
       {/* <AppUseLocalStorageExample /> */}
-      <AppUseThemeExample />
+      {/* <AppUseThemeExample /> */}
       {/* <AppUseThemeExampleI /> */}
       {/* <AppUseFetchExample /> */}
       {/* 还没开始练习的，可以好好练习一下  */}
