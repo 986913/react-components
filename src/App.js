@@ -108,8 +108,9 @@ import { AppUseCallbackExample2 } from './Hooks/ReacBuildIntHooks/useCallback_eg
 import { AppUseReducerExample1 } from './Hooks/ReacBuildIntHooks/useReducer_eg1';
 import { AppUseReducerExample2 } from './Hooks/ReacBuildIntHooks/useReducer_eg2';
 import { AppUseRandomTitleExample } from './Hooks/CustomizeHooks/useRandomTitle';
-import { AppUseWindowSizeExample } from './Hooks/CustomizeHooks/useWindowSize';
+import { AppUseWindowDimensionsExample } from './Hooks/CustomizeHooks/useWindowDimensions';
 import { AppUseLocalStorageExample } from './Hooks/CustomizeHooks/useLocalStorage';
+import { AppUseThemeExample } from './Hooks/CustomizeHooks/useTheme';
 import { AppUseThemeExampleI } from './Hooks/CustomizeHooks/useThemeI';
 import { AppUseFetchExample } from './Hooks/CustomizeHooks/useFetch';
 import { AppUseTransitionExample1 } from './Hooks/ReacBuildIntHooks/useTransition_eg1';
@@ -127,7 +128,7 @@ function App() {
       {/* <LocalStorageWrapperI /> */}
       {/* <LayoutAnimationWrapper /> */}
       {/* <LayoutAnimationWrapperII /> */}
-      <LabelFilterDashboardWrapper />
+      {/* <LabelFilterDashboardWrapper /> */}
       {/* <TemperatureConverterWrapper /> */}
       {/* <AutocompleteWrapper /> */}
       {/* <AutocompleteWrapperII /> */}
@@ -226,8 +227,9 @@ function App() {
       {/* <AppUseArrayExample /> */}
       {/* <AppUseUpdateEffectExample /> */}
       {/* <AppUseRandomTitleExample /> */}
-      {/* <AppUseWindowSizeExample /> */}
+      {/* <AppUseWindowDimensionsExample /> */}
       {/* <AppUseLocalStorageExample /> */}
+      <AppUseThemeExample />
       {/* <AppUseThemeExampleI /> */}
       {/* <AppUseFetchExample /> */}
       {/* 还没开始练习的，可以好好练习一下  */}
